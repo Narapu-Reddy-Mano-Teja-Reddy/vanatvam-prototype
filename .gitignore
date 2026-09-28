@@ -1,3 +1,5 @@
-.kilo/
+# OS metadata files
 .DS_Store
 Thumbs.db
+*.tmp
+node_modules/

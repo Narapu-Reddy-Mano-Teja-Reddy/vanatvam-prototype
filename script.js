@@ -165,6 +165,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     statNumbers.forEach(el => statsObserver.observe(el));
   }
+  // 8. Projects Page Filter Tabs
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCardsDetailed = document.querySelectorAll('.project-detailed-card');
+
+  if (filterBtns.length > 0 && projectCardsDetailed.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        projectCardsDetailed.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'block';
+            setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 50);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => { card.style.display = 'none'; }, 300);
+          }
+        });
+      });
+    });
+  }
+
+  // 9. Contact Page Form Submit Listener
+  const contactPageForm = document.getElementById('contact-page-form');
+  if (contactPageForm) {
+    contactPageForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const cName = document.getElementById('c-name').value;
+      showToast(`Thank you, ${cName}! Your inquiry has been logged. Our advisory team will connect with you shortly.`);
+      contactPageForm.reset();
+    });
+  }
 });
+
 
 
