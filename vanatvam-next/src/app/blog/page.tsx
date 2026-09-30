@@ -7,30 +7,39 @@ import Link from 'next/link';
 export default function Blog() {
   const blogs = [
     {
-      id: 'sustainable-farming-future',
-      title: 'The Future of Sustainable Farming in Karnataka',
-      date: 'September 15, 2026',
+      id: 'redefining-farmland-ownership',
+      title: 'How Vanatvam is Redefining Farmland Ownership with a Natural & Sustainable Approach',
+      date: 'January 12, 2026',
       author: 'Vanatvam Ecological Team',
       img: '/assets/images/dew_drops_leaf.webp',
-      excerpt: 'How integrating traditional agricultural practices with modern water management can save our depleted aquifers.',
+      excerpt: 'Discover how we are moving away from traditional real estate to create living, breathing ecosystems that you can call home.',
       category: 'Ecology'
     },
     {
-      id: 'wildlife-corridors-bandipur',
-      title: 'Living on the Edge: The Importance of Wildlife Corridors',
-      date: 'August 22, 2026',
+      id: 'wellness-benefits-nature',
+      title: 'The Wellness Benefits of Living Close to Nature: A Guide for Modern Families',
+      date: 'December 05, 2025',
       author: 'Dr. Vivek Sharma',
       img: '/assets/images/anantavana.webp',
-      excerpt: 'A deep dive into why buffer zones like Anantavana are critical for the survival of large mammals in the Bandipur-Nagarhole stretch.',
-      category: 'Wildlife'
+      excerpt: 'Modern science is finally catching up to ancient wisdom: living near forests and rich biodiversity profoundly impacts mental and physical health.',
+      category: 'Wellness'
     },
     {
-      id: 'nakshatra-vana-ancient-wisdom',
-      title: 'Nakshatra Vana: Ancient Wisdom for Modern Reforestation',
-      date: 'July 10, 2026',
+      id: 'sustainable-farmland-future',
+      title: 'Why Sustainable Farmland is the Future of Real Estate in India',
+      date: 'November 22, 2025',
+      author: 'Vanatvam Research',
+      img: '/assets/images/about_hero_bg.webp',
+      excerpt: 'As urban spaces become increasingly crowded, managed agricultural land offers an incredible inflation-hedging asset that also secures our ecological future.',
+      category: 'Investment'
+    },
+    {
+      id: 'madhuvana-sacred-groves',
+      title: 'Sacred Groves, Eternal Harmony: How Madhuvana Revives India’s Soul',
+      date: 'October 15, 2025',
       author: 'Vanatvam Heritage Team',
       img: '/assets/images/forest_address_bg.webp',
-      excerpt: 'Exploring the astrological and ecological significance of planting the 27 trees of the Nakshatra Vana.',
+      excerpt: 'A deep dive into the philosophy behind Project Madhuvana and how we are using ancient Nakshatra Vana principles to create sacred ecological spaces.',
       category: 'Heritage'
     }
   ];

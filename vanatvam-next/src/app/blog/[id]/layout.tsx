@@ -1,8 +1,9 @@
 export function generateStaticParams() {
   return [
-    { id: 'sustainable-farming-future' },
-    { id: 'wildlife-corridors-bandipur' },
-    { id: 'nakshatra-vana-ancient-wisdom' }
+    { id: 'redefining-farmland-ownership' },
+    { id: 'wellness-benefits-nature' },
+    { id: 'sustainable-farmland-future' },
+    { id: 'madhuvana-sacred-groves' }
   ];
 }
 

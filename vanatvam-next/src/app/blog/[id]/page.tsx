@@ -10,68 +10,81 @@ export default function BlogPost() {
   const id = params.id as string;
 
   const blogs: Record<string, any> = {
-    'sustainable-farming-future': {
-      title: 'The Future of Sustainable Farming in Karnataka',
-      date: 'September 15, 2026',
+    'redefining-farmland-ownership': {
+      title: 'How Vanatvam is Redefining Farmland Ownership with a Natural & Sustainable Approach',
+      date: 'January 12, 2026',
       author: 'Vanatvam Ecological Team',
       img: '/assets/images/dew_drops_leaf.webp',
       category: 'Ecology',
       content: (
         <>
-          <p>As groundwater levels continue to drop across Karnataka, the traditional models of agriculture are being heavily tested. The reliance on chemical fertilizers and deep borewells has led to soil degradation and water scarcity. At Vanatvam, we believe the future of farming lies in returning to ecological roots while applying modern hydrological understanding and permaculture principles.</p>
+          <p>For decades, purchasing agricultural land was seen purely as a financial investment—a piece of earth to hold onto until its value increased. However, this traditional model often leads to neglected plots, monoculture farming, or complete ecological degradation. At Vanatvam, we are fundamentally redefining what it means to own farmland.</p>
           
-          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>The Role of Deep Trenching</h3>
-          <p>One of the most effective methods we've implemented at Brindavana is deep trenching along the natural contours of the land. Instead of fighting gravity, we use it. This slows down surface runoff during the monsoon, forcing the rainwater to percolate deep down and passively recharge the underground aquifer over the months following the rains.</p>
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>From Ownership to Custodianship</h3>
+          <p>When you purchase a plot in a Vanatvam community, you aren't just buying land; you are becoming a custodian of a living ecosystem. We shift the paradigm from resource extraction to ecological restoration. This means implementing deep water trenching, soil regeneration protocols, and strict guidelines against chemical fertilizers.</p>
           
           <img src="/assets/images/impact_seedling.webp" alt="Seedling" style={{ width: '100%', borderRadius: '16px', margin: '40px 0', boxShadow: '0 10px 30px rgba(0,0,0,0.08)' }} />
           
-          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>Integrating Native Canopy Trees</h3>
-          <p>Sustainable farming isn't just about crops; it's about the entire ecosystem. By surrounding farm plots with native, deep-rooted canopy trees, we create natural windbreaks, drastically reduce topsoil erosion, and invite pollinators that are absolutely essential for high crop yields.</p>
-          
-          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>A Community Approach</h3>
-          <p>The transition to sustainable farming cannot happen in isolation. By creating farm communities, we pool resources for organic composting, shared water management systems, and collective harvesting. This model not only regenerates the land but provides long-term food security and asset value for everyone involved.</p>
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>The Power of Managed Sustainability</h3>
+          <p>The primary hurdle for urban individuals wanting to own farmland is maintenance. How do you manage a farm when you live in a city? Our managed farmland model completely removes this friction. Our team of ecologists, agriculturists, and local farmers handle the day-to-day operations—from planting native canopy trees to harvesting organic produce.</p>
         </>
       )
     },
-    'wildlife-corridors-bandipur': {
-      title: 'Living on the Edge: The Importance of Wildlife Corridors',
-      date: 'August 22, 2026',
+    'wellness-benefits-nature': {
+      title: 'The Wellness Benefits of Living Close to Nature: A Guide for Modern Families',
+      date: 'December 05, 2025',
       author: 'Dr. Vivek Sharma',
       img: '/assets/images/anantavana.webp',
-      category: 'Wildlife',
+      category: 'Wellness',
       content: (
         <>
-          <p>The Bandipur-Nagarhole stretch is one of the most vital wildlife corridors in Southern India, supporting one of the highest densities of wild elephants and tigers in the world. However, as agricultural borders expand and human settlements encroach, human-wildlife conflict increases at an alarming rate.</p>
+          <p>In our hyper-connected, concrete-heavy modern lives, the human nervous system is in a constant state of low-grade stress. The antidote, it turns out, is not a new wellness app, but something our ancestors knew intimately: deep, uninterrupted time in nature.</p>
           
-          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>Creating Ecological Buffer Zones</h3>
-          <p>Projects like Anantavana act as critical ecological buffer zones. By maintaining an extremely low human footprint (less than 10% built area) and planting highly specific flora species that herbivores avoid, these buffer zones protect the core forest. At the same time, they give local communities and nature enthusiasts a sustainable way to live in harmony near the wildlife without disrupting migratory paths.</p>
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>The Science of Phytoncides</h3>
+          <p>When you walk through communities like Anantavana or Brindavana, you are breathing in phytoncides—antimicrobial essential oils emitted by trees to protect themselves from insects and rot. Studies show that inhaling these organic compounds significantly decreases cortisol levels, lowers blood pressure, and boosts the activity of white blood cells.</p>
           
           <blockquote style={{ borderLeft: '3px solid var(--accent-gold)', paddingLeft: '24px', margin: '40px 0', fontSize: '1.4rem', fontFamily: 'var(--font-serif)', fontStyle: 'italic', color: 'var(--bg-dark-forest)', lineHeight: 1.6 }}>
-            "Conservation is not about building higher fences to keep people out; it's about teaching people how to live alongside nature, turning them into custodians rather than consumers."
+            "We are not apart from nature; we are a part of it. When we return to the forest, our bodies biochemically recognize that we have come home."
           </blockquote>
           
-          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>The Economics of Co-existence</h3>
-          <p>When communities understand that a healthy forest directly contributes to higher property values, cleaner air, and a stable micro-climate, conservation becomes an economic incentive. We are proving that luxury and ecology are not mutually exclusive—they are deeply intertwined.</p>
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>Rewilding Childhood</h3>
+          <p>For children growing up today, structured outdoor time is rare. Natural farm communities provide a safe, unbounded environment for children to engage in 'free play'. This type of unstructured interaction with soil, plants, and water is crucial for cognitive development and building robust immune systems.</p>
         </>
       )
     },
-    'nakshatra-vana-ancient-wisdom': {
-      title: 'Nakshatra Vana: Ancient Wisdom for Modern Reforestation',
-      date: 'July 10, 2026',
+    'sustainable-farmland-future': {
+      title: 'Why Sustainable Farmland is the Future of Real Estate in India',
+      date: 'November 22, 2025',
+      author: 'Vanatvam Research',
+      img: '/assets/images/about_hero_bg.webp',
+      category: 'Investment',
+      content: (
+        <>
+          <p>The real estate landscape in India is undergoing a massive shift. As urban centers become saturated and pollution levels rise, High Net Worth Individuals (HNIs) and urban professionals are looking beyond city limits—not just for weekend homes, but for secure, inflation-hedging assets.</p>
+          
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>The Mathematics of Managed Farmland</h3>
+          <p>Unlike commercial real estate which is subject to market volatility and high maintenance overheads, agricultural land in strategic corridors (like the Kabini or Nandi Hills belts) has historically appreciated steadily. When combined with a managed model, the asset generates passive agricultural yield while the land value compounds.</p>
+          
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>Ecological Equity</h3>
+          <p>What sets Vanatvam apart is the concept of 'Ecological Equity'. A barren piece of land has a certain value. But a piece of land that has been scientifically reforested, with active water tables, rich topsoil, and mature fruit-bearing trees, commands a significant premium. We build wealth by building the ecosystem.</p>
+        </>
+      )
+    },
+    'madhuvana-sacred-groves': {
+      title: 'Sacred Groves, Eternal Harmony: How Madhuvana Revives India’s Soul',
+      date: 'October 15, 2025',
       author: 'Vanatvam Heritage Team',
       img: '/assets/images/forest_address_bg.webp',
       category: 'Heritage',
       content: (
         <>
-          <p>In traditional Indian ecology, trees are deeply intertwined with the cosmos and human well-being. The ancient concept of the Nakshatra Vana involves planting 27 specific species of trees, each uniquely corresponding to one of the 27 Nakshatras (constellations) in Vedic astrology.</p>
+          <p>In traditional Indian ecology, a 'Vana' (forest) is not just a collection of trees; it is a sacred space. Ancient texts like the Brihat Samhita meticulously detail the relationships between specific plant species, cosmic energies, and human well-being. Project Madhuvana is a modern homage to this ancient science.</p>
           
-          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>Profound Ecological Benefits</h3>
-          <p>While the roots of this practice are spiritual, the tangible ecological benefits are profound and measurable. These 27 species are highly diverse, spanning medicinal plants like Neem and Jamun, to massive, long-living canopy trees like the Banyan and Peepal.</p>
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>The Architecture of a Sacred Grove</h3>
+          <p>At the heart of Madhuvana lies the integration of specialized groves like the Nakshatra Vana and Navagraha Vana. By planting 27 specific species of trees corresponding to the 27 constellations, we create a highly resilient micro-forest. Because these species have vastly different root depths and leaf structures, they thrive together without competing for the same soil nutrients.</p>
           
-          <p>Planting them together in a specific geometric arrangement creates a highly resilient micro-forest. Because of the vast difference in root depths and leaf structures, they do not compete for the same soil nutrients. Instead, they support a diverse range of endemic bird and insect life.</p>
-          
-          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>A Space for Healing</h3>
-          <p>Beyond ecology, a Nakshatra Vana serves as a natural sanctuary for mental and physical healing. The combined phytoncides (wood essential oils) released by this specific combination of trees are known to lower blood pressure and reduce cortisol levels in those who walk through the Vana regularly.</p>
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>Beyond Aesthetics</h3>
+          <p>This is not landscaping; this is ecological engineering. The diverse flora attracts specific endemic bird species and critical pollinators. The dense canopy lowers the ambient temperature by several degrees, creating a self-sustaining micro-climate that honors India's deep ecological heritage.</p>
         </>
       )
     }

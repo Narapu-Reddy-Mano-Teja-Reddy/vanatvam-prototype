@@ -80,13 +80,19 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
                 style={{ fontSize: '1.2rem', color: 'var(--text-dark)', lineHeight: 1.8, marginBottom: '25px', fontWeight: 300 }}
               >
-                <strong style={{ color: 'var(--bg-dark-forest)', fontWeight: 500 }}>Vanatvam Private Limited</strong> is a Bengaluru-based company developing Natural Sustainable Farm Communities across Karnataka.
+                <strong style={{ color: 'var(--bg-dark-forest)', fontWeight: 500 }}>VanaTvam</strong>, in collaboration with Indus Herbs, is an organization of passionate individuals who believe that farming and leisure must be in harmony with nature. Our mission is to create Sustainable Natural Farm Communities that connect us to our ancient cultural traditions and revive them for future generations.
               </motion.p>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
+                style={{ fontSize: '1.2rem', color: 'var(--text-dark)', lineHeight: 1.8, marginBottom: '25px', fontWeight: 300 }}
+              >
+                At VanaTvam, we believe in the power of Natural Sustainability to create a better world. "Natural Sustainable land practices" refers to the use and management of land resources in a way that maintains productivity and benefits both current and future generations. This preserves soil fertility, conserves water resources, and protects biodiversity while meeting our needs.
+              </motion.p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}
                 style={{ fontSize: '1.2rem', color: 'var(--text-dark)', lineHeight: 1.8, fontWeight: 300 }}
               >
-                Founded around the idea that people and nature should grow together, Vanatvam combines responsible land development, biodiversity creation, ecological restoration, community-oriented planning, and immersive nature-based experiences.
+                We are not just a "Farmland Developer". We understand many would love to connect with nature and enjoy living on their own farms, but face obstacles like lack of time or farming knowledge. We are on a mission to change that—by making owning a farm simple, meaningful, and fulfilling.
               </motion.p>
             </div>
 

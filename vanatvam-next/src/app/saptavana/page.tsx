@@ -4,8 +4,8 @@ import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
 
-export default function Madhuvana() {
-  const galleryImages: string[] = ["/assets/images/Madhuvana/Master Plan.jpg", "/assets/images/Madhuvana/MV Tree House.jpg", "/assets/images/Madhuvana/eco friendly.png", "/assets/images/Madhuvana/MV Gazebo.jpg", "/assets/images/Madhuvana/MV Pond and Cottage.jpg"];
+export default function Saptavana() {
+  const galleryImages: string[] = [];
 
   return (
     <>
@@ -13,20 +13,20 @@ export default function Madhuvana() {
       
       <section style={{ height: '80vh', position: 'relative', display: 'flex', alignItems: 'center' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <img src="/assets/images/madhu_vana.webp" alt="MADHUVANA" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <img src="/assets/images/forest_address_bg.webp" alt="SAPTAVANA" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(18, 34, 23, 0.4) 0%, rgba(18, 34, 23, 0.9) 100%)' }}></div>
         </div>
 
         <div className="container relative" style={{ zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '60px' }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <span style={{ display: 'inline-block', padding: '6px 16px', background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)', color: '#FFF', borderRadius: '30px', fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '30px' }}>
-              MADDUR · 17 ACRES
+              NANDI HILLS · 10 EXCLUSIVE PLOTS
             </span>
             
-            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '5rem', color: '#FFF', lineHeight: 1, marginBottom: '20px' }}>MADHUVANA</h1>
+            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '5rem', color: '#FFF', lineHeight: 1, marginBottom: '20px' }}>SAPTAVANA</h1>
             
             <p style={{ fontSize: '1.4rem', color: 'rgba(255,255,255,0.9)', maxWidth: '600px', fontWeight: 300, fontFamily: 'var(--font-serif)', fontStyle: 'italic', margin: '0 auto' }}>
-              100% Natural & Organic Farm Community
+              Your home in the Grove of Life
             </p>
           </motion.div>
         </div>
@@ -39,15 +39,21 @@ export default function Madhuvana() {
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px' }}>PROJECT OVERVIEW</span>
               
               <div style={{ marginBottom: '40px' }}>
-                <img src="/assets/projects/Logo-MadhuVana.svg" alt="MADHUVANA Logo" style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
+                <img src="/assets/projects/saptavanalogo1-e1748489137241.webp" alt="SAPTAVANA Logo" style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
 
-              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.8rem', color: 'var(--bg-dark-forest)', marginBottom: '30px', lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: 'Ancient forest wisdom<br/>meets modern living.' }}>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.8rem', color: 'var(--bg-dark-forest)', marginBottom: '30px', lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: 'A living, breathing<br/>legacy.' }}>
               </h2>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-dark)', fontSize: '1.1rem', lineHeight: 1.8 }}>
-                <p>MadhuVana is a joint offering from VanaTvam and Indus Herbs who have extensive experience in designing and developing eco-landscaping, afforestation, and themed herbal gardens. MadhuVana is spread across 17 acres and when completed, will have over 5000 Trees and plants, Ponds, Gazebos, Walk Ways, perimeter fencing, and 24/7 Security. The project will also have a common area with Cottages/Rooms with Kitchenette, Landscaped garden, Car Parking, and a Dining area among others.</p>
-              <p>Located off the 10-lane Bangalore and Mysore highway MadhuVana is just about 20 Km from Maddur and Mandya and is surrounded by River Cauvery and interlaced with Vishweshwaraiah Canals  MadhuVana is offered as quarter-acre farm plots with various trees and Herbal plants in each plot and we will also plant vegetables and fruit trees which will be grown using 100% Natural and Organic  methods. This offering is envisioned as a “ Natural, Sustainable Farm Community” meaning we are building a strong community that believes in a common goal and shares common views. This means that your neighbours are people who think and live like you! Come, be a part of this awesome community!</p>
+                <p>Imagine a grove — ancient, calm, sacred — where every tree is a silent guardian of your dreams. Welcome to SaptaVana, a sanctuary of sacredtrees in a grove nestled just outside Bengaluru’s bustle, where the land breathes, and life blooms.</p>
+              <p>Conceived for those who value space, solitude, and sustainability, SaptaVanais not just a plotted development — it is a philosophy of living rooted in nature and forward thinking.</p>
+              <p>SaptaVana has just 10 exclusive plots of 7,000+ sq.ft.,and is your opportunity to own a living, breathing legacy — a grove for your family, your future, and your soul.</p>
+              <p>These are not plots, but private sanctuaries — large, green, and designed for those who seek more than walls. Each grove is a blank canvas for your dreams.</p>
+              <p>Set in Bengaluru’s Urban District, minutes from the upcoming metro and surrounded by transformative developments — yet cocooned in lush quietude.</p>
+              <p>Whether you are building a second home or investing in a better future, SaptaVana grows with you — just like the trees it protects</p>
+              <p>Drip irrigation +  water lines for  every plot</p>
+              <p>Petting Zoo & Aviary for weekend joyFull-time Gardening & Landscape MaintenanceEvery corner of SaptaVana is designed to breathe, grow, and soothe— just like a grove should</p>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', borderTop: '1px solid var(--border-light)', paddingTop: '40px', marginTop: '40px' }}>
@@ -82,7 +88,7 @@ export default function Madhuvana() {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px', textAlign: 'center' }}>GALLERY</span>
               <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: 'var(--bg-dark-forest)', marginBottom: '60px', textAlign: 'center' }}>
-                Life at MADHUVANA
+                Life at SAPTAVANA
               </h2>
             </motion.div>
             
@@ -96,7 +102,7 @@ export default function Madhuvana() {
                   transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
                   style={{ borderRadius: '16px', overflow: 'hidden', height: '350px' }}
                 >
-                  <img src={img} alt={`MADHUVANA gallery ${i}`} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
+                  <img src={img} alt={`SAPTAVANA gallery ${i}`} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
                 </motion.div>
               ))}
             </div>
@@ -107,7 +113,7 @@ export default function Madhuvana() {
       <section style={{ padding: '100px 0', background: 'var(--bg-dark-forest)', textAlign: 'center' }}>
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: '#FFF', marginBottom: '20px' }}>Experience MADHUVANA</h2>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: '#FFF', marginBottom: '20px' }}>Experience SAPTAVANA</h2>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 40px', lineHeight: 1.6 }}>
               Schedule a site visit to walk the land and understand the ecological principles driving this community.
             </p>

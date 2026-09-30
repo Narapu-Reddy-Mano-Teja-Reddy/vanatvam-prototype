@@ -4,8 +4,8 @@ import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
 
-export default function Madhuvana() {
-  const galleryImages: string[] = ["/assets/images/Madhuvana/Master Plan.jpg", "/assets/images/Madhuvana/MV Tree House.jpg", "/assets/images/Madhuvana/eco friendly.png", "/assets/images/Madhuvana/MV Gazebo.jpg", "/assets/images/Madhuvana/MV Pond and Cottage.jpg"];
+export default function Shukhavana() {
+  const galleryImages: string[] = [];
 
   return (
     <>
@@ -13,20 +13,20 @@ export default function Madhuvana() {
       
       <section style={{ height: '80vh', position: 'relative', display: 'flex', alignItems: 'center' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <img src="/assets/images/madhu_vana.webp" alt="MADHUVANA" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <img src="/assets/images/anantavana.webp" alt="SHUKHAVANA" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(18, 34, 23, 0.4) 0%, rgba(18, 34, 23, 0.9) 100%)' }}></div>
         </div>
 
         <div className="container relative" style={{ zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '60px' }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <span style={{ display: 'inline-block', padding: '6px 16px', background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)', color: '#FFF', borderRadius: '30px', fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '30px' }}>
-              MADDUR · 17 ACRES
+              DODDABALLAPUR · 6.5 ACRES
             </span>
             
-            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '5rem', color: '#FFF', lineHeight: 1, marginBottom: '20px' }}>MADHUVANA</h1>
+            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '5rem', color: '#FFF', lineHeight: 1, marginBottom: '20px' }}>SHUKHAVANA</h1>
             
             <p style={{ fontSize: '1.4rem', color: 'rgba(255,255,255,0.9)', maxWidth: '600px', fontWeight: 300, fontFamily: 'var(--font-serif)', fontStyle: 'italic', margin: '0 auto' }}>
-              100% Natural & Organic Farm Community
+              Where Nature, Birds & Happiness Thrive
             </p>
           </motion.div>
         </div>
@@ -39,15 +39,24 @@ export default function Madhuvana() {
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px' }}>PROJECT OVERVIEW</span>
               
               <div style={{ marginBottom: '40px' }}>
-                <img src="/assets/projects/Logo-MadhuVana.svg" alt="MADHUVANA Logo" style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
+                <img src="/assets/projects/Sukhavanalogo-e1761722881620.webp" alt="SHUKHAVANA Logo" style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
 
-              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.8rem', color: 'var(--bg-dark-forest)', marginBottom: '30px', lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: 'Ancient forest wisdom<br/>meets modern living.' }}>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.8rem', color: 'var(--bg-dark-forest)', marginBottom: '30px', lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: 'Lifestyle, Livelihood<br/>& Biodiversity.' }}>
               </h2>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-dark)', fontSize: '1.1rem', lineHeight: 1.8 }}>
-                <p>MadhuVana is a joint offering from VanaTvam and Indus Herbs who have extensive experience in designing and developing eco-landscaping, afforestation, and themed herbal gardens. MadhuVana is spread across 17 acres and when completed, will have over 5000 Trees and plants, Ponds, Gazebos, Walk Ways, perimeter fencing, and 24/7 Security. The project will also have a common area with Cottages/Rooms with Kitchenette, Landscaped garden, Car Parking, and a Dining area among others.</p>
-              <p>Located off the 10-lane Bangalore and Mysore highway MadhuVana is just about 20 Km from Maddur and Mandya and is surrounded by River Cauvery and interlaced with Vishweshwaraiah Canals  MadhuVana is offered as quarter-acre farm plots with various trees and Herbal plants in each plot and we will also plant vegetables and fruit trees which will be grown using 100% Natural and Organic  methods. This offering is envisioned as a “ Natural, Sustainable Farm Community” meaning we are building a strong community that believes in a common goal and shares common views. This means that your neighbours are people who think and live like you! Come, be a part of this awesome community!</p>
+                <p>Shukhavana – Where Nature, Birds & Happiness Thrive</p>
+              <p>A farmland community near Mysuru that brings you closer to nature, wellness, and sustainable living.</p>
+              <p>For over a decade, Vanatvam has been dedicated to sustainable development and rural revival. With Shukhavana, we’ve created more than just farmland — we’ve created a lifestyle rooted in balance, health, and biodiversity.</p>
+              <p>Here, you don’t just own land — you become part of a living ecosystem where fresh air, organic farming, and native bird habitats coexist in perfect harmony.</p>
+              <p>Located just off the Bengaluru–Mysuru Highway, Shukhavana offers the perfect blend of city convenience and countryside serenity.</p>
+              <p>Shukhavana features planned vegetation that nurtures bird habitats, uses solar, wind, soil, and water sustainably, and ensures steady income through short, medium, and long-term crop yields promoting balanced eco-living.</p>
+              <p>Borderline plantations include teak, silver oak, and agarwood; inner areas grow areca, coffee, pepper, and fruits, while seasonal crops like vegetables, cereals, and pulses provide continuous harvests year-round.</p>
+              <p>Equipped with drip irrigation, a 15x15 ft farm pond per plot serving as a bird watering spot, secure fencing for safety, and centralized maintenance ensuring sustainability, convenience, and ecological care.</p>
+              <p>Grow your own fruits, vegetables, and grains naturally — enjoy truly organic, nutritious produce.</p>
+              <p>Wake up to chirping birds and find joy in a habitat that supports biodiversity.</p>
+              <p>Sustainable design using solar, water, and green systems ensures a future-ready lifestyle.</p>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', borderTop: '1px solid var(--border-light)', paddingTop: '40px', marginTop: '40px' }}>
@@ -82,7 +91,7 @@ export default function Madhuvana() {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px', textAlign: 'center' }}>GALLERY</span>
               <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: 'var(--bg-dark-forest)', marginBottom: '60px', textAlign: 'center' }}>
-                Life at MADHUVANA
+                Life at SHUKHAVANA
               </h2>
             </motion.div>
             
@@ -96,7 +105,7 @@ export default function Madhuvana() {
                   transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
                   style={{ borderRadius: '16px', overflow: 'hidden', height: '350px' }}
                 >
-                  <img src={img} alt={`MADHUVANA gallery ${i}`} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
+                  <img src={img} alt={`SHUKHAVANA gallery ${i}`} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
                 </motion.div>
               ))}
             </div>
@@ -107,7 +116,7 @@ export default function Madhuvana() {
       <section style={{ padding: '100px 0', background: 'var(--bg-dark-forest)', textAlign: 'center' }}>
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: '#FFF', marginBottom: '20px' }}>Experience MADHUVANA</h2>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: '#FFF', marginBottom: '20px' }}>Experience SHUKHAVANA</h2>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 40px', lineHeight: 1.6 }}>
               Schedule a site visit to walk the land and understand the ecological principles driving this community.
             </p>
