@@ -5,6 +5,13 @@ import Footer from '@/app/components/Footer';
 import Link from 'next/link';
 
 export default function Anantavana() {
+  const specs = [
+    { label: 'Location', value: 'Near Kabini, Karnataka' },
+    { label: 'Total Area', value: '35 Acres' },
+    { label: 'Ecosystem Type', value: 'Wildlife Corridor Buffer' },
+    { label: 'Green Cover', value: '82%+ Native Canopy' },
+  ];
+
   const galleryImages: string[] = ["/assets/images/AnantaVana/ChatGPT Image Jul 8, 2026, 02_42_31 PM (1).png", "/assets/images/AnantaVana/ChatGPT Image Aug 3, 2026, 01_16_33 PM (2).png", "/assets/images/AnantaVana/AV Tree House.png", "/assets/images/AnantaVana/AV common Area arial View.png", "/assets/images/AnantaVana/Snapshot_20260727114027.png", "/assets/images/AnantaVana/ChatGPT Image May 31, 2026, 08_00_33 PM (1).png", "/assets/images/AnantaVana/AV Landscape.png", "/assets/images/AnantaVana/AV entrance arial view.jpg", "/assets/images/AnantaVana/AV12.png"];
 
   return (
@@ -70,13 +77,23 @@ export default function Anantavana() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ position: 'sticky', top: '120px' }}>
-              <div style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.1)' }}>
-                <img src="/assets/images/master_plan_map.webp" alt="Master Plan" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <div style={{ background: '#FFFFFF', padding: '36px', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.06)', border: '1px solid var(--border-light)', marginBottom: '30px' }}>
+                <span style={{ color: 'var(--accent-gold)', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>Project Specifications</span>
+                {specs.map((s) => (
+                  <div key={s.label} style={{ display: 'flex', justifyContent: 'space-between', padding: '11px 0', borderBottom: '1px solid var(--border-light)', fontSize: '0.9rem' }}>
+                    <span style={{ color: 'var(--text-muted)' }}>{s.label}</span>
+                    <strong style={{ color: 'var(--bg-dark-forest)', textAlign: 'right', marginLeft: '12px' }}>{s.value}</strong>
+                  </div>
+                ))}
               </div>
-              <div style={{ position: 'absolute', bottom: '-30px', left: '-30px', background: 'var(--bg-dark-forest)', color: '#FFF', padding: '40px', borderRadius: '24px', maxWidth: '300px', boxShadow: '0 20px 40px rgba(24, 44, 30, 0.2)' }}>
-                <i className="fa-solid fa-leaf" style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '20px' }}></i>
-                <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: '10px' }}>Sustainable Design</h4>
-                <p style={{ fontSize: '0.9rem', opacity: 0.8, lineHeight: 1.6, margin: 0 }}>Every aspect of the master plan is dictated by the natural topography and water flow.</p>
+
+              <div style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.1)', position: 'relative', marginBottom: '60px' }}>
+                <img src="/assets/images/master_plan_map.webp" alt="Master Plan" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <div style={{ position: 'absolute', bottom: '-30px', left: '-30px', background: 'var(--bg-dark-forest)', color: '#FFF', padding: '40px', borderRadius: '24px', maxWidth: '300px', boxShadow: '0 20px 40px rgba(24, 44, 30, 0.2)' }}>
+                  <i className="fa-solid fa-leaf" style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '20px' }}></i>
+                  <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: '10px' }}>Sustainable Design</h4>
+                  <p style={{ fontSize: '0.9rem', opacity: 0.8, lineHeight: 1.6, margin: 0 }}>Every aspect of the master plan is dictated by the natural topography and water flow.</p>
+                </div>
               </div>
             </motion.div>
           </div>

@@ -5,6 +5,14 @@ import Footer from '@/app/components/Footer';
 import Link from 'next/link';
 
 export default function Eeshavana() {
+  const specs = [
+    { label: 'Location', value: 'Kollegala, Karnataka' },
+    { label: 'Feature', value: 'Direct Cauvery Riverfront' },
+    { label: 'Plot Size', value: 'From 8,000 sq.ft' },
+    { label: 'Pricing', value: 'Contact for Pricing' },
+    { label: 'Green Cover', value: '80%+ Riparian Forest' },
+  ];
+
   const galleryImages: string[] = ["/assets/images/Eeshavana/Riverside view.png", "/assets/images/Eeshavana/Dainind Deck.png", "/assets/images/Eeshavana/EV Arial View 4.png", "/assets/images/Eeshavana/EV Arial View 1.png", "/assets/images/Eeshavana/Amphithiater.png", "/assets/images/Eeshavana/EV Arial View 3.png", "/assets/images/Eeshavana/EV River View 1.jpg"];
 
   return (
@@ -47,7 +55,7 @@ export default function Eeshavana() {
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-dark)', fontSize: '1.1rem', lineHeight: 1.8 }}>
                 <p>Eeshavana is a 6.5-acre gated premium riverfront community where village calm meets riverside living — plots from 8000 sq.ft.</p>
-              <p>This isn't just a plot. It's a way of life.</p>
+              <p>This isn&apos;t just a plot. It&apos;s a way of life.</p>
               <p>Surrounded by native trees, open skies, and unhurried mornings.</p>
               <p>A gated, low-density community built for privacy and stillness.</p>
               <p>A close-knit circle of landowners who value the same things you do.</p>
@@ -71,13 +79,23 @@ export default function Eeshavana() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ position: 'sticky', top: '120px' }}>
-              <div style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.1)' }}>
-                <img src="/assets/images/master_plan_map.webp" alt="Master Plan" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <div style={{ background: '#FFFFFF', padding: '36px', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.06)', border: '1px solid var(--border-light)', marginBottom: '30px' }}>
+                <span style={{ color: 'var(--accent-gold)', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>Project Specifications</span>
+                {specs.map((s) => (
+                  <div key={s.label} style={{ display: 'flex', justifyContent: 'space-between', padding: '11px 0', borderBottom: '1px solid var(--border-light)', fontSize: '0.9rem' }}>
+                    <span style={{ color: 'var(--text-muted)' }}>{s.label}</span>
+                    <strong style={{ color: 'var(--bg-dark-forest)', textAlign: 'right', marginLeft: '12px' }}>{s.value}</strong>
+                  </div>
+                ))}
               </div>
-              <div style={{ position: 'absolute', bottom: '-30px', left: '-30px', background: 'var(--bg-dark-forest)', color: '#FFF', padding: '40px', borderRadius: '24px', maxWidth: '300px', boxShadow: '0 20px 40px rgba(24, 44, 30, 0.2)' }}>
-                <i className="fa-solid fa-leaf" style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '20px' }}></i>
-                <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: '10px' }}>Sustainable Design</h4>
-                <p style={{ fontSize: '0.9rem', opacity: 0.8, lineHeight: 1.6, margin: 0 }}>Every aspect of the master plan is dictated by the natural topography and water flow.</p>
+
+              <div style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.1)', position: 'relative', marginBottom: '60px' }}>
+                <img src="/assets/images/master_plan_map.webp" alt="Master Plan" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <div style={{ position: 'absolute', bottom: '-30px', left: '-30px', background: 'var(--bg-dark-forest)', color: '#FFF', padding: '40px', borderRadius: '24px', maxWidth: '300px', boxShadow: '0 20px 40px rgba(24, 44, 30, 0.2)' }}>
+                  <i className="fa-solid fa-leaf" style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '20px' }}></i>
+                  <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: '10px' }}>Sustainable Design</h4>
+                  <p style={{ fontSize: '0.9rem', opacity: 0.8, lineHeight: 1.6, margin: 0 }}>Every aspect of the master plan is dictated by the natural topography and water flow.</p>
+                </div>
               </div>
             </motion.div>
           </div>

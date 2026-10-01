@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Magnetic from '@/components/premium/Magnetic';
 
 export default function Footer() {
   return (
@@ -10,7 +11,13 @@ export default function Footer() {
       </video>
       <div className="footer-overlay"></div>
       <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-        <div className="footer-grid">
+        <motion.div
+          className="footer-grid"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+        >
           <div>
             <div className="footer-brand-title">VANATVAM</div>
             <div className="footer-brand-tag">NATURAL FARMS · NATURE COMMUNITIES</div>
@@ -46,13 +53,19 @@ export default function Footer() {
               <p>Managed Farmland Bangalore · Sustainable Farmland Karnataka · Farm Plots Near Bangalore · Agricultural Land Investment · Eco Friendly Farm Communities · Nakshatra Vana Forest</p>
             </div>
             <div className="footer-socials" style={{ marginTop: '15px', display: 'flex', gap: '15px' }}>
-              <a href="#" className="social-icon" style={{ color: '#fff', fontSize: '1.2rem', transition: 'color 0.3s' }}><i className="fa-brands fa-instagram"></i></a>
-              <a href="#" className="social-icon" style={{ color: '#fff', fontSize: '1.2rem', transition: 'color 0.3s' }}><i className="fa-brands fa-facebook-f"></i></a>
-              <a href="#" className="social-icon" style={{ color: '#fff', fontSize: '1.2rem', transition: 'color 0.3s' }}><i className="fa-brands fa-youtube"></i></a>
-              <a href="#" className="social-icon" style={{ color: '#fff', fontSize: '1.2rem', transition: 'color 0.3s' }}><i className="fa-brands fa-linkedin-in"></i></a>
+              {[
+                { icon: 'fa-instagram', label: 'Instagram' },
+                { icon: 'fa-facebook-f', label: 'Facebook' },
+                { icon: 'fa-youtube', label: 'YouTube' },
+                { icon: 'fa-linkedin-in', label: 'LinkedIn' },
+              ].map((s) => (
+                <Magnetic key={s.icon} strength={0.5}>
+                  <a href="#" aria-label={s.label} className="social-icon" style={{ color: '#fff', fontSize: '1.2rem', transition: 'color 0.3s' }}><i className={`fa-brands ${s.icon}`}></i></a>
+                </Magnetic>
+              ))}
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className="footer-bottom">
           <span>Rooted in nature. Built for generations. CIN: U01100KA2022PTC159587</span>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '5px' }}>

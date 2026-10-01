@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
+import RevealText from '@/components/premium/RevealText';
 
 export default function About() {
   return (
@@ -22,12 +23,10 @@ export default function About() {
           >
             About Vanatvam Private Limited
           </motion.span>
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
-            style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(3.5rem, 7vw, 6rem)', color: '#FFFFFF', lineHeight: 1.05, marginBottom: '30px', letterSpacing: '-0.02em' }}
-          >
-            A Vision Rooted<br/><span style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>in Nature.</span>
-          </motion.h1>
+          <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(3.5rem, 7vw, 6rem)', color: '#FFFFFF', lineHeight: 1.05, marginBottom: '30px', letterSpacing: '-0.02em' }}>
+            <RevealText>A Vision Rooted</RevealText><br/>
+            <RevealText delay={0.15} style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>in Nature.</RevealText>
+          </h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
             style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.85)', maxWidth: '650px', margin: '0 auto', lineHeight: 1.7, fontWeight: 300 }}
@@ -55,7 +54,7 @@ export default function About() {
                 initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.3 }}
                 style={{ position: 'absolute', bottom: '-40px', right: '-40px', background: 'var(--bg-dark-forest)', padding: '40px', borderRadius: '24px', maxWidth: '320px', color: '#FFF', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}
               >
-                <span style={{ fontSize: '4rem', color: 'var(--accent-gold)', fontFamily: 'var(--font-serif)', lineHeight: 0.5, display: 'block', marginBottom: '20px' }}>"</span>
+                <span style={{ fontSize: '4rem', color: 'var(--accent-gold)', fontFamily: 'var(--font-serif)', lineHeight: 0.5, display: 'block', marginBottom: '20px' }}>&ldquo;</span>
                 <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', fontStyle: 'italic', marginBottom: '15px', lineHeight: 1.5, color: '#FFFFFF' }}>
                   If you want to save the wildlife, start by saving the trees.
                 </p>
@@ -70,12 +69,10 @@ export default function About() {
               >
                 Our Story & Founding Philosophy
               </motion.span>
-              <motion.h2 
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
-                style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.8rem, 4vw, 3.8rem)', color: 'var(--bg-dark-forest)', lineHeight: 1.1, marginBottom: '30px', letterSpacing: '-0.02em' }}
-              >
-                From a Vision to a<br/>Living Legacy.
-              </motion.h2>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.8rem, 4vw, 3.8rem)', color: 'var(--bg-dark-forest)', lineHeight: 1.1, marginBottom: '30px', letterSpacing: '-0.02em' }}>
+                <RevealText>From a Vision to a</RevealText><br/>
+                <RevealText delay={0.1}>Living Legacy.</RevealText>
+              </h2>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
                 style={{ fontSize: '1.2rem', color: 'var(--text-dark)', lineHeight: 1.8, marginBottom: '25px', fontWeight: 300 }}
@@ -86,13 +83,13 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
                 style={{ fontSize: '1.2rem', color: 'var(--text-dark)', lineHeight: 1.8, marginBottom: '25px', fontWeight: 300 }}
               >
-                At VanaTvam, we believe in the power of Natural Sustainability to create a better world. "Natural Sustainable land practices" refers to the use and management of land resources in a way that maintains productivity and benefits both current and future generations. This preserves soil fertility, conserves water resources, and protects biodiversity while meeting our needs.
+                At VanaTvam, we believe in the power of Natural Sustainability to create a better world. &ldquo;Natural Sustainable land practices&rdquo; refers to the use and management of land resources in a way that maintains productivity and benefits both current and future generations. This preserves soil fertility, conserves water resources, and protects biodiversity while meeting our needs.
               </motion.p>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}
                 style={{ fontSize: '1.2rem', color: 'var(--text-dark)', lineHeight: 1.8, fontWeight: 300 }}
               >
-                We are not just a "Farmland Developer". We understand many would love to connect with nature and enjoy living on their own farms, but face obstacles like lack of time or farming knowledge. We are on a mission to change that—by making owning a farm simple, meaningful, and fulfilling.
+                We are not just a &ldquo;Farmland Developer&rdquo;. We understand many would love to connect with nature and enjoy living on their own farms, but face obstacles like lack of time or farming knowledge. We are on a mission to change that—by making owning a farm simple, meaningful, and fulfilling.
               </motion.p>
             </div>
 
@@ -111,7 +108,8 @@ export default function About() {
               Traditional Ecological Concepts
             </span>
             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>
-              Ancient Ecological Wisdom<br/><span style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>Meets Modern Reforestation</span>
+              <RevealText>Ancient Ecological Wisdom</RevealText><br/>
+              <RevealText delay={0.1} style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>Meets Modern Reforestation</RevealText>
             </h2>
           </motion.div>
 
@@ -124,7 +122,7 @@ export default function About() {
               <span style={{ position: 'absolute', top: '40px', right: '40px', fontSize: '8rem', fontFamily: 'var(--font-serif)', color: 'rgba(198,162,101,0.06)', lineHeight: 0.8, pointerEvents: 'none' }}>01</span>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.5rem', color: 'var(--accent-gold)', marginBottom: '20px' }}>Nakshatra Vana</h3>
               <p style={{ fontSize: '1.15rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', fontWeight: 300 }}>
-                Forests inspired by India's ancient connection between trees, nature, and the stars. Each species is carefully chosen to create micro-climate sanctuaries and preserve endemic flora.
+                Forests inspired by India&apos;s ancient connection between trees, nature, and the stars. Each species is carefully chosen to create micro-climate sanctuaries and preserve endemic flora.
               </p>
             </motion.div>
 
@@ -135,7 +133,7 @@ export default function About() {
               <span style={{ position: 'absolute', top: '40px', right: '40px', fontSize: '8rem', fontFamily: 'var(--font-serif)', color: 'rgba(198,162,101,0.06)', lineHeight: 0.8, pointerEvents: 'none' }}>02</span>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.5rem', color: 'var(--accent-gold)', marginBottom: '20px' }}>Navagraha Vana</h3>
               <p style={{ fontSize: '1.15rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', fontWeight: 300 }}>
-                Thematic plantations rooted in India's traditional ecological and cultural knowledge, fostering medicinal plants, bird sanctuaries, and organic soil health.
+                Thematic plantations rooted in India&apos;s traditional ecological and cultural knowledge, fostering medicinal plants, bird sanctuaries, and organic soil health.
               </p>
             </motion.div>
 
@@ -155,10 +153,10 @@ export default function About() {
                 Institutional Recognition
               </span>
               <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.5rem, 4vw, 3.2rem)', color: 'var(--bg-dark-forest)', lineHeight: 1.1, marginBottom: '30px', letterSpacing: '-0.02em' }}>
-                FKCCI Award in Tourism & Hospitality
+                <RevealText>FKCCI Award in Tourism & Hospitality</RevealText>
               </h2>
               <p style={{ fontSize: '1.15rem', color: 'var(--text-dark)', lineHeight: 1.8, marginBottom: '20px', fontWeight: 300 }}>
-                Vanatvam's work has received institutional recognition through an <strong style={{ color: 'var(--bg-dark-forest)', fontWeight: 500 }}>FKCCI Award in Tourism and Hospitality</strong> from the Federation of Karnataka Chambers of Commerce and Industry.
+                Vanatvam&apos;s work has received institutional recognition through an <strong style={{ color: 'var(--bg-dark-forest)', fontWeight: 500 }}>FKCCI Award in Tourism and Hospitality</strong> from the Federation of Karnataka Chambers of Commerce and Industry.
               </p>
               <p style={{ fontSize: '1.15rem', color: 'var(--text-dark)', lineHeight: 1.8, fontWeight: 300 }}>
                 This award reflects a growing realization: nature-led land development and commercial viability can coexist seamlessly, delivering both ecological regeneration and long-term asset security.

@@ -32,7 +32,7 @@ export default function Investment() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
             style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.85)', maxWidth: '650px', margin: '0 auto', lineHeight: 1.7, fontWeight: 300 }}
           >
-            Combining secure legal land ownership, long-term capital appreciation, and ecological equity across Karnataka's prime natural belts.
+            Combining secure legal land ownership, long-term capital appreciation, and ecological equity across Karnataka&apos;s prime natural belts.
           </motion.p>
         </div>
       </section>

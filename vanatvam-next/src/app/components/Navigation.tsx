@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Magnetic from '@/components/premium/Magnetic';
 
 export default function Navigation() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -41,21 +42,31 @@ export default function Navigation() {
               { path: '/blog', label: 'Journal' },
               { path: '/contact', label: 'Contact' }
             ].map((item) => (
-              <Link 
-                key={item.path} 
-                href={item.path} 
-                className={`nav-link ${pathname === item.path ? 'active' : ''}`} 
+              <Link
+                key={item.path}
+                href={item.path}
+                className={`nav-link ${pathname === item.path ? 'active' : ''}`}
                 style={{ color: scrolled || isDrawerOpen ? '#1E352F' : '#FFFFFF' }}
               >
                 {item.label}
+                {pathname === item.path && (
+                  <motion.span
+                    layoutId="nav-active-underline"
+                    className="nav-underline"
+                    style={{ background: scrolled || isDrawerOpen ? 'var(--accent-gold)' : '#FFFFFF' }}
+                    transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+                  />
+                )}
               </Link>
             ))}
           </nav>
           <div className="header-right">
-            <button className="btn-pill btn-pill-outline" onClick={() => setIsModalOpen(true)} style={{
-              borderColor: scrolled || isDrawerOpen ? '#1E352F' : '#FFFFFF',
-              color: scrolled || isDrawerOpen ? '#1E352F' : '#FFFFFF'
-            }}>Book a Visit</button>
+            <Magnetic strength={0.3}>
+              <button className="btn-pill btn-pill-outline" onClick={() => setIsModalOpen(true)} style={{
+                borderColor: scrolled || isDrawerOpen ? '#1E352F' : '#FFFFFF',
+                color: scrolled || isDrawerOpen ? '#1E352F' : '#FFFFFF'
+              }}>Book a Visit</button>
+            </Magnetic>
             <div className={`menu-toggle-btn ${isDrawerOpen ? 'open' : ''}`} onClick={() => setIsDrawerOpen(!isDrawerOpen)}>
               <span style={{ backgroundColor: scrolled || isDrawerOpen ? '#1E352F' : '#FFFFFF' }}></span>
               <span style={{ backgroundColor: scrolled || isDrawerOpen ? '#1E352F' : '#FFFFFF' }}></span>
@@ -140,16 +151,32 @@ export default function Navigation() {
             <motion.div className="modal-card" initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} onClick={e => e.stopPropagation()}>
               <span className="modal-close-btn" onClick={() => setIsModalOpen(false)}>&times;</span>
               <h3 className="modal-title">Book a Visit</h3>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '25px' }}>Experience the tranquility of Vanatvam natural farmlands firsthand in Karnataka.</p>
               <form>
                 <div className="form-group">
                   <label>Full Name</label>
-                  <input type="text" className="form-control" />
+                  <input type="text" className="form-control" placeholder="Enter your full name" required />
                 </div>
                 <div className="form-group">
-                  <label>Email</label>
-                  <input type="email" className="form-control" />
+                  <label>Phone Number</label>
+                  <input type="tel" className="form-control" placeholder="+91 98765 43210" required />
                 </div>
-                <button type="submit" className="btn-pill btn-pill-dark" style={{ width: '100%', justifyContent: 'center' }}>Confirm</button>
+                <div className="form-group">
+                  <label>Email Address</label>
+                  <input type="email" className="form-control" placeholder="yourname@domain.com" required />
+                </div>
+                <div className="form-group">
+                  <label>Preferred Community</label>
+                  <select className="form-control">
+                    <option value="brindavana">Brindavana (Pavagada · 30 Acres · Completed)</option>
+                    <option value="madhuvana">Madhuvana (Maddur · 18 Acres · Water Forest)</option>
+                    <option value="anantavana">Anantavana (Kabini · 35 Acres · Wildlife Corridor)</option>
+                    <option value="eeshavana">Eeshavana (Kollegala · Cauvery Riverfront)</option>
+                    <option value="saptavana">Saptavana (Nandi Hills · 10 Acres)</option>
+                    <option value="shukhavana">Shukhavana (Doddaballapur · 6.5 Acres)</option>
+                  </select>
+                </div>
+                <button type="submit" className="btn-pill btn-pill-dark" style={{ width: '100%', justifyContent: 'center', marginTop: '10px' }}>Confirm Site Visit Request</button>
               </form>
             </motion.div>
           </div>

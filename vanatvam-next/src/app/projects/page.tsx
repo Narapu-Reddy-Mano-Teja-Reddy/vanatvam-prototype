@@ -4,6 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
+import RevealText from '@/components/premium/RevealText';
+import Magnetic from '@/components/premium/Magnetic';
+import TiltCard from '@/components/premium/TiltCard';
 
 export default function Projects() {
   const [filter, setFilter] = useState('all');
@@ -85,6 +88,16 @@ export default function Projects() {
 
   const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.category === filter);
 
+  const filters = [
+    { key: 'all', label: 'All Communities' },
+    { key: 'completed', label: 'Completed' },
+    { key: 'water', label: 'Water Forest' },
+    { key: 'wildlife', label: 'Wildlife Corridor' },
+    { key: 'riverfront', label: 'Riverfront' },
+    { key: 'forest', label: 'Mountain & Forest' },
+    { key: 'nature', label: 'Nature Community' },
+  ];
+
   return (
     <>
       <Navigation />
@@ -99,7 +112,8 @@ export default function Projects() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }}>
             <span style={{ display: 'inline-block', padding: '6px 16px', border: '1px solid var(--accent-gold)', borderRadius: '30px', color: 'var(--accent-gold)', fontSize: '0.85rem', letterSpacing: '0.1em', marginBottom: '20px' }}>OUR LIVING SANCTUARIES</span>
             <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '4.5rem', color: '#FFF', lineHeight: 1.1, marginBottom: '20px' }}>
-              Six Expressions of<br/><span style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>Nature.</span>
+              <RevealText>Six Expressions of</RevealText><br/>
+              <RevealText delay={0.1} style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>Nature.</RevealText>
             </h1>
             <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.2rem', maxWidth: '600px', lineHeight: 1.6 }}>
               Explore our curated portfolio of ecological communities, each designed to respect and enhance its unique natural context across Karnataka.
@@ -110,9 +124,28 @@ export default function Projects() {
 
       <section style={{ padding: '100px 0', background: 'var(--bg-cream)' }}>
         <div className="container">
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginBottom: '60px' }}>
+            {filters.map((f) => (
+              <button
+                key={f.key}
+                onClick={() => setFilter(f.key)}
+                className="btn-pill"
+                style={{
+                  background: filter === f.key ? 'var(--bg-dark-forest)' : 'transparent',
+                  color: filter === f.key ? '#FFFFFF' : 'var(--text-dark)',
+                  border: `1px solid ${filter === f.key ? 'var(--bg-dark-forest)' : 'var(--border-light)'}`,
+                  fontSize: '0.85rem',
+                  transition: 'var(--transition-smooth)',
+                }}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
+
           <motion.div layout style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))', gap: '40px' }}>
-            <AnimatePresence>
-              {projects.map(proj => (
+            <AnimatePresence mode="popLayout">
+              {filteredProjects.map(proj => (
                 <motion.div 
                   key={proj.id}
                   layout
@@ -123,12 +156,12 @@ export default function Projects() {
                   whileHover={{ y: -10 }}
                   style={{ background: '#FFF', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.06)', display: 'flex', flexDirection: 'column' }}
                 >
-                  <div style={{ position: 'relative', height: '300px' }}>
+                  <TiltCard max={4} style={{ position: 'relative', height: '300px', overflow: 'hidden' }}>
                     <img src={proj.img} alt={proj.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <div style={{ position: 'absolute', top: 20, left: 20, background: proj.badgeBg, color: '#FFF', padding: '6px 14px', borderRadius: '30px', fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.05em' }}>
                       {proj.badge}
                     </div>
-                  </div>
+                  </TiltCard>
                   <div style={{ padding: '40px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                     <span style={{ color: 'var(--accent-gold)', fontSize: '0.8rem', letterSpacing: '0.1em', fontWeight: 600, marginBottom: '15px', display: 'block' }}>{proj.location}</span>
                     
@@ -150,9 +183,11 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    <Link href={`/${proj.id}`} className="btn-pill btn-pill-dark" style={{ justifyContent: 'center', width: '100%' }}>
-                      Explore Project
-                    </Link>
+                    <Magnetic strength={0.15} style={{ display: 'block', width: '100%' }}>
+                      <Link href={`/${proj.id}`} className="btn-pill btn-pill-dark" style={{ justifyContent: 'center', width: '100%' }}>
+                        Explore Project
+                      </Link>
+                    </Magnetic>
                   </div>
                 </motion.div>
               ))}

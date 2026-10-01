@@ -15,37 +15,45 @@ export function FeatureCard({ feature, className, ...props }: FeatureCardPorps) 
 	const p = genRandomPattern();
 
 	return (
-		<div 
-      className={cn('relative overflow-hidden p-8', className)} 
-      {...props} 
-      style={{ 
-        backgroundColor: '#FFFFFF', 
-        borderRadius: '24px', 
-        boxShadow: '0 10px 40px rgba(0,0,0,0.03)', 
+		<div
+      className={cn('relative overflow-hidden', className)}
+      {...props}
+      style={{
+        backgroundColor: '#FFFFFF',
+        borderRadius: '24px',
+        boxShadow: '0 10px 40px rgba(0,0,0,0.03)',
         border: '1px solid rgba(0,0,0,0.04)',
+        padding: '2rem',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         textAlign: 'center'
       }}
     >
-			<div className="pointer-events-none absolute top-0 left-1/2 -mt-2 -ml-20 h-full w-full [mask-image:linear-gradient(white,transparent)]">
-				<div className="from-foreground/5 to-foreground/1 absolute inset-0 bg-gradient-to-r [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] opacity-100">
-					<GridPattern
-						width={20}
-						height={20}
-						x="-12"
-						y="4"
-						squares={p}
-						className="fill-foreground/5 stroke-foreground/25 absolute inset-0 h-full w-full mix-blend-overlay"
-					/>
-				</div>
-			</div>
-			<div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '70px', height: '70px', borderRadius: '50%', backgroundColor: 'rgba(198,162,101,0.1)', color: 'var(--accent-gold)' }}>
+			<GridPattern
+				width={20}
+				height={20}
+				x="-12"
+				y="4"
+				squares={p}
+				style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          width: '65%',
+          height: '100%',
+          color: 'var(--accent-gold)',
+          opacity: 0.1,
+          maskImage: 'radial-gradient(ellipse at top right, white, transparent 70%)',
+          WebkitMaskImage: 'radial-gradient(ellipse at top right, white, transparent 70%)',
+          pointerEvents: 'none',
+        }}
+			/>
+			<div style={{ position: 'relative', zIndex: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '70px', height: '70px', borderRadius: '50%', backgroundColor: 'rgba(198,162,101,0.1)', color: 'var(--accent-gold)' }}>
 				<feature.icon className="size-8" strokeWidth={1.5} aria-hidden />
 			</div>
-			<h3 className="mt-6 text-xl md:text-2xl font-serif" style={{ color: 'var(--bg-dark-forest)' }}>{feature.title}</h3>
-			<p className="text-muted-foreground relative z-20 mt-3 text-base font-light leading-relaxed" style={{ color: 'var(--text-muted)' }}>{feature.description}</p>
+			<h3 style={{ position: 'relative', zIndex: 1, marginTop: '24px', fontFamily: 'var(--font-serif)', fontSize: '1.4rem', color: 'var(--bg-dark-forest)' }}>{feature.title}</h3>
+			<p style={{ position: 'relative', zIndex: 1, marginTop: '12px', fontSize: '1rem', lineHeight: 1.65, fontWeight: 300, color: 'var(--text-muted)' }}>{feature.description}</p>
 		</div>
 	);
 }
@@ -56,12 +64,13 @@ function GridPattern({
 	x,
 	y,
 	squares,
+	style,
 	...props
 }: React.ComponentProps<'svg'> & { width: number; height: number; x: string; y: string; squares?: number[][] }) {
 	const patternId = React.useId();
 
 	return (
-		<svg aria-hidden="true" {...props} style={{ opacity: 0.2 }}>
+		<svg aria-hidden="true" {...props} style={style}>
 			<defs>
 				<pattern id={patternId} width={width} height={height} patternUnits="userSpaceOnUse" x={x} y={y}>
 					<path d={`M.5 ${height}V.5H${width}`} fill="none" stroke="currentColor" />
