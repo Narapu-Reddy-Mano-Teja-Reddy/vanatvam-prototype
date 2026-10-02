@@ -118,8 +118,6 @@ export default function Contact() {
                     <option value="madhuvana">Madhuvana (Maddur · 18 Acres)</option>
                     <option value="anantavana">Anantavana (Kabini · 35 Acres)</option>
                     <option value="eeshavana">Eeshavana (Cauvery Riverfront)</option>
-                    <option value="saptavana">Saptavana (Nandi Hills · 10 Acres)</option>
-                    <option value="shukhavana">Shukhavana (Doddaballapur · 6.5 Acres)</option>
                   </select>
                 </div>
                 <div className="form-group">

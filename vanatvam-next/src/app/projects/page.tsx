@@ -60,30 +60,6 @@ export default function Projects() {
       badgeBg: '#1B4965',
       pills: ['Cauvery Frontage', 'River Ecosystem']
     },
-    {
-      id: 'saptavana',
-      category: 'forest',
-      name: 'SAPTAVANA',
-      logo: '/assets/projects/saptavanalogo1-e1748489137241.webp',
-      location: 'NANDI HILLS · 10 ACRES',
-      desc: 'Saptavana offers exclusive farm plots nested in a tranquil forest setting, featuring rich red soil perfect for deep-rooted native tree species and lush ecological development.',
-      img: '/assets/images/forest_address_bg.webp',
-      badge: 'Mountain View',
-      badgeBg: '#606C38',
-      pills: ['Red Soil', 'Nandi Hills Range']
-    },
-    {
-      id: 'shukhavana',
-      category: 'nature',
-      name: 'SHUKHAVANA',
-      logo: '/assets/projects/Sukhavanalogo-e1761722881620.webp',
-      location: 'DODDABALLAPUR · 6.5 ACRES',
-      desc: 'A premium riverfront community by Vanatvam, offering an exclusive lifestyle integrated entirely with natural surroundings and expansive river views.',
-      img: '/assets/images/anantavana.webp',
-      badge: 'Nature Community',
-      badgeBg: '#7A6B48',
-      pills: ['Waterfront', 'Boutique Community']
-    }
   ];
 
   const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.category === filter);
@@ -111,8 +87,8 @@ export default function Projects() {
         <div className="container relative" style={{ zIndex: 10, display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }}>
             <span style={{ display: 'inline-block', padding: '6px 16px', border: '1px solid var(--accent-gold)', borderRadius: '30px', color: 'var(--accent-gold)', fontSize: '0.85rem', letterSpacing: '0.1em', marginBottom: '20px' }}>OUR LIVING SANCTUARIES</span>
-            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '4.5rem', color: '#FFF', lineHeight: 1.1, marginBottom: '20px' }}>
-              <RevealText>Six Expressions of</RevealText><br/>
+            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.475rem, 4.5vw, 4.5rem)', color: '#FFF', lineHeight: 1.1, marginBottom: '20px' }}>
+              <RevealText>Four Expressions of</RevealText><br/>
               <RevealText delay={0.1} style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>Nature.</RevealText>
             </h1>
             <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.2rem', maxWidth: '600px', lineHeight: 1.6 }}>
@@ -124,25 +100,6 @@ export default function Projects() {
 
       <section style={{ padding: '100px 0', background: 'var(--bg-cream)' }}>
         <div className="container">
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginBottom: '60px' }}>
-            {filters.map((f) => (
-              <button
-                key={f.key}
-                onClick={() => setFilter(f.key)}
-                className="btn-pill"
-                style={{
-                  background: filter === f.key ? 'var(--bg-dark-forest)' : 'transparent',
-                  color: filter === f.key ? '#FFFFFF' : 'var(--text-dark)',
-                  border: `1px solid ${filter === f.key ? 'var(--bg-dark-forest)' : 'var(--border-light)'}`,
-                  fontSize: '0.85rem',
-                  transition: 'var(--transition-smooth)',
-                }}
-              >
-                {f.label}
-              </button>
-            ))}
-          </div>
-
           <motion.div layout style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))', gap: '40px' }}>
             <AnimatePresence mode="popLayout">
               {filteredProjects.map(proj => (

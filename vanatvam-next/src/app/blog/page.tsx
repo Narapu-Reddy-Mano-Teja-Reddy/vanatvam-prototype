@@ -48,15 +48,23 @@ export default function Blog() {
     <>
       <Navigation />
 
-      <section style={{ padding: '150px 0 80px', background: 'var(--bg-cream)' }}>
-        <div className="container">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ textAlign: 'center', marginBottom: '80px' }}>
+      <section style={{ position: 'relative', padding: '180px 0 100px', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+          <img src="/assets/images/about_story_forest.webp" alt="Forest Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(18,34,23,0.85) 0%, rgba(18,34,23,0.95) 100%)' }}></div>
+        </div>
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ textAlign: 'center', marginBottom: '40px' }}>
             <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em' }}>VANATVAM JOURNAL</span>
-            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '4rem', color: 'var(--bg-dark-forest)', marginTop: '15px' }}>Stories from the Soil</h1>
-            <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '20px auto 0' }}>Insights, updates, and deep dives into ecological restoration, nature communities, and sustainable living.</p>
+            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.8rem, 6vw, 4.5rem)', color: '#FFF', marginTop: '20px', lineHeight: 1.15 }}>Stories from the Soil</h1>
+            <p style={{ fontSize: 'clamp(1.05rem, 2vw, 1.25rem)', color: 'rgba(255,255,255,0.85)', maxWidth: '650px', margin: '24px auto 0', lineHeight: 1.6 }}>Insights, updates, and deep dives into ecological restoration, nature communities, and sustainable living.</p>
           </motion.div>
+        </div>
+      </section>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '40px' }}>
+      <section style={{ padding: '80px 0', background: 'var(--bg-cream)' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '40px' }}>
             {blogs.map((blog, i) => (
               <motion.article 
                 key={blog.id} 

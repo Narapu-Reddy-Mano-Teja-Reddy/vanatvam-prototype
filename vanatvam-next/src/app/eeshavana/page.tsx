@@ -1,8 +1,10 @@
+
 'use client';
 import { motion } from 'framer-motion';
 import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
+import AccordionGallery from '@/components/premium/AccordionGallery';
 
 export default function Eeshavana() {
   const specs = [
@@ -13,7 +15,14 @@ export default function Eeshavana() {
     { label: 'Green Cover', value: '80%+ Riparian Forest' },
   ];
 
-  const galleryImages: string[] = ["/assets/images/Eeshavana/Riverside view.png", "/assets/images/Eeshavana/Dainind Deck.png", "/assets/images/Eeshavana/EV Arial View 4.png", "/assets/images/Eeshavana/EV Arial View 1.png", "/assets/images/Eeshavana/Amphithiater.png", "/assets/images/Eeshavana/EV Arial View 3.png", "/assets/images/Eeshavana/EV River View 1.jpg"];
+  
+  const galleryItems = [
+    { img: '/assets/images/eeshavana.webp', title: 'Cauvery Riverfront', desc: 'Direct, pristine access to the sacred waters of the flowing Cauvery river.' },
+    { img: '/assets/images/dew_drops_leaf.webp', title: 'Riparian Forest', desc: 'A protected buffer zone supporting unique aquatic and riverbank ecosystems.' },
+    { img: '/assets/images/about_hero_bg.webp', title: 'Tranquil Retreat', desc: 'Exclusive community spots designed for meditation and riverside wellness.' },
+    { img: '/assets/images/master_plan_map.webp', title: 'Exclusive Enclaves', desc: 'Premium plots starting from 8,000 sq.ft offering unmatched river views.' },
+  ];
+
 
   return (
     <>
@@ -31,7 +40,7 @@ export default function Eeshavana() {
               KOLLEGALA · 6.5 ACRES
             </span>
             
-            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '5rem', color: '#FFF', lineHeight: 1, marginBottom: '20px' }}>EESHAVANA</h1>
+            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.75rem, 5.0vw, 5.0rem)', color: '#FFF', lineHeight: 1, marginBottom: '20px' }}>EESHAVANA</h1>
             
             <p style={{ fontSize: '1.4rem', color: 'rgba(255,255,255,0.9)', maxWidth: '600px', fontWeight: 300, fontFamily: 'var(--font-serif)', fontStyle: 'italic', margin: '0 auto' }}>
               Premium Riverfront Community
@@ -50,7 +59,7 @@ export default function Eeshavana() {
                 <img src="/assets/projects/eeshavanaalogo.webp" alt="EESHAVANA Logo" style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
 
-              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.8rem', color: 'var(--bg-dark-forest)', marginBottom: '30px', lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: 'Live by the river,<br/>not just near it.' }}>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 2.8vw, 2.8rem)', color: 'var(--bg-dark-forest)', marginBottom: '30px', lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: 'Live by the river,<br/>not just near it.' }}>
               </h2>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-dark)', fontSize: '1.1rem', lineHeight: 1.8 }}>
@@ -68,23 +77,35 @@ export default function Eeshavana() {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', borderTop: '1px solid var(--border-light)', paddingTop: '40px', marginTop: '40px' }}>
                 <div>
-                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Ecological Impact</h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Designed to restore soil health, recharge aquifers, and provide a sanctuary for local flora and fauna.</p>
+                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Riparian Ecology</h4>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Meticulously designed to protect and integrate with the natural riverbank, fostering diverse aquatic and bird life.</p>
                 </div>
                 <div>
-                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Community Living</h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Low-density footprints ensuring maximum privacy and minimal disturbance to the natural surroundings.</p>
+                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Waterfront Living</h4>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Exclusive access to the sacred Cauvery, creating a tranquil environment where the sound of flowing water is your constant companion.</p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ position: 'sticky', top: '120px' }}>
-              <div style={{ background: '#FFFFFF', padding: '36px', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.06)', border: '1px solid var(--border-light)', marginBottom: '30px' }}>
-                <span style={{ color: 'var(--accent-gold)', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>Project Specifications</span>
-                {specs.map((s) => (
-                  <div key={s.label} style={{ display: 'flex', justifyContent: 'space-between', padding: '11px 0', borderBottom: '1px solid var(--border-light)', fontSize: '0.9rem' }}>
-                    <span style={{ color: 'var(--text-muted)' }}>{s.label}</span>
-                    <strong style={{ color: 'var(--bg-dark-forest)', textAlign: 'right', marginLeft: '12px' }}>{s.value}</strong>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '40px' }}>
+                <div style={{ gridColumn: '1 / -1', marginBottom: '10px' }}>
+                  <span style={{ color: 'var(--accent-gold)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>Project Specifications</span>
+                </div>
+                {specs.map((s, i) => (
+                  <div key={s.label} style={{ 
+                    gridColumn: i === specs.length - 1 && specs.length % 2 !== 0 ? '1 / -1' : 'auto',
+                    background: i === 0 ? 'var(--bg-dark-forest)' : '#FFFFFF', 
+                    padding: '24px', 
+                    borderRadius: '20px', 
+                    border: i === 0 ? 'none' : '1px solid var(--border-light)', 
+                    boxShadow: i === 0 ? '0 20px 40px rgba(18,34,23,0.15)' : '0 10px 30px rgba(0,0,0,0.04)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center'
+                  }}>
+                    <span style={{ color: i === 0 ? 'var(--accent-gold)' : 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px', fontWeight: 600 }}>{s.label}</span>
+                    <strong style={{ fontSize: '1.25rem', fontFamily: 'var(--font-serif)', color: i === 0 ? '#FFF' : 'var(--bg-dark-forest)', lineHeight: 1.3 }}>{s.value}</strong>
                   </div>
                 ))}
               </div>
@@ -102,30 +123,17 @@ export default function Eeshavana() {
         </div>
       </section>
 
-      {galleryImages.length > 0 && (
+            {galleryItems.length > 0 && (
         <section style={{ padding: '100px 0', background: '#FFF' }}>
           <div className="container">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px', textAlign: 'center' }}>GALLERY</span>
-              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: 'var(--bg-dark-forest)', marginBottom: '60px', textAlign: 'center' }}>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 3.0vw, 3.0rem)', color: 'var(--bg-dark-forest)', marginBottom: '60px', textAlign: 'center' }}>
                 Life at EESHAVANA
               </h2>
             </motion.div>
             
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '20px' }}>
-              {galleryImages.map((img, i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-                  style={{ borderRadius: '16px', overflow: 'hidden', height: '350px' }}
-                >
-                  <img src={img} alt={`EESHAVANA gallery ${i}`} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
-                </motion.div>
-              ))}
-            </div>
+            <AccordionGallery items={galleryItems} height="500px" />
           </div>
         </section>
       )}
@@ -133,7 +141,7 @@ export default function Eeshavana() {
       <section style={{ padding: '100px 0', background: 'var(--bg-dark-forest)', textAlign: 'center' }}>
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: '#FFF', marginBottom: '20px' }}>Experience EESHAVANA</h2>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 3.0vw, 3.0rem)', color: '#FFF', marginBottom: '20px' }}>Experience EESHAVANA</h2>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 40px', lineHeight: 1.6 }}>
               Schedule a site visit to walk the land and understand the ecological principles driving this community.
             </p>

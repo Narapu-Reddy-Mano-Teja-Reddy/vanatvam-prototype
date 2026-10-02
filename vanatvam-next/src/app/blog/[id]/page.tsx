@@ -98,7 +98,7 @@ export default function BlogPost() {
         <Navigation />
         <div style={{ height: '70vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-cream)' }}>
           <div style={{ textAlign: 'center' }}>
-            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: 'var(--bg-dark-forest)' }}>Article Not Found</h1>
+            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 3.0vw, 3.0rem)', color: 'var(--bg-dark-forest)' }}>Article Not Found</h1>
             <Link href="/blog" className="btn-pill btn-pill-dark" style={{ marginTop: '20px' }}>Back to Journal</Link>
           </div>
         </div>
@@ -112,18 +112,18 @@ export default function BlogPost() {
       <Navigation />
 
       <article style={{ background: 'var(--bg-cream)', paddingBottom: '120px' }}>
-        <header style={{ height: '60vh', minHeight: '500px', position: 'relative', display: 'flex', alignItems: 'flex-end', paddingBottom: '60px' }}>
+        <header style={{ minHeight: '60vh', position: 'relative', display: 'flex', alignItems: 'flex-end', paddingTop: '180px', paddingBottom: '60px' }}>
           <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
             <img src={blog.img} alt={blog.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(18,34,23,0.3) 0%, rgba(18,34,23,0.95) 100%)' }}></div>
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(18,34,23,0.7) 0%, rgba(18,34,23,0.95) 100%)' }}></div>
           </div>
           
-          <div className="container relative" style={{ zIndex: 1 }}>
+          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <span style={{ display: 'inline-block', background: 'var(--accent-gold)', color: '#122217', padding: '6px 16px', borderRadius: '30px', fontSize: '0.85rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '25px' }}>
                 {blog.category}
               </span>
-              <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(3rem, 5vw, 4.5rem)', color: '#FFF', lineHeight: 1.1, maxWidth: '900px', marginBottom: '25px' }}>
+              <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', color: '#FFF', lineHeight: 1.15, maxWidth: '900px', marginBottom: '25px' }}>
                 {blog.title}
               </h1>
               <div style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.1rem', display: 'flex', gap: '20px', alignItems: 'center' }}>
@@ -139,7 +139,7 @@ export default function BlogPost() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '60px', alignItems: 'flex-start' }}>
             
             {/* Main Content Column */}
-            <div style={{ flex: '1 1 600px', background: '#FFF', padding: '60px 80px', borderRadius: '30px', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.03)' }}>
+            <div style={{ flex: '1 1 600px', background: '#FFF', padding: 'clamp(30px, 5vw, 60px) clamp(20px, 5vw, 80px)', borderRadius: '30px', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.03)' }}>
               <motion.div 
                 initial={{ opacity: 0 }} 
                 animate={{ opacity: 1 }} 
@@ -158,7 +158,7 @@ export default function BlogPost() {
             </div>
 
             {/* Sticky Sidebar */}
-            <div style={{ flex: '0 0 350px', position: 'sticky', top: '120px' }}>
+            <div style={{ flex: '1 1 350px', maxWidth: '400px', minWidth: '300px', position: 'sticky', top: '120px' }}>
               <div style={{ background: '#FFF', padding: '40px', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.03)', marginBottom: '30px' }}>
                 <span style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '15px', fontWeight: 600 }}>Written By</span>
                 <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', color: 'var(--bg-dark-forest)', margin: '0 0 10px 0' }}>{blog.author}</h3>

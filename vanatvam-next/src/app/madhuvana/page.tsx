@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
+import AccordionGallery from '@/components/premium/AccordionGallery';
 import Counter from '@/components/premium/Counter';
 import Magnetic from '@/components/premium/Magnetic';
 import { useLenis } from '@/components/premium/SmoothScroll';
@@ -118,7 +119,14 @@ const birds = [
 ];
 
 export default function Madhuvana() {
-  const galleryImages: string[] = ["/assets/images/Madhuvana/Master Plan.jpg", "/assets/images/Madhuvana/MV Tree House.jpg", "/assets/images/Madhuvana/eco friendly.png", "/assets/images/Madhuvana/MV Gazebo.jpg", "/assets/images/Madhuvana/MV Pond and Cottage.jpg"];
+  
+  const galleryItems = [
+    { img: '/assets/images/madhu_vana.webp', title: 'Water-Led Ecology', desc: 'A landscape sculpted around flowing canals and an extensive central lake.' },
+    { img: '/assets/images/madhuvana_gallery_1.webp', title: 'The Secret Vanas', desc: 'Five sacred groves aligned with ancient Vedic wisdom and celestial energies.' },
+    { img: '/assets/images/about_hero_bg.webp', title: 'Canopy Density', desc: 'Over 5,000 native trees forming a thriving habitat for birds and pollinators.' },
+    { img: '/assets/images/master_plan_map.webp', title: 'Farm Parcels', desc: 'Spacious quarter-acre plots designed for integrated organic farming and living.' },
+  ];
+
   const [selected, setSelected] = useState<{ kind: 'plot' | 'amenity'; id: string } | null>(null);
   const lenisRef = useLenis();
 
@@ -214,7 +222,7 @@ export default function Madhuvana() {
                 <img src="/assets/projects/Logo-MadhuVana.svg" alt="MADHUVANA Logo" style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
 
-              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.8rem', color: 'var(--bg-dark-forest)', marginBottom: '30px', lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: 'Ancient forest wisdom<br/>meets modern living.' }}>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 2.8vw, 2.8rem)', color: 'var(--bg-dark-forest)', marginBottom: '30px', lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: 'Ancient forest wisdom<br/>meets modern living.' }}>
               </h2>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-dark)', fontSize: '1.1rem', lineHeight: 1.8 }}>
@@ -224,12 +232,12 @@ export default function Madhuvana() {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', borderTop: '1px solid var(--border-light)', paddingTop: '40px', marginTop: '40px' }}>
                 <div>
-                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Ecological Impact</h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Designed to restore soil health, recharge aquifers, and provide a sanctuary for local flora and fauna.</p>
+                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>The Secret Vanas</h4>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Explore five sacred groves including Nakshatravana, Rashivana, and Vinayakavana, each designed with specific spiritual plants and ancient Vedic alignments.</p>
                 </div>
                 <div>
-                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Community Living</h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Low-density footprints ensuring maximum privacy and minimal disturbance to the natural surroundings.</p>
+                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Embraced by Water</h4>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Bordered on three sides by flowing channels, featuring a serene central lake and organic fruit orchards.</p>
                 </div>
               </div>
             </motion.div>
@@ -342,30 +350,17 @@ export default function Madhuvana() {
         </div>
       </section>
 
-      {galleryImages.length > 0 && (
+            {galleryItems.length > 0 && (
         <section style={{ padding: '100px 0', background: '#FFF' }}>
           <div className="container">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px', textAlign: 'center' }}>GALLERY</span>
-              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: 'var(--bg-dark-forest)', marginBottom: '60px', textAlign: 'center' }}>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 3.0vw, 3.0rem)', color: 'var(--bg-dark-forest)', marginBottom: '60px', textAlign: 'center' }}>
                 Life at MADHUVANA
               </h2>
             </motion.div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '20px' }}>
-              {galleryImages.map((img, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-                  style={{ borderRadius: '16px', overflow: 'hidden', height: '350px' }}
-                >
-                  <img src={img} alt={`MADHUVANA gallery ${i}`} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
-                </motion.div>
-              ))}
-            </div>
+            
+            <AccordionGallery items={galleryItems} height="500px" />
           </div>
         </section>
       )}

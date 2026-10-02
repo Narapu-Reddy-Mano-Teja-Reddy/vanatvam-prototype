@@ -645,13 +645,29 @@ ul {
   white-space: nowrap;
 }
 
+.reviews-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: vanaMarqueeScroll 60s linear infinite;
+}
+
+.reviews-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.reviews-marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 @keyframes vanaMarqueeScroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .vana-marquee-track {
+  .vana-marquee-track, .reviews-marquee-track {
     animation: none;
   }
 }
@@ -3274,3 +3290,9 @@ ul {
 
 
 
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}

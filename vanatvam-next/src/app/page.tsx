@@ -18,8 +18,6 @@ const heroSlides = [
   { id: 'madhuvana', name: 'MADHUVANA', location: 'Maddur · 18 Acres', tagline: 'A dense water-forest ecosystem built around 250+ native trees.', img: '/assets/images/madhu_vana.webp' },
   { id: 'anantavana', name: 'ANANTAVANA', location: 'Near Kabini · 35 Acres', tagline: 'Living within the Bandipur–Nagarhole wildlife corridor.', img: '/assets/images/anantavana.webp' },
   { id: 'eeshavana', name: 'EESHAVANA', location: 'Kollegala · Cauvery Riverfront', tagline: 'A premium riverfront community on the sacred Cauvery.', img: '/assets/images/eeshavana.webp' },
-  { id: 'saptavana', name: 'SAPTAVANA', location: 'Nandi Hills · 10 Exclusive Plots', tagline: 'A sanctuary of sacred groves, minutes from Bengaluru.', img: '/assets/images/forest_address_bg.webp' },
-  { id: 'shukhavana', name: 'SHUKHAVANA', location: 'Doddaballapur · 6.5 Acres', tagline: 'Where nature, birds, and happiness thrive together.', img: '/assets/images/sukhavana.webp' },
 ];
 
 export default function Home() {
@@ -112,7 +110,7 @@ export default function Home() {
                 <span style={{ display: 'block', color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', marginBottom: '16px' }}>
                   0{activeSlide + 1} / 0{heroSlides.length} · {slide.location}
                 </span>
-                <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '5rem', lineHeight: 1.05, color: '#FFFFFF', marginBottom: '20px', letterSpacing: '-0.02em' }}>
+                <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.75rem, 5.0vw, 5.0rem)', lineHeight: 1.05, color: '#FFFFFF', marginBottom: '20px', letterSpacing: '-0.02em' }}>
                   {slide.name}
                 </h1>
                 <p style={{ fontSize: '1.25rem', color: 'rgba(255, 255, 255, 0.85)', lineHeight: 1.6, maxWidth: '600px', marginBottom: '36px', fontWeight: 300 }}>
@@ -135,14 +133,16 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <button className="hero-carousel-arrow left" onClick={prevSlide} aria-label="Previous community">
-          <i className="fa-solid fa-chevron-left"></i>
-        </button>
-        <button className="hero-carousel-arrow right" onClick={nextSlide} aria-label="Next community">
-          <i className="fa-solid fa-chevron-right"></i>
-        </button>
+        <div style={{ position: 'absolute', bottom: '40px', right: '40px', display: 'flex', gap: '15px', zIndex: 15 }}>
+          <button className="hero-carousel-arrow" style={{ position: 'relative', top: 'auto', left: 'auto', right: 'auto', transform: 'none' }} onClick={prevSlide} aria-label="Previous community">
+            <i className="fa-solid fa-chevron-left"></i>
+          </button>
+          <button className="hero-carousel-arrow" style={{ position: 'relative', top: 'auto', left: 'auto', right: 'auto', transform: 'none' }} onClick={nextSlide} aria-label="Next community">
+            <i className="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
 
-        <div className="hero-carousel-dots">
+        <div className="hero-carousel-dots" style={{ left: '40px', transform: 'none' }}>
           {heroSlides.map((s, i) => (
             <button
               key={s.id}
@@ -159,7 +159,7 @@ export default function Home() {
         <div className="vana-marquee-track">
           {Array(2).fill(null).map((_, rep) => (
             <div className="vana-marquee-group" key={rep}>
-              {['Brindavana', 'Madhuvana', 'Anantavana', 'Eeshavana', 'Saptavana', 'Shukhavana'].map((name) => (
+              {['Brindavana', 'Madhuvana', 'Anantavana', 'Eeshavana'].map((name) => (
                 <span key={name} className="vana-marquee-item">
                   {name} <Leaf className="size-4" strokeWidth={1.5} style={{ display: 'inline', margin: '0 28px', color: 'var(--accent-gold)' }} />
                 </span>
@@ -228,14 +228,14 @@ export default function Home() {
             style={{ flex: '1 1 50%', minWidth: '300px', padding: '120px 8%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
           >
             <span style={{ color: 'var(--accent-gold)', fontSize: '0.85rem', letterSpacing: '0.15em', fontWeight: 600, marginBottom: '20px' }}>ECOLOGICAL PROTECTION</span>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: '#FFFFFF', lineHeight: 1.1, marginBottom: '30px' }}>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 3.0vw, 3.0rem)', color: '#FFFFFF', lineHeight: 1.1, marginBottom: '30px' }}>
               <RevealText>Conservation that invites people in.</RevealText>
             </h2>
             <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.8, marginBottom: '40px' }}>
               Traditional conservation often begins by keeping people away from nature. Vanatvam takes a different approach. We bring people into the ecosystem as owners, residents, and custodians — creating a model where human presence directly supports regeneration.
             </p>
             <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '20px', padding: '36px 32px', position: 'relative' }}>
-              <span style={{ position: 'absolute', top: '10px', left: '24px', fontFamily: 'var(--font-serif)', fontSize: '3.5rem', color: 'var(--accent-gold)', opacity: 0.3, lineHeight: 1 }}>&ldquo;</span>
+              <span style={{ position: 'absolute', top: '10px', left: '24px', fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.9250000000000003rem, 3.5vw, 3.5rem)', color: 'var(--accent-gold)', opacity: 0.3, lineHeight: 1 }}>&ldquo;</span>
               <blockquote style={{ margin: 0, position: 'relative', zIndex: 1 }}>
                 <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', color: '#FFF', fontStyle: 'italic', marginBottom: '10px', marginTop: '18px' }}>
                   If you want to save the wildlife, start by saving the trees.
@@ -357,7 +357,7 @@ export default function Home() {
                 >
                   Biodiversity by Design
                 </motion.span>
-                <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3.8rem', color: 'var(--bg-dark-forest)', lineHeight: 1.1, marginBottom: '30px' }}>
+                <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.09rem, 3.8vw, 3.8rem)', color: 'var(--bg-dark-forest)', lineHeight: 1.1, marginBottom: '30px' }}>
                   <RevealText>We don&apos;t landscape.</RevealText><br/>
                   <RevealText delay={0.1}>We create ecosystems.</RevealText>
                 </h2>
@@ -436,7 +436,7 @@ export default function Home() {
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '80px' }}>
             <motion.div variants={fadeIn} style={{ flex: '1 1 500px', maxWidth: '600px' }}>
               <span className="subtitle-tag" style={{ color: 'var(--accent-gold)' }}>LIVING ECOSYSTEMS</span>
-              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3.5rem', lineHeight: 1.1, color: 'var(--bg-dark-forest)', marginTop: '15px' }}>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.9250000000000003rem, 3.5vw, 3.5rem)', lineHeight: 1.1, color: 'var(--bg-dark-forest)', marginTop: '15px' }}>
                 <RevealText>Four Unique Expressions of</RevealText> <RevealText delay={0.1} style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>Nature&apos;s Abundance.</RevealText>
               </h2>
             </motion.div>
@@ -579,7 +579,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.92 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
               style={{ background: 'var(--bg-dark-forest)', color: '#FFF', borderRadius: '32px', padding: '60px 40px', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
             >
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: '5rem', color: 'var(--accent-gold)', lineHeight: 1 }}>
+              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.75rem, 5.0vw, 5.0rem)', color: 'var(--accent-gold)', lineHeight: 1 }}>
                 <Counter value={80} suffix="%+" />
               </div>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', margin: '18px 0 14px' }}>Green Cover Guarantee</h3>
@@ -662,36 +662,49 @@ export default function Home() {
             </motion.p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
-            {[
-              "oTd69o1SAkk",
-              "rPMv_cggbH8",
-              "HIuRfVHefz0",
-              "5sDm6-yiMPs",
-              "61PcdiIYtgs"
-            ].map((id, i) => (
-              <motion.div
-                key={id}
-                initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }}
-                style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.3)', background: '#0A1510', border: '1px solid rgba(255,255,255,0.06)' }}
-              >
-                <div style={{ aspectRatio: '16/9' }}>
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${id}?modestbranding=1&rel=0`}
-                    title="Client Review"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
+          <div style={{ overflow: 'hidden', padding: '20px 0', width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
+            <div className="reviews-marquee-track">
+              {[0, 1].map((rep) => (
+                <div key={rep} className="reviews-marquee-group" style={{ display: 'flex', gap: '30px', paddingRight: '30px', flexShrink: 0 }}>
+                  {[
+                    "oTd69o1SAkk",
+                    "rPMv_cggbH8",
+                    "HIuRfVHefz0",
+                    "5sDm6-yiMPs",
+                    "61PcdiIYtgs"
+                  ].map((id, i) => (
+                    <motion.div
+                      key={id + rep}
+                      style={{ 
+                        width: '360px', 
+                        flexShrink: 0, 
+                        borderRadius: '24px', 
+                        overflow: 'hidden', 
+                        boxShadow: '0 20px 40px rgba(0,0,0,0.3)', 
+                        background: '#0A1510', 
+                        border: '1px solid rgba(255,255,255,0.06)' 
+                      }}
+                    >
+                      <div style={{ aspectRatio: '16/9' }}>
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={`https://www.youtube.com/embed/${id}?modestbranding=1&rel=0`}
+                          title="Client Review"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                      <div style={{ padding: '14px 18px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <i className="fa-solid fa-circle-play" style={{ color: 'var(--accent-gold)', fontSize: '0.85rem' }}></i>
+                        <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>Client Video Testimonial</span>
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
-                <div style={{ padding: '14px 18px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <i className="fa-solid fa-circle-play" style={{ color: 'var(--accent-gold)', fontSize: '0.85rem' }}></i>
-                  <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>Client Video Testimonial</span>
-                </div>
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

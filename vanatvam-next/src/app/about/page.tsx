@@ -54,7 +54,7 @@ export default function About() {
                 initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.3 }}
                 style={{ position: 'absolute', bottom: '-40px', right: '-40px', background: 'var(--bg-dark-forest)', padding: '40px', borderRadius: '24px', maxWidth: '320px', color: '#FFF', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}
               >
-                <span style={{ fontSize: '4rem', color: 'var(--accent-gold)', fontFamily: 'var(--font-serif)', lineHeight: 0.5, display: 'block', marginBottom: '20px' }}>&ldquo;</span>
+                <span style={{ fontSize: 'clamp(2.2rem, 4.0vw, 4.0rem)', color: 'var(--accent-gold)', fontFamily: 'var(--font-serif)', lineHeight: 0.5, display: 'block', marginBottom: '20px' }}>&ldquo;</span>
                 <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', fontStyle: 'italic', marginBottom: '15px', lineHeight: 1.5, color: '#FFFFFF' }}>
                   If you want to save the wildlife, start by saving the trees.
                 </p>
@@ -120,7 +120,7 @@ export default function About() {
               style={{ padding: '60px', background: 'rgba(255,255,255,0.03)', borderRadius: '30px', border: '1px solid rgba(255,255,255,0.05)', position: 'relative' }}
             >
               <span style={{ position: 'absolute', top: '40px', right: '40px', fontSize: '8rem', fontFamily: 'var(--font-serif)', color: 'rgba(198,162,101,0.06)', lineHeight: 0.8, pointerEvents: 'none' }}>01</span>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.5rem', color: 'var(--accent-gold)', marginBottom: '20px' }}>Nakshatra Vana</h3>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 2.5vw, 2.5rem)', color: 'var(--accent-gold)', marginBottom: '20px' }}>Nakshatra Vana</h3>
               <p style={{ fontSize: '1.15rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', fontWeight: 300 }}>
                 Forests inspired by India&apos;s ancient connection between trees, nature, and the stars. Each species is carefully chosen to create micro-climate sanctuaries and preserve endemic flora.
               </p>
@@ -131,7 +131,7 @@ export default function About() {
               style={{ padding: '60px', background: 'rgba(255,255,255,0.03)', borderRadius: '30px', border: '1px solid rgba(255,255,255,0.05)', position: 'relative' }}
             >
               <span style={{ position: 'absolute', top: '40px', right: '40px', fontSize: '8rem', fontFamily: 'var(--font-serif)', color: 'rgba(198,162,101,0.06)', lineHeight: 0.8, pointerEvents: 'none' }}>02</span>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.5rem', color: 'var(--accent-gold)', marginBottom: '20px' }}>Navagraha Vana</h3>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 2.5vw, 2.5rem)', color: 'var(--accent-gold)', marginBottom: '20px' }}>Navagraha Vana</h3>
               <p style={{ fontSize: '1.15rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', fontWeight: 300 }}>
                 Thematic plantations rooted in India&apos;s traditional ecological and cultural knowledge, fostering medicinal plants, bird sanctuaries, and organic soil health.
               </p>
