@@ -5,6 +5,7 @@ import ScrollProgress from "@/components/premium/ScrollProgress";
 import GrainOverlay from "@/components/premium/GrainOverlay";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.vanatvam.com"),
   title: {
     default: "Vanatvam | Sustainable Managed Farmland & Nature Communities",
     template: "%s | Vanatvam"

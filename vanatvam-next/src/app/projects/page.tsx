@@ -98,7 +98,7 @@ export default function Projects() {
         </div>
       </section>
 
-      <section style={{ padding: '100px 0', background: 'var(--bg-cream)' }}>
+      <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-cream)' }}>
         <div className="container">
           <motion.div layout style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))', gap: '40px' }}>
             <AnimatePresence mode="popLayout">
@@ -150,6 +150,85 @@ export default function Projects() {
               ))}
             </AnimatePresence>
           </motion.div>
+        </div>
+      </section>
+
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: '#F9F8F6' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '60px', alignItems: 'center' }}>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
+            >
+              <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+                EXPERIENCE THE LAND
+              </span>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.5rem, 4vw, 3.2rem)', color: 'var(--bg-dark-forest)', lineHeight: 1.1, marginBottom: '30px', letterSpacing: '-0.02em' }}>
+                Immerse in Nature's Rhythm.
+              </h2>
+              <p style={{ fontSize: '1.15rem', color: 'var(--text-dark)', lineHeight: 1.8, marginBottom: '20px', fontWeight: 300 }}>
+                At VanaTvam, land is just the beginning. Every farm plot is crafted as an enriching experience—an opportunity to reconnect with the earth and immerse in the natural rhythms of nature.
+              </p>
+              <p style={{ fontSize: '1.15rem', color: 'var(--text-dark)', lineHeight: 1.8, marginBottom: '20px', fontWeight: 300 }}>
+                When you own a farm plot in Vanatvam projects, you can enjoy stays in serene eco cottages, walk through verdant trails brimming with biodiversity, plant saplings to honour nature’s legacy, and experience vibrant cultural festivals that celebrate community, heritage, and sustainability.
+              </p>
+              <p style={{ fontSize: '1.25rem', color: 'var(--bg-dark-forest)', lineHeight: 1.8, fontWeight: 500 }}>
+                Vanatvam's farms aren’t just a place you buy, it's a life you experience.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
+              style={{ borderRadius: '30px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.04)' }}
+            >
+              <img src="/assets/images/dew_drops_leaf.webp" alt="Nature's Rhythm" style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: 'var(--bg-dark-forest)', color: '#FFF' }}>
+        <div className="container">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
+            style={{ textAlign: 'center', marginBottom: '80px', maxWidth: '800px', margin: '0 auto 60px' }}
+          >
+            <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+              Built Spaces
+            </span>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.1, marginBottom: '30px' }}>
+              Shared Cottages: Convenience Meets Comfort
+            </h2>
+            <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.8 }}>
+              For plot owners not yet ready to build their homes, Vanatvam offers beautifully designed Shared Cottages, with complimentary stays for a fixed number of days each year. It’s the perfect way to enjoy the land you own—without the pressure of immediate construction. Whether you seek solitude, connection, or celebration, our shared cottages offer a living experience that is rooted in nature, refined in design, and rich in meaning.
+            </p>
+          </motion.div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '40px' }}>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.1 }}
+              style={{ padding: '50px 40px', background: 'rgba(255,255,255,0.03)', borderRadius: '30px', border: '1px solid rgba(255,255,255,0.05)' }}
+            >
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--accent-gold)', marginBottom: '20px' }}>Madhuvana Cottages</h3>
+              <p style={{ fontSize: '1.05rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', fontWeight: 300, marginBottom: '20px' }}>
+                4 cottages of about 400+sft each are built using exposed wire-cut bricks and feature a central courtyard, open green views on both sides, and two bathrooms—one with a skylight and semi-open design for a rare, nature-connected bathing experience.
+              </p>
+              <p style={{ fontSize: '1.05rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', fontWeight: 300 }}>
+                Modern conveniences like a compact workstation and kitchenette ensure a comfortable, soulful retreat.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}
+              style={{ padding: '50px 40px', background: 'rgba(255,255,255,0.03)', borderRadius: '30px', border: '1px solid rgba(255,255,255,0.05)' }}
+            >
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--accent-gold)', marginBottom: '20px' }}>AnantaVana Cottages</h3>
+              <p style={{ fontSize: '1.05rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', fontWeight: 300, marginBottom: '20px' }}>
+                Our distinctive roundhouse cottages offer panoramic forest views, overlook a serene pond, and blend harmoniously with the landscaped surroundings.
+              </p>
+              <p style={{ fontSize: '1.05rem', lineHeight: 1.8, color: 'var(--accent-gold)', fontWeight: 500, marginTop: '40px' }}>
+                With ~20% of each project dedicated to community spaces, there’s always room to gather, celebrate, or simply unwind—together.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 

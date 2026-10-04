@@ -48,7 +48,7 @@ export default function Blog() {
     <>
       <Navigation />
 
-      <section style={{ position: 'relative', padding: '180px 0 100px', overflow: 'hidden' }}>
+      <section style={{ position: 'relative', padding: 'clamp(120px, 15vh, 160px) 0 clamp(60px, 8vh, 90px)', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
           <img src="/assets/images/about_story_forest.webp" alt="Forest Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(18,34,23,0.85) 0%, rgba(18,34,23,0.95) 100%)' }}></div>

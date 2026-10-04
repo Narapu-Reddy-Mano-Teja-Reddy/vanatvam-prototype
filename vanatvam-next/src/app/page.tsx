@@ -26,8 +26,6 @@ export default function Home() {
   const pausedRef = useRef(false);
 
   useEffect(() => {
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) return;
     const timer = setInterval(() => {
       if (!pausedRef.current) {
         setActiveSlide((prev) => (prev + 1) % heroSlides.length);
@@ -170,7 +168,7 @@ export default function Home() {
       </div>
 
       {/* Our Philosophy */}
-      <section style={{ padding: '180px 0', background: 'var(--bg-cream)', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: 'var(--bg-cream)', position: 'relative', overflow: 'hidden' }}>
         {/* Subtle background decoration */}
         <div style={{ position: 'absolute', top: '10%', right: '-10%', width: '50vw', height: '50vw', background: 'radial-gradient(circle, rgba(198,162,101,0.06) 0%, transparent 70%)', zIndex: 0, borderRadius: '50%' }} />
 
@@ -264,7 +262,7 @@ export default function Home() {
       </section>
 
       {/* Impact in Numbers */}
-      <section style={{ padding: '110px 0', background: 'var(--bg-dark-forest)', borderTop: '1px solid var(--border-dark)', borderBottom: '1px solid var(--border-dark)' }}>
+      <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-dark-forest)', borderTop: '1px solid var(--border-dark)', borderBottom: '1px solid var(--border-dark)' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '50px', textAlign: 'center' }}>
             {[
@@ -289,7 +287,7 @@ export default function Home() {
       </section>
 
       {/* When Nature Takes Over - Evolving Ecosystem */}
-      <section style={{ padding: '160px 0', background: 'var(--bg-cream)' }}>
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: 'var(--bg-cream)' }}>
         <div className="container">
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '90px', alignItems: 'center' }}>
 
@@ -344,7 +342,7 @@ export default function Home() {
       </section>
 
       {/* Redesigned Biodiversity by Design - Premium Sticky Layout */}
-      <section style={{ padding: '160px 0', background: '#F9F8F6' }}>
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: '#F9F8F6' }}>
         <div className="container">
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '80px' }}>
             
@@ -392,7 +390,7 @@ export default function Home() {
       </section>
 
       {/* 200+ Varieties of Trees, Plants & Habitats */}
-      <section style={{ padding: '160px 0', background: '#122217' }}>
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: '#122217' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 70px' }}>
             <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
@@ -428,7 +426,7 @@ export default function Home() {
         </div>
       </section>
 
-      <motion.section className="projects-section" id="projects" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={staggerContainer} style={{ padding: '120px 0', background: 'var(--bg-cream)', position: 'relative', overflow: 'hidden' }}>
+      <motion.section className="projects-section" id="projects" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={staggerContainer} style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-cream)', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '-10%', left: '-5%', width: '40vw', height: '40vw', background: 'radial-gradient(circle, rgba(198,162,101,0.08) 0%, transparent 70%)', zIndex: 0, borderRadius: '50%' }}></div>
         <div style={{ position: 'absolute', bottom: '-10%', right: '-5%', width: '50vw', height: '50vw', background: 'radial-gradient(circle, rgba(45,106,79,0.05) 0%, transparent 70%)', zIndex: 0, borderRadius: '50%' }}></div>
 
@@ -543,7 +541,7 @@ export default function Home() {
       </section>
 
       {/* Ownership Beyond Your Plot + Green Cover Guarantee */}
-      <section style={{ padding: '140px 0', background: 'var(--bg-cream)' }}>
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: 'var(--bg-cream)' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '60px', alignItems: 'stretch' }}>
             <motion.div
@@ -602,7 +600,7 @@ export default function Home() {
       </section>
 
       {/* Nature. Community. Future. */}
-      <section style={{ padding: '140px 0', background: '#F9F8F6', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: '#F9F8F6', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '-15%', left: '50%', transform: 'translateX(-50%)', width: '60vw', height: '40vw', background: 'radial-gradient(ellipse, rgba(198,162,101,0.07) 0%, transparent 70%)', zIndex: 0 }} />
         <div className="container relative" style={{ zIndex: 1 }}>
           <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 70px' }}>
@@ -614,32 +612,81 @@ export default function Home() {
             </h2>
             <p style={{ color: 'var(--text-muted)', marginTop: '16px' }}>Vanatvam brings together three things that are often treated separately in real estate development:</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px,1fr))', gap: '40px', maxWidth: '1000px', margin: '0 auto' }}>
+          <div className="philosophy-grid">
             {[
               { icon: TreePine, num: '01', title: 'Nature', text: 'Native forests, biodiversity creation, soil regeneration, and long-term ecological restoration.' },
               { icon: Users, num: '02', title: 'People', text: 'Communities designed around meaningful shared experiences, wellness, and quiet reflection in nature.' },
               { icon: Target, num: '03', title: 'Purpose', text: 'A commercially viable managed farmland investment model that supports long-term ecological growth.' },
+              { icon: Leaf, num: '04', title: 'Biodiversity', text: 'Rich ecological diversity, fostering habitats that support endemic species and complex natural webs.' },
             ].map((t, i) => (
               <motion.div
                 key={t.num}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }}
-                whileHover={{ y: -6 }}
-                style={{ textAlign: 'center', background: '#FFFFFF', padding: '46px 32px', borderRadius: '22px', boxShadow: '0 16px 36px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.03)' }}
+                className="philosophy-card"
               >
-                <div style={{ width: '72px', height: '72px', borderRadius: '50%', background: 'linear-gradient(145deg, var(--accent-gold), #B4894F)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 22px', color: '#FFFFFF', boxShadow: '0 14px 28px rgba(198,162,101,0.35)' }}>
+                <div className="philosophy-num">{t.num}</div>
+                <div className="philosophy-icon-wrap">
                   <t.icon className="size-8" strokeWidth={1.5} />
                 </div>
-                <span style={{ fontFamily: 'var(--font-serif)', fontSize: '0.85rem', color: 'var(--accent-gold)', letterSpacing: '0.15em' }}>{t.num}</span>
-                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', color: 'var(--bg-dark-forest)', margin: '8px 0 12px' }}>{t.title}</h3>
-                <p style={{ color: 'var(--text-muted)', lineHeight: 1.7, margin: '0 auto', maxWidth: '260px' }}>{t.text}</p>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', color: 'var(--bg-dark-forest)', margin: '0 0 12px' }}>{t.title}</h3>
+                <p style={{ color: 'var(--text-muted)', lineHeight: 1.7, margin: 0, fontSize: '0.95rem' }}>{t.text}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Community Events */}
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: 'var(--bg-cream)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 60px' }}>
+            <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+              🌟 Community Events at Vanatvam
+            </span>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.4rem, 4.5vw, 3.5rem)', color: 'var(--bg-dark-forest)', lineHeight: 1.15, marginBottom: '24px' }}>
+              Celebrating Life, Nature, and Togetherness
+            </h2>
+            <p style={{ fontSize: '1.15rem', color: 'var(--text-muted)', lineHeight: 1.8 }}>
+              At both Madhuvana and AnantaVana, we host vibrant seasonal festivals that bring our community closer to the land—and to each other. Each event transforms our shared spaces—courtyards, pondside lawns, and open-air plazas—into stages for memorable experiences, nurturing a true sense of belonging and harmony within our farm community.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
+              style={{ background: '#FFF', borderRadius: '24px', padding: '40px', boxShadow: '0 15px 35px rgba(0,0,0,0.05)' }}
+            >
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginBottom: '16px' }}>Deepotsava</h3>
+              <p style={{ color: 'var(--text-muted)', lineHeight: 1.7 }}>
+                A magical evening where hundreds of earthen lamps are lovingly lit across the farm, illuminating pathways, courtyards, and green spaces—creating a warm, communal glow and a sense of shared wonder.
+              </p>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
+              style={{ background: '#FFF', borderRadius: '24px', padding: '40px', boxShadow: '0 15px 35px rgba(0,0,0,0.05)' }}
+            >
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginBottom: '16px' }}>Vasantotsava</h3>
+              <p style={{ color: 'var(--text-muted)', lineHeight: 1.7 }}>
+                A joyful celebration of spring, complete with nature-inspired arts, guided walks, interactive workshops, and farm-to-table gatherings—designed to awaken the senses and connect us all with the rhythms of growth and renewal.
+              </p>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
+              style={{ background: '#FFF', borderRadius: '24px', padding: '40px', boxShadow: '0 15px 35px rgba(0,0,0,0.05)' }}
+            >
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginBottom: '16px' }}>Seasonal Gatherings</h3>
+              <p style={{ color: 'var(--text-muted)', lineHeight: 1.7 }}>
+                From planting festivals, to stargazing nights, nature workshops, communal cooking, and storytelling by the bonfire—we host events that celebrate biodiversity, culture, and sustainable living.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Client Reviews Section */}
-      <section style={{ padding: '160px 0', background: '#122217', color: '#FFF' }}>
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: '#122217', color: '#FFF' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
             <motion.span 

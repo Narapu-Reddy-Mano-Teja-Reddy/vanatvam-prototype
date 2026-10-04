@@ -38,7 +38,7 @@ export default function Investment() {
       </section>
 
       {/* Investment Pillars */}
-      <section style={{ padding: '160px 0', background: 'var(--bg-cream)', position: 'relative' }}>
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: 'var(--bg-cream)', position: 'relative' }}>
         <div className="container">
           <motion.div 
             initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
@@ -72,8 +72,43 @@ export default function Investment() {
         </div>
       </section>
 
+      {/* Beyond Land, Beyond ROI */}
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: 'var(--bg-cream)' }}>
+        <div className="container">
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '80px', alignItems: 'center' }}>
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
+              style={{ flex: '1 1 500px' }}
+            >
+              <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+                OUR PURPOSE
+              </span>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.8rem, 4vw, 3.8rem)', color: 'var(--bg-dark-forest)', lineHeight: 1.1, marginBottom: '30px', letterSpacing: '-0.02em' }}>
+                Beyond Land, Beyond ROI.
+              </h2>
+              <p style={{ fontSize: '1.2rem', color: 'var(--text-dark)', lineHeight: 1.8, marginBottom: '25px', fontWeight: 300 }}>
+                Vanatvam is not a land bank or an ROI-driven company. Our mission transcends mere property transactions and profit-centric models. Instead, we carefully curate living, breathing eco-systems that become vibrant cultural communities.
+              </p>
+              <p style={{ fontSize: '1.2rem', color: 'var(--text-dark)', lineHeight: 1.8, marginBottom: '25px', fontWeight: 300 }}>
+                Our goal is to foster spaces where life thrives in harmony with nature, where every tree planted and every cottage built contributes meaningfully to ecological balance and cultural enrichment.
+              </p>
+              <p style={{ fontSize: '1.25rem', color: 'var(--bg-dark-forest)', lineHeight: 1.8, fontWeight: 500 }}>
+                VanaTvam is about legacy, connection, and sustainable living—not just land ownership.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
+              style={{ flex: '1 1 400px', borderRadius: '30px', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.1)' }}
+            >
+              <img src="/assets/images/impact_seedling.webp" alt="Legacy and Connection" style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Comparison Section */}
-      <section style={{ background: '#122217', color: '#FFF', padding: '160px 0', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ background: '#122217', color: '#FFF', padding: 'clamp(80px, 10vh, 120px) 0', position: 'relative', overflow: 'hidden' }}>
         <div className="container">
           <motion.div 
             initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}

@@ -212,7 +212,7 @@ export default function Madhuvana() {
       </section>
 
       {/* Project Overview */}
-      <section style={{ padding: '120px 0', background: 'var(--bg-cream)' }}>
+      <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-cream)' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '80px', alignItems: 'flex-start' }}>
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
@@ -257,7 +257,7 @@ export default function Madhuvana() {
       </section>
 
       {/* Interactive 3D Master Plan */}
-      <section id="master-plan" style={{ padding: '70px 0 100px', background: '#F4F1EA' }}>
+      <section id="master-plan" style={{ padding: 'clamp(50px, 6vh, 70px) 0 clamp(60px, 8vh, 90px)', background: '#F4F1EA' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '50px' }}>
             <span className="subtitle-tag">Interactive Master Plan</span>
@@ -302,7 +302,7 @@ export default function Madhuvana() {
       </section>
 
       {/* 12 Amenities Grid */}
-      <section id="amenities" style={{ padding: '100px 0', background: '#FFFFFF' }}>
+      <section id="amenities" style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: '#FFFFFF' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
             <span className="subtitle-tag">Master Plan Amenities</span>
@@ -328,7 +328,7 @@ export default function Madhuvana() {
       </section>
 
       {/* Winged Visitors */}
-      <section id="birds" style={{ padding: '100px 0', background: '#122217', color: '#FFFFFF' }}>
+      <section id="birds" style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: '#122217', color: '#FFFFFF' }}>
         <div className="container">
           <div style={{ marginBottom: '50px' }}>
             <span className="subtitle-tag subtitle-tag-light">Fauna &amp; Biodiversity</span>
@@ -351,7 +351,7 @@ export default function Madhuvana() {
       </section>
 
             {galleryItems.length > 0 && (
-        <section style={{ padding: '100px 0', background: '#FFF' }}>
+        <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: '#FFF' }}>
           <div className="container">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px', textAlign: 'center' }}>GALLERY</span>

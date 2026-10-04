@@ -37,7 +37,7 @@ export default function About() {
       </section>
 
       {/* Story Section */}
-      <section style={{ padding: '160px 0', background: 'var(--bg-cream)', position: 'relative' }}>
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: 'var(--bg-cream)', position: 'relative' }}>
         <div className="container">
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '80px', alignItems: 'center' }}>
             
@@ -97,8 +97,46 @@ export default function About() {
         </div>
       </section>
 
+      {/* Sacred Ecosystems Section */}
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: 'var(--bg-dark-forest)', color: '#FFF' }}>
+        <div className="container">
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '80px', alignItems: 'center' }}>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
+              style={{ flex: '1 1 400px', borderRadius: '30px', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.2)' }}
+            >
+              <img src="/assets/images/eeshavana.webp" alt="Sacred Ecosystems" style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
+            </motion.div>
+
+            <div style={{ flex: '1 1 500px' }}>
+              <motion.span 
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
+                style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}
+              >
+                OUR INSPIRATION
+              </motion.span>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', color: '#FFF', lineHeight: 1.1, marginBottom: '30px', letterSpacing: '-0.02em' }}>
+                Re-creating Sacred<br/><span style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>Ecosystems.</span>
+              </h2>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
+                style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.8, marginBottom: '25px', fontWeight: 300 }}
+              >
+                Our vision for VanaTvam is deeply rooted in the profound wisdom of the Brihat Samhita, an ancient Indian text illuminating sustainable living and sacred ecological balance. We embarked on this journey driven by a desire to recreate these sacred, thriving ecosystems that honour both the land and those who inhabit it.
+              </motion.p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
+                style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.8, fontWeight: 300 }}
+              >
+                VanaTvam is our heartfelt commitment to nurturing a space where nature flourishes alongside human aspiration—cultivating a community bound by respect, sustainability, and cultural richness.
+              </motion.p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Ecological Concepts Section */}
-      <section style={{ background: '#122217', color: '#FFF', padding: '160px 0', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ background: '#1B2B1F', color: '#FFF', padding: 'clamp(80px, 10vh, 120px) 0', position: 'relative', overflow: 'hidden' }}>
         <div className="container">
           <motion.div 
             initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
@@ -142,7 +180,7 @@ export default function About() {
       </section>
 
       {/* Recognition Section */}
-      <section style={{ padding: '160px 0', background: '#F9F8F6' }}>
+      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: '#F9F8F6' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '80px', alignItems: 'center' }}>
             
