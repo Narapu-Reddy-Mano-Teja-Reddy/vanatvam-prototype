@@ -5,6 +5,7 @@ import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
 import AccordionGallery from '@/components/premium/AccordionGallery';
+import { ConnectivitySection, OtherProjectsSection, DownloadBrochureButton } from '@/app/components/ProjectSections';
 
 export default function Eeshavana() {
   const specs = [
@@ -64,25 +65,45 @@ export default function Eeshavana() {
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-dark)', fontSize: '1.1rem', lineHeight: 1.8 }}>
                 <p>Eeshavana is a 6.5-acre gated premium riverfront community where village calm meets riverside living — plots from 8000 sq.ft.</p>
-              <p>This isn&apos;t just a plot. It&apos;s a way of life.</p>
-              <p>Surrounded by native trees, open skies, and unhurried mornings.</p>
-              <p>A gated, low-density community built for privacy and stillness.</p>
-              <p>A close-knit circle of landowners who value the same things you do.</p>
-              <p>Direct Kaveri frontage with a private deck, bio-pool & nature pathways.</p>
-              <p>Eeshavana is a thoughtfully planned premium riverfront community envisioned along the serene banks of the Kaveri. Every plot, pathway, and pause point has been laid out to keep you close to the river and far from the noise — connected to the essentials of life, without losing the wild calm of the land it sits on.</p>
-              <p>This is land for those who’ve outgrown the city’s pace but never want for its comforts. A place to build slowly, live simply, and return to often — where the river sets the rhythm of your days.</p>
-              <p>Everything a riverfront retreat should have</p>
-              <p>A limited number of plots are open at prelaunch pricing before the community’s public release. Reserve your stretch of riverfront now.</p>
+                <p>Eeshavana is a thoughtfully planned premium riverfront community envisioned along the serene banks of the Kaveri. Every plot, pathway, and pause point has been laid out to keep you close to the river and far from the noise — connected to the essentials of life, without losing the wild calm of the land it sits on.</p>
+                <div>
+                  <DownloadBrochureButton />
+                </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', borderTop: '1px solid var(--border-light)', paddingTop: '40px', marginTop: '40px' }}>
-                <div>
-                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Riparian Ecology</h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Meticulously designed to protect and integrate with the natural riverbank, fostering diverse aquatic and bird life.</p>
+              <div style={{ marginTop: '60px' }}>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', color: 'var(--bg-dark-forest)', marginBottom: '30px' }}>Amenities</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px' }}>
+                  {[
+                    { title: 'Trekking Path', icon: 'fa-person-hiking' },
+                    { title: 'Clubhouse', icon: 'fa-house-chimney-window' },
+                    { title: 'Pickleball Court', icon: 'fa-table-tennis-paddle-ball' },
+                    { title: 'Eco Cottages', icon: 'fa-house-leaf' }
+                  ].map((amenity, i) => (
+                    <div key={i} style={{ background: '#FFF', padding: '30px 20px', borderRadius: '16px', textAlign: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.03)' }}>
+                      <div style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '15px' }}><i className={`fa-solid ${amenity.icon}`}></i></div>
+                      <h4 style={{ fontSize: '1rem', color: 'var(--bg-dark-forest)', fontWeight: 600 }}>{amenity.title}</h4>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Waterfront Living</h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Exclusive access to the sacred Cauvery, creating a tranquil environment where the sound of flowing water is your constant companion.</p>
+              </div>
+
+              <div style={{ marginTop: '60px' }}>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', color: 'var(--bg-dark-forest)', marginBottom: '30px' }}>The Vanatvam Advantage</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                  {[
+                    { title: 'Close Comfort', desc: 'Modern amenities seamlessly integrated with natural landscapes.' },
+                    { title: 'Ready and Waiting', desc: 'Fully established infrastructure so you can build your dream farm home immediately.' },
+                    { title: 'Growth Corridor', desc: 'Located in high-appreciation zones while maintaining ecological sanctity.' }
+                  ].map((adv, i) => (
+                    <div key={i} style={{ display: 'flex', gap: '20px', background: '#FFF', padding: '24px', borderRadius: '16px', boxShadow: '0 10px 20px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.02)' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--bg-cream)', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontWeight: 'bold' }}>0{i+1}</div>
+                      <div>
+                        <h4 style={{ fontSize: '1.1rem', color: 'var(--bg-dark-forest)', marginBottom: '8px' }}>{adv.title}</h4>
+                        <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--text-muted)' }}>{adv.desc}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -138,6 +159,8 @@ export default function Eeshavana() {
         </section>
       )}
 
+      <ConnectivitySection />
+
       <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-dark-forest)', textAlign: 'center' }}>
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
@@ -146,12 +169,13 @@ export default function Eeshavana() {
               Schedule a site visit to walk the land and understand the ecological principles driving this community.
             </p>
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-              <Link href="/contact" className="btn-pill btn-pill-gold">Book a Site Visit</Link>
-              <Link href="/projects" className="btn-pill btn-pill-outline" style={{ color: '#FFF', borderColor: 'rgba(255,255,255,0.3)' }}>Back to Projects</Link>
+              <Link href="/contact" className="btn-pill btn-pill-gold">Schedule a Site Visit</Link>
             </div>
           </motion.div>
         </div>
       </section>
+
+      <OtherProjectsSection currentProjectId="eeshavana" />
 
       <Footer />
     </>

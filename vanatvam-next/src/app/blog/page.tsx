@@ -48,13 +48,9 @@ export default function Blog() {
     <>
       <Navigation />
 
-      <section style={{ position: 'relative', padding: 'clamp(120px, 15vh, 160px) 0 clamp(60px, 8vh, 90px)', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <img src="/assets/images/about_story_forest.webp" alt="Forest Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(18,34,23,0.85) 0%, rgba(18,34,23,0.95) 100%)' }}></div>
-        </div>
+      <section style={{ position: 'relative', padding: 'clamp(150px, 20vh, 180px) 0 clamp(80px, 10vh, 100px)', overflow: 'hidden', background: 'var(--bg-dark-forest)' }}>
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ textAlign: 'center', marginBottom: '20px' }}>
             <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em' }}>VANATVAM JOURNAL</span>
             <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.8rem, 6vw, 4.5rem)', color: '#FFF', marginTop: '20px', lineHeight: 1.15 }}>Stories from the Soil</h1>
             <p style={{ fontSize: 'clamp(1.05rem, 2vw, 1.25rem)', color: 'rgba(255,255,255,0.85)', maxWidth: '650px', margin: '24px auto 0', lineHeight: 1.6 }}>Insights, updates, and deep dives into ecological restoration, nature communities, and sustainable living.</p>

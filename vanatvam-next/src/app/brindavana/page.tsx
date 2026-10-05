@@ -4,6 +4,7 @@ import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
 import AccordionGallery from '@/components/premium/AccordionGallery';
+import { ConnectivitySection, OtherProjectsSection, DownloadBrochureButton } from '@/app/components/ProjectSections';
 
 export default function Brindavana() {
   
@@ -62,24 +63,46 @@ export default function Brindavana() {
               </h2>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-dark)', fontSize: '1.1rem', lineHeight: 1.8 }}>
-                <p>Brindavana, where roots run deep and nature thrives</p>
-              <p>Welcome to Brindavana, a 30-acre haven of sustainable, natural farmland nestled amidst the serenity of Krishnapura in the Pavagada Taluk. Here, at Brindavana by Vanatvam, we have woven together the ancient wisdom of our culture with innovative agroforestry and organic farming practices to create a flourishing ecosystem that nourishes both the land and the soul.</p>
-              <p>Brindavana’s journey is a testament to the power of dedication and respect for nature. Once barren land, it has been meticulously revived through years of tireless effort. Our commitment to natural methods, without the use of harmful fertilizers, has nurtured the soil back to health, creating a foundation for a thriving ecosystem.</p>
-              <p>We understand that healthy soil is the backbone of any sustainable farm. At Brindavana, we’ve focused on fostering a rich and diverse microbial community within the soil. This not only increases fertility but also ensures a natural and sustainable habitat for all living things.</p>
-              <p>Brindavana is more than just a farm; it’s a community that cherishes family traditions, our ancient cultural values, and our connection to the land. Here, we believe in preserving our heritage while embracing sustainable practices to create a brighter future for generations to come.</p>
-              <p>In a fast-paced world, Brindavana has become a unique sanctuary for busy professionals. Corporate employees and self-employed people seeking a break from the demands of city life, are finding solace and rejuvenation in the natural, sustainable lure of Brindavana. Therapeutic Farming is all about re-connecting with soil and nurturing the land and this has proven to have a calming and stress-reducing effect as many city dwellers are discovering!</p>
-              <p>Brindavana is a community of like-minded individuals who share a passion for sustainability, a desire for a simpler way of life and an emotional connection for our culture. At Brindavana, our farm owners are eco-conscious and take pride in fully embracing nature and spend quality time with friends and family.</p>
-              <p>Reconnect with your roots and immerse yourself in a community that values tradition and fosters a deep connection to our cultural heritage; find rejuvenation by escaping the city and discover the therapeutic power by immersing yourself in nature.</p>
+                <p>Welcome to Brindavana, a 30-acre haven of sustainable, natural farmland nestled amidst the serenity of Krishnapura in the Pavagada Taluk. Here, at Brindavana by Vanatvam, we have woven together the ancient wisdom of our culture with innovative agroforestry and organic farming practices to create a flourishing ecosystem that nourishes both the land and the soul.</p>
+                <p>Brindavana is a community of like-minded individuals who share a passion for sustainability, a desire for a simpler way of life, and an emotional connection to our culture. Reconnect with your roots and discover the therapeutic power of immersing yourself in nature.</p>
+                <div>
+                  <DownloadBrochureButton />
+                </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', borderTop: '1px solid var(--border-light)', paddingTop: '40px', marginTop: '40px' }}>
-                <div>
-                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Ecological Impact</h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Designed to restore soil health, recharge aquifers, and provide a sanctuary for local flora and fauna.</p>
+              <div style={{ marginTop: '60px' }}>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', color: 'var(--bg-dark-forest)', marginBottom: '30px' }}>Amenities</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px' }}>
+                  {[
+                    { title: 'Trekking Path', icon: 'fa-person-hiking' },
+                    { title: 'Clubhouse', icon: 'fa-house-chimney-window' },
+                    { title: 'Pickleball Court', icon: 'fa-table-tennis-paddle-ball' },
+                    { title: 'Eco Cottages', icon: 'fa-house-leaf' }
+                  ].map((amenity, i) => (
+                    <div key={i} style={{ background: '#FFF', padding: '30px 20px', borderRadius: '16px', textAlign: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.03)' }}>
+                      <div style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '15px' }}><i className={`fa-solid ${amenity.icon}`}></i></div>
+                      <h4 style={{ fontSize: '1rem', color: 'var(--bg-dark-forest)', fontWeight: 600 }}>{amenity.title}</h4>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Community Living</h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Low-density footprints ensuring maximum privacy and minimal disturbance to the natural surroundings.</p>
+              </div>
+
+              <div style={{ marginTop: '60px' }}>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', color: 'var(--bg-dark-forest)', marginBottom: '30px' }}>The Vanatvam Advantage</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                  {[
+                    { title: 'Close Comfort', desc: 'Modern amenities seamlessly integrated with natural landscapes.' },
+                    { title: 'Ready and Waiting', desc: 'Fully established infrastructure so you can build your dream farm home immediately.' },
+                    { title: 'Growth Corridor', desc: 'Located in high-appreciation zones while maintaining ecological sanctity.' }
+                  ].map((adv, i) => (
+                    <div key={i} style={{ display: 'flex', gap: '20px', background: '#FFF', padding: '24px', borderRadius: '16px', boxShadow: '0 10px 20px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.02)' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--bg-cream)', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontWeight: 'bold' }}>0{i+1}</div>
+                      <div>
+                        <h4 style={{ fontSize: '1.1rem', color: 'var(--bg-dark-forest)', marginBottom: '8px' }}>{adv.title}</h4>
+                        <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--text-muted)' }}>{adv.desc}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -135,6 +158,8 @@ export default function Brindavana() {
         </section>
       )}
 
+      <ConnectivitySection />
+      
       <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-dark-forest)', textAlign: 'center' }}>
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
@@ -143,12 +168,13 @@ export default function Brindavana() {
               Schedule a site visit to walk the land and understand the ecological principles driving this community.
             </p>
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-              <Link href="/contact" className="btn-pill btn-pill-gold">Book a Site Visit</Link>
-              <Link href="/projects" className="btn-pill btn-pill-outline" style={{ color: '#FFF', borderColor: 'rgba(255,255,255,0.3)' }}>Back to Projects</Link>
+              <Link href="/contact" className="btn-pill btn-pill-gold">Schedule a Site Visit</Link>
             </div>
           </motion.div>
         </div>
       </section>
+
+      <OtherProjectsSection currentProjectId="brindavana" />
 
       <Footer />
     </>

@@ -21,9 +21,10 @@ const container: Variants = {
 };
 
 const word: Variants = {
-  hidden: { y: '115%' },
+  hidden: { opacity: 0, y: 20 },
   visible: {
-    y: '0%',
+    opacity: 1,
+    y: 0,
     transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] },
   },
 };
@@ -57,7 +58,7 @@ export default function RevealText({
       {words.map((w, i) => (
         <span
           key={i}
-          style={{ display: 'inline-block', overflow: 'hidden', verticalAlign: 'top', paddingBottom: '0.08em' }}
+          style={{ display: 'inline-block', verticalAlign: 'top', paddingBottom: '0.08em' }}
         >
           <motion.span style={{ display: 'inline-block' }} variants={word}>
             {w}

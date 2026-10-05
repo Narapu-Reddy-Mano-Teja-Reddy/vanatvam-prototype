@@ -3393,3 +3393,20 @@ ul {
   color: rgba(198, 162, 101, 0.15);
   transform: scale(1.1);
 }
+
+/* Accordion Gallery Responsive */
+.accordion-gallery-wrapper {
+  display: flex;
+  gap: 16px;
+  height: var(--gallery-height);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+@media (max-width: 768px) {
+  .accordion-gallery-wrapper {
+    flex-direction: column;
+    height: calc(var(--gallery-height) * 1.5) !important;
+  }
+}

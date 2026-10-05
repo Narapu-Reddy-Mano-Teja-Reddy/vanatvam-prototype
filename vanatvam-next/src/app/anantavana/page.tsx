@@ -4,6 +4,7 @@ import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
 import AccordionGallery from '@/components/premium/AccordionGallery';
+import { ConnectivitySection, OtherProjectsSection, DownloadBrochureButton } from '@/app/components/ProjectSections';
 
 export default function Anantavana() {
   const specs = [
@@ -62,24 +63,45 @@ export default function Anantavana() {
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-dark)', fontSize: '1.1rem', lineHeight: 1.8 }}>
                 <p>Kabini – The land of spectacular landscapes and wildlife.</p>
-              <p>The rustle of leaves blowing in the wind, the deep silence of the forest, the chirping of birds and the calmness of River Kabini, all whisper the breathtaking beauty of this most wonderful land. Everyone, from a wildlife enthusiast to the nature lover, and the average citizen have a reason to love Kabini, known as one of the country’s richest biodiversity spots.</p>
-              <p>AnantaVana is a sustainable natural re-forestation project in Kabini for nature lovers. Here, VanaTvam in association with Indus Herbs is creating a niche community of land owners who understand, appreciate, and consciously participate in sustaining the unique biosphere of Kabini. This limited edition one acre plot of land is a personal nature retreat that one can plug into to recharge the body and spirit!</p>
-              <p>While set amid Kabini AnantaVana’s features are eco-friendly and are designed to merge with the natural elements of Kabini’s landscape.</p>
-              <p>Landscape features like walking tracks, gazebos, decks integrated into design</p>
-              <p>Large green cul-de-sacs with theme gardens</p>
-              <p>Pause points with seating along the walking track</p>
-              <p>Storm-water channels along natural valleys & slopes</p>
-              <p>Wetland or pond to Harvest rain water and more..</p>
+                <p>AnantaVana is a sustainable natural re-forestation project in Kabini for nature lovers. Here, VanaTvam in association with Indus Herbs is creating a niche community of land owners who understand, appreciate, and consciously participate in sustaining the unique biosphere of Kabini. This limited edition one acre plot of land is a personal nature retreat that one can plug into to recharge the body and spirit!</p>
+                <div>
+                  <DownloadBrochureButton />
+                </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', borderTop: '1px solid var(--border-light)', paddingTop: '40px', marginTop: '40px' }}>
-                <div>
-                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Heritage Heaven Since 1976</h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>At the heart of the community stands a charming heritage home with earthy tones and traditional architecture, preserving a bygone era.</p>
+              <div style={{ marginTop: '60px' }}>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', color: 'var(--bg-dark-forest)', marginBottom: '30px' }}>Amenities</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px' }}>
+                  {[
+                    { title: 'Trekking Path', icon: 'fa-person-hiking' },
+                    { title: 'Clubhouse', icon: 'fa-house-chimney-window' },
+                    { title: 'Pickleball Court', icon: 'fa-table-tennis-paddle-ball' },
+                    { title: 'Eco Cottages', icon: 'fa-house-leaf' }
+                  ].map((amenity, i) => (
+                    <div key={i} style={{ background: '#FFF', padding: '30px 20px', borderRadius: '16px', textAlign: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.03)' }}>
+                      <div style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '15px' }}><i className={`fa-solid ${amenity.icon}`}></i></div>
+                      <h4 style={{ fontSize: '1rem', color: 'var(--bg-dark-forest)', fontWeight: 600 }}>{amenity.title}</h4>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Kabini Wildlife</h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>An immersive experience featuring traditional tree machans, beekeeping, and a natural pond amidst a stunning landscape frequented by wildlife.</p>
+              </div>
+
+              <div style={{ marginTop: '60px' }}>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', color: 'var(--bg-dark-forest)', marginBottom: '30px' }}>The Vanatvam Advantage</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                  {[
+                    { title: 'Close Comfort', desc: 'Modern amenities seamlessly integrated with natural landscapes.' },
+                    { title: 'Ready and Waiting', desc: 'Fully established infrastructure so you can build your dream farm home immediately.' },
+                    { title: 'Growth Corridor', desc: 'Located in high-appreciation zones while maintaining ecological sanctity.' }
+                  ].map((adv, i) => (
+                    <div key={i} style={{ display: 'flex', gap: '20px', background: '#FFF', padding: '24px', borderRadius: '16px', boxShadow: '0 10px 20px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.02)' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--bg-cream)', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontWeight: 'bold' }}>0{i+1}</div>
+                      <div>
+                        <h4 style={{ fontSize: '1.1rem', color: 'var(--bg-dark-forest)', marginBottom: '8px' }}>{adv.title}</h4>
+                        <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--text-muted)' }}>{adv.desc}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -135,6 +157,8 @@ export default function Anantavana() {
         </section>
       )}
 
+      <ConnectivitySection />
+      
       <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-dark-forest)', textAlign: 'center' }}>
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
@@ -143,12 +167,13 @@ export default function Anantavana() {
               Schedule a site visit to walk the land and understand the ecological principles driving this community.
             </p>
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-              <Link href="/contact" className="btn-pill btn-pill-gold">Book a Site Visit</Link>
-              <Link href="/projects" className="btn-pill btn-pill-outline" style={{ color: '#FFF', borderColor: 'rgba(255,255,255,0.3)' }}>Back to Projects</Link>
+              <Link href="/contact" className="btn-pill btn-pill-gold">Schedule a Site Visit</Link>
             </div>
           </motion.div>
         </div>
       </section>
+
+      <OtherProjectsSection currentProjectId="anantavana" />
 
       <Footer />
     </>

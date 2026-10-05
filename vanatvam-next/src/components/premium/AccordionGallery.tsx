@@ -12,7 +12,7 @@ export default function AccordionGallery({ items, height = '500px' }: { items: G
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
 
   return (
-    <div style={{ display: 'flex', gap: '16px', height, width: '100%', overflow: 'hidden', borderRadius: '24px' }}>
+    <div className="accordion-gallery-wrapper" style={{ '--gallery-height': height } as React.CSSProperties}>
       {items.map((item, index) => {
         const isActive = hoveredIndex === index;
         return (

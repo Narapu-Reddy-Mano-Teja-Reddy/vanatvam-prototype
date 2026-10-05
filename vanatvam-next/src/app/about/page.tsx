@@ -135,44 +135,87 @@ export default function About() {
         </div>
       </section>
 
-      {/* Ecological Concepts Section */}
+      {/* Ecosystem Section */}
       <section style={{ background: '#1B2B1F', color: '#FFF', padding: 'clamp(80px, 10vh, 120px) 0', position: 'relative', overflow: 'hidden' }}>
         <div className="container">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
-            style={{ textAlign: 'center', marginBottom: '100px' }}
-          >
-            <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
-              Traditional Ecological Concepts
-            </span>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>
-              <RevealText>Ancient Ecological Wisdom</RevealText><br/>
-              <RevealText delay={0.1} style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>Meets Modern Reforestation</RevealText>
-            </h2>
-          </motion.div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '80px' }}>
             
+            {/* Top Text Content */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.1 }}
-              style={{ padding: '60px', background: 'rgba(255,255,255,0.03)', borderRadius: '30px', border: '1px solid rgba(255,255,255,0.05)', position: 'relative' }}
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
             >
-              <span style={{ position: 'absolute', top: '40px', right: '40px', fontSize: '8rem', fontFamily: 'var(--font-serif)', color: 'rgba(198,162,101,0.06)', lineHeight: 0.8, pointerEvents: 'none' }}>01</span>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 2.5vw, 2.5rem)', color: 'var(--accent-gold)', marginBottom: '20px' }}>Nakshatra Vana</h3>
-              <p style={{ fontSize: '1.15rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', fontWeight: 300 }}>
-                Forests inspired by India&apos;s ancient connection between trees, nature, and the stars. Each species is carefully chosen to create micro-climate sanctuaries and preserve endemic flora.
-              </p>
+              <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+                Biodiversity by Design
+              </span>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '40px' }}>
+                We don't landscape.<br/>
+                <span style={{ color: 'var(--accent-gold)', fontStyle: 'italic' }}>We create ecosystems.</span>
+              </h2>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px', fontSize: '1.15rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.8, fontWeight: 300 }}>
+                <div>
+                  <p style={{ marginBottom: '20px' }}>A landscape can be designed. <strong>An ecosystem must be nurtured.</strong></p>
+                  <p style={{ marginBottom: '20px' }}>At Vanatvam, we don't simply plant trees, create gardens or beautify land. We thoughtfully bring together <strong>trees, water, soil, native plants, birds, butterflies and natural habitats</strong> to create places where life can flourish.</p>
+                  <p>Our approach is rooted in <strong>India's ancient understanding of living with nature</strong> — from the wisdom documented in <em>Brihat Samhita</em> to traditions such as <strong>Vinayaka Vana, Rashi Vana and Navagraha Vana</strong>.</p>
+                </div>
+                <div>
+                  <div style={{ padding: '30px', background: 'rgba(255,255,255,0.03)', borderRadius: '20px', borderLeft: '4px solid var(--accent-gold)', marginBottom: '30px' }}>
+                    <p style={{ margin: 0, fontStyle: 'italic', color: 'var(--accent-gold)', fontSize: '1.2rem', lineHeight: 1.6 }}>
+                      Every tree has a purpose.<br/>
+                      Every grove creates habitat.<br/>
+                      Every water body supports life.<br/>
+                      Every living element becomes part of a larger whole.
+                    </p>
+                  </div>
+                  <p style={{ marginBottom: '20px' }}>
+                    This is not landscaping. This is the patient work of creating a living, breathing ecosystem — one that grows richer with every passing year.
+                  </p>
+                  <p style={{ fontSize: '1.25rem', fontWeight: 500, color: '#FFF' }}>
+                    Our belief: When nature thrives, people thrive too.
+                  </p>
+                </div>
+              </div>
             </motion.div>
 
+            {/* Stats Grid */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}
-              style={{ padding: '60px', background: 'rgba(255,255,255,0.03)', borderRadius: '30px', border: '1px solid rgba(255,255,255,0.05)', position: 'relative' }}
             >
-              <span style={{ position: 'absolute', top: '40px', right: '40px', fontSize: '8rem', fontFamily: 'var(--font-serif)', color: 'rgba(198,162,101,0.06)', lineHeight: 0.8, pointerEvents: 'none' }}>02</span>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 2.5vw, 2.5rem)', color: 'var(--accent-gold)', marginBottom: '20px' }}>Navagraha Vana</h3>
-              <p style={{ fontSize: '1.15rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', fontWeight: 300 }}>
-                Thematic plantations rooted in India&apos;s traditional ecological and cultural knowledge, fostering medicinal plants, bird sanctuaries, and organic soil health.
-              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
+                {[
+                  { value: '250+', label: 'Tree Varieties' },
+                  { value: '150+', label: 'Rare & Endangered Species' },
+                  { value: '20,000+', label: 'Trees' },
+                  { value: '60+', label: 'Bird Species' },
+                  { value: '150+', label: 'Butterfly Species' }
+                ].map((stat, i) => (
+                  <div key={i} style={{ background: 'rgba(255,255,255,0.03)', padding: '40px 20px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.05)', textAlign: 'center', transition: 'all 0.3s ease' }}>
+                    <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', color: 'var(--accent-gold)', marginBottom: '10px', lineHeight: 1 }}>{stat.value}</div>
+                    <div style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* 2x2 Concept Grid from image */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px' }}>
+                {[
+                  { title: 'Nakshatra Vana', text: 'Forests inspired by India\'s ancient connection between trees, nature, and the stars. A tranquil space for reflection.' },
+                  { title: 'Navagraha Vana', text: 'Thematic plantations rooted in India\'s traditional ecological knowledge, bringing balance to the environment.' },
+                  { title: 'Soil & Water', text: 'Engineered swales, rain catchments, and organic soil enrichment that continuously recharge groundwater levels.' },
+                  { title: 'Self-Sustaining', text: 'The ultimate objective is simple yet profound: Create an ecosystem that can naturally sustain and regenerate itself.' }
+                ].map((concept, i) => (
+                  <div key={i} style={{ background: '#FFF', color: 'var(--text-dark)', padding: '40px', borderRadius: '24px', textAlign: 'center', boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}>
+                    <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'var(--bg-cream)', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-gold)', border: '1px solid rgba(198,162,101,0.2)' }}>
+                      <span style={{ fontFamily: 'var(--font-serif)', fontSize: '1.2rem' }}>0{i+1}</span>
+                    </div>
+                    <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', color: 'var(--bg-dark-forest)', marginBottom: '15px' }}>{concept.title}</h3>
+                    <p style={{ color: 'var(--text-muted)', lineHeight: 1.6, fontSize: '0.95rem' }}>{concept.text}</p>
+                  </div>
+                ))}
+              </div>
             </motion.div>
 
           </div>

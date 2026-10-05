@@ -266,9 +266,10 @@ export default function Home() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '50px', textAlign: 'center' }}>
             {[
-              { value: 6, suffix: '', label: 'Living Ecosystems Across Karnataka' },
+              { value: 4, suffix: '', label: 'Living Ecosystems Across Karnataka' },
               { value: 100, suffix: '+', label: 'Acres Under Active Regeneration' },
-              { value: 250, suffix: '+', label: 'Native Tree Species in Madhuvana Alone' },
+              { value: 100, suffix: '+', label: 'Families In Our Community' },
+              { value: 250, suffix: '+', label: 'Native Tree Varieties' },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -499,45 +500,48 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Nature Is The Destination - Experiences Carousel */}
-      <section className="experiences-section" id="experiences">
+      {/* See what your weekends could look like - Landscape Gallery */}
+      <section style={{ padding: 'clamp(60px, 8vh, 100px) 0', background: 'var(--bg-cream)', overflow: 'hidden' }}>
         <div className="container">
-          <div className="experiences-header">
-            <div>
-              <span className="subtitle-tag subtitle-tag-light">Designed For People. Built Around Nature.</span>
-              <h2 className="experiences-title">
-                <RevealText>Nature Is The Destination.</RevealText><br/>
-                <RevealText delay={0.1} style={{ fontStyle: 'italic' }}>Come for the land. Stay for the life.</RevealText>
-              </h2>
-            </div>
-            <Magnetic strength={0.2}>
-              <Link href="/projects" className="link-underline" style={{ color: '#FFFFFF' }}>
-                Explore Experiences <i className="fa-solid fa-arrow-right arrow"></i>
-              </Link>
-            </Magnetic>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="subtitle-tag" style={{ color: 'var(--accent-gold)' }}>LIFE AT THE FARM</span>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', color: 'var(--bg-dark-forest)', marginTop: '16px', letterSpacing: '-0.02em', fontStyle: 'italic' }}>
+              See what your weekends could look like.
+            </h2>
           </div>
+        </div>
 
-          <div className="experiences-carousel">
-            {[
-              { img: '/assets/images/dew_drops_leaf.webp', title: 'Nature Trails', sub: 'Canopy walking paths & birding trails' },
-              { img: '/assets/images/hero_kaveri_river.webp', title: 'Water Bodies', sub: 'Swales, ponds & Kaveri riverfronts' },
-              { img: '/assets/images/about_story_forest.webp', title: 'Forest Groves', sub: 'Nakshatra & Navagraha native groves' },
-              { img: '/assets/images/impact_seedling.webp', title: 'Farm-to-Table', sub: 'Organic harvests & community dining' },
-              { img: '/assets/images/forest_address_bg.webp', title: 'Community Spaces', sub: 'Open-air amphitheaters & campfire lawns' },
-              { img: '/assets/images/madhu_vana.webp', title: 'Integrated Cottages', sub: 'Earth-inspired architecture seamlessly blended' },
-            ].map((exp) => (
-              <div className="exp-card" key={exp.title}>
-                <img src={exp.img} alt={exp.title} />
-                <div className="exp-card-overlay">
-                  <div>
-                    <h3 className="exp-card-title">{exp.title}</h3>
-                    <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.7)', marginTop: '4px' }}>{exp.sub}</p>
+        {/* CSS Marquee Track for Landscape Images */}
+        <div className="weekend-marquee" style={{ position: 'relative', width: '100%', overflow: 'hidden', padding: '10px 0' }}>
+          <div className="weekend-marquee-track" style={{ display: 'flex', width: 'calc(400px * 12)', animation: 'marqueeScroll 40s linear infinite' }}>
+            {/* We duplicate the images twice to create an infinite scroll loop */}
+            {[...Array(2)].map((_, loopIndex) => (
+              <div key={loopIndex} style={{ display: 'flex' }}>
+                {[
+                  { img: '/assets/images/about_hero_bg.webp', alt: 'Family walking dog on trail' },
+                  { img: '/assets/images/madhu_vana.webp', alt: 'Family petting dog' },
+                  { img: '/assets/images/anantavana.webp', alt: 'Cow grazing in farm' },
+                  { img: '/assets/images/eeshavana.webp', alt: 'Woman picking herbs' },
+                  { img: '/assets/images/about_story_forest.webp', alt: 'Forest path walking' },
+                  { img: '/assets/images/hero_kaveri_river.webp', alt: 'Riverfront views' }
+                ].map((item, i) => (
+                  <div key={i} style={{ width: '400px', height: '280px', margin: '0 12px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.05)', flexShrink: 0 }}>
+                    <img src={item.img} alt={item.alt} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
-                </div>
+                ))}
               </div>
             ))}
           </div>
         </div>
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .weekend-marquee-track:hover {
+            animation-play-state: paused !important;
+          }
+        `}} />
       </section>
 
       {/* Ownership Beyond Your Plot + Green Cover Guarantee */}

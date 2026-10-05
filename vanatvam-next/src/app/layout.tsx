@@ -77,6 +77,8 @@ const structuredData = {
   },
 };
 
+import Script from "next/script";
+
 export default function RootLayout({
   children,
 }: {
@@ -95,6 +97,13 @@ export default function RootLayout({
         <ScrollProgress />
         <GrainOverlay />
         <SmoothScroll>{children}</SmoothScroll>
+
+        {/* Kenyt AI Chatbot */}
+        <Script 
+          src="https://india.kenyt.ai/botapp/ChatbotUI/dist/js/bot-loader.js" 
+          strategy="lazyOnload"
+          data-bot="116027152"
+        />
       </body>
     </html>
   );

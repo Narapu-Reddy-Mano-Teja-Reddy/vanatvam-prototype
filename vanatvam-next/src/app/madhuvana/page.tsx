@@ -8,6 +8,7 @@ import AccordionGallery from '@/components/premium/AccordionGallery';
 import Counter from '@/components/premium/Counter';
 import Magnetic from '@/components/premium/Magnetic';
 import { useLenis } from '@/components/premium/SmoothScroll';
+import { ConnectivitySection, OtherProjectsSection, DownloadBrochureButton } from '@/app/components/ProjectSections';
 
 type PlotInfo = {
   title: string;
@@ -226,18 +227,29 @@ export default function Madhuvana() {
               </h2>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-dark)', fontSize: '1.1rem', lineHeight: 1.8 }}>
-                <p>MadhuVana is a joint offering from VanaTvam and Indus Herbs who have extensive experience in designing and developing eco-landscaping, afforestation, and themed herbal gardens. MadhuVana is spread across 18 acres and when completed, will have over 5000 trees and plants, ponds, gazebos, walkways, perimeter fencing, and 24/7 security. The project will also have a common area with cottages/rooms with kitchenette, landscaped garden, car parking, and a dining area among others.</p>
-                <p>Located off the 10-lane Bangalore and Mysore highway, MadhuVana is just about 20 km from Maddur and Mandya and is surrounded by River Cauvery and interlaced with Vishweshwaraiah canals. MadhuVana is offered as quarter-acre farm plots with various trees and herbal plants in each plot, and we will also plant vegetables and fruit trees grown using 100% natural and organic methods. This offering is envisioned as a &ldquo;Natural, Sustainable Farm Community&rdquo; — meaning we are building a strong community that believes in a common goal and shares common views. Your neighbours are people who think and live like you!</p>
+                <p>MadhuVana is a joint offering from VanaTvam and Indus Herbs. Spread across 18 acres, MadhuVana will feature over 5000 trees and plants, ponds, gazebos, walkways, and a vibrant community space with eco-cottages.</p>
+                <p>Located off the Bangalore-Mysore highway near Maddur, MadhuVana is surrounded by the River Cauvery and interlaced with canals. It is envisioned as a "Natural, Sustainable Farm Community" — where neighbors share a common goal of holistic, nature-centric living.</p>
+                <div>
+                  <DownloadBrochureButton />
+                </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', borderTop: '1px solid var(--border-light)', paddingTop: '40px', marginTop: '40px' }}>
-                <div>
-                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>The Secret Vanas</h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Explore five sacred groves including Nakshatravana, Rashivana, and Vinayakavana, each designed with specific spiritual plants and ancient Vedic alignments.</p>
-                </div>
-                <div>
-                  <h4 style={{ color: 'var(--bg-dark-forest)', marginBottom: '10px', fontSize: '1.2rem' }}>Embraced by Water</h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Bordered on three sides by flowing channels, featuring a serene central lake and organic fruit orchards.</p>
+              <div style={{ marginTop: '60px' }}>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', color: 'var(--bg-dark-forest)', marginBottom: '30px' }}>The Vanatvam Advantage</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                  {[
+                    { title: 'Close Comfort', desc: 'Modern amenities seamlessly integrated with natural landscapes.' },
+                    { title: 'Ready and Waiting', desc: 'Fully established infrastructure so you can build your dream farm home immediately.' },
+                    { title: 'Growth Corridor', desc: 'Located in high-appreciation zones while maintaining ecological sanctity.' }
+                  ].map((adv, i) => (
+                    <div key={i} style={{ display: 'flex', gap: '20px', background: '#FFF', padding: '24px', borderRadius: '16px', boxShadow: '0 10px 20px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.02)' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--bg-cream)', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontWeight: 'bold' }}>0{i+1}</div>
+                      <div>
+                        <h4 style={{ fontSize: '1.1rem', color: 'var(--bg-dark-forest)', marginBottom: '8px' }}>{adv.title}</h4>
+                        <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--text-muted)' }}>{adv.desc}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -383,6 +395,10 @@ export default function Madhuvana() {
           </motion.div>
         </div>
       </section>
+
+      <ConnectivitySection />
+
+      <OtherProjectsSection currentProjectId="madhuvana" />
 
       <Footer />
 
