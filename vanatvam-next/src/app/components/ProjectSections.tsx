@@ -1,24 +1,30 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-export function ConnectivitySection() {
+export function ConnectivitySection({ title, subtitle, locations }: { title?: string; subtitle?: string; locations?: { time: string; unit: string; desc: string; icon: string }[] }) {
+  const defaultLocations = [
+    { time: '30', unit: 'Minutes', desc: 'Drive from NICE Road Junction', icon: 'fa-road' },
+    { time: '10', unit: 'Minutes', desc: 'Drive to Satellite Town Ring Road', icon: 'fa-route' },
+    { time: '5', unit: 'Minutes', desc: 'Drive to Nearest Hospital', icon: 'fa-hospital' },
+    { time: '15', unit: 'Minutes', desc: 'Drive to Education Institutions', icon: 'fa-school' },
+  ];
+  
+  const displayLocations = locations || defaultLocations;
+
   return (
     <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-cream)' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>Location Highlights</span>
+          <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
+            {subtitle || 'Location Highlights'}
+          </span>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2rem, 3.5vw, 3rem)', color: 'var(--bg-dark-forest)' }}>
-            Perfect Blend of Convenience & Connectivity
+            {title || 'Perfect Blend of Convenience & Connectivity'}
           </h2>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px' }}>
-          {[
-            { time: '30', unit: 'Minutes', desc: 'Drive from NICE Road Junction', icon: 'fa-road' },
-            { time: '10', unit: 'Minutes', desc: 'Drive to Satellite Town Ring Road', icon: 'fa-route' },
-            { time: '5', unit: 'Minutes', desc: 'Drive to Nearest Hospital', icon: 'fa-hospital' },
-            { time: '15', unit: 'Minutes', desc: 'Drive to Education Institutions', icon: 'fa-school' },
-          ].map((item, i) => (
+          {displayLocations.map((item, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
               style={{ background: '#FFF', padding: '30px', borderRadius: '20px', textAlign: 'center', border: '1px solid rgba(0,0,0,0.03)', boxShadow: '0 10px 20px rgba(0,0,0,0.03)' }}>
               <div style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '16px' }}><i className={`fa-solid ${item.icon}`}></i></div>
@@ -35,10 +41,10 @@ export function ConnectivitySection() {
 
 export function OtherProjectsSection({ currentProjectId }: { currentProjectId: string }) {
   const allProjects = [
-    { id: 'brindavana', name: 'BRINDAVANA', loc: 'Pavagada', img: '/assets/projects/BrindaVana.webp' },
-    { id: 'madhuvana', name: 'MADHUVANA', loc: 'Maddur', img: '/assets/projects/Logo-MadhuVana.svg' },
-    { id: 'anantavana', name: 'ANANTAVANA', loc: 'Kabini', img: '/assets/projects/Anantavana.webp' },
-    { id: 'eeshavana', name: 'EESHAVANA', loc: 'Kollegala', img: '/assets/projects/eeshavanaalogo.webp' }
+    { id: 'brindavana', name: 'BRINDAVANA', loc: 'Pavagada', img: '/assets/images/Project-Logos/BrindaVana.webp' },
+    { id: 'madhuvana', name: 'MADHUVANA', loc: 'Maddur', img: '/assets/images/Project-Logos/Logo-MadhuVana.svg' },
+    { id: 'anantavana', name: 'ANANTAVANA', loc: 'Kabini', img: '/assets/images/Project-Logos/Anantavana.webp' },
+    { id: 'eeshavana', name: 'EESHAVANA', loc: 'Kollegala', img: '/assets/images/Project-Logos/eeshavanaalogo.webp' }
   ];
 
   const otherProjects = allProjects.filter(p => p.id !== currentProjectId);

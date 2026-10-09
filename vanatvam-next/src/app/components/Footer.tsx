@@ -5,72 +5,78 @@ import Magnetic from '@/components/premium/Magnetic';
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <video className="footer-bg-video" autoPlay loop muted playsInline>
-        <source src="/assets/images/footer.mp4" type="video/mp4" />
-      </video>
-      <div className="footer-overlay"></div>
-      <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+    <footer style={{ background: 'var(--bg-dark-forest)', color: '#FFF', padding: '100px 0 40px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+      <div className="container">
         <motion.div
-          className="footer-grid"
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '60px', marginBottom: '80px' }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
-          <div>
-            <div className="footer-brand-title">VANATVAM</div>
-            <div className="footer-brand-tag">NATURAL FARMS · NATURE COMMUNITIES</div>
-            <p style={{ fontSize: '0.85rem', maxWidth: '320px', lineHeight: 1.6, color: 'rgba(255,255,255,0.7)', marginTop: '12px' }}>
-              Vanatvam Private Limited is developing sustainable managed farmlands, native forests, and ecological communities across Karnataka. CIN: U01100KA2022PTC159587.
+          <div style={{ maxWidth: '400px', marginBottom: '20px' }}>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: 'var(--accent-gold)', marginBottom: '15px', letterSpacing: '0.05em' }}>VANATVAM</h2>
+            <div style={{ fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', marginBottom: '20px' }}>Natural Farms · Nature Communities</div>
+            <p style={{ fontSize: '0.95rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.6)' }}>
+              Vanatvam Private Limited is developing sustainable managed farmlands, native forests, and ecological communities across Karnataka.
             </p>
           </div>
+
           <div>
-            <h4 className="footer-col-title">Navigation</h4>
-            <div className="footer-links">
-              <Link href="/">Home</Link>
-              <Link href="/about">Our Story</Link>
-              <Link href="/projects">Projects Overview</Link>
-              <Link href="/investment">Investment Guide</Link>
-              <Link href="/blog">Journal</Link>
-              <Link href="/contact">Contact Us</Link>
-              <Link href="/privacy-policy">Privacy Policy</Link>
-              <Link href="/terms">Terms & Conditions</Link>
+            <h4 style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#FFF', marginBottom: '24px', fontWeight: 600 }}>Navigation</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <Link href="/" className="footer-link">Home</Link>
+              <Link href="/about" className="footer-link">Our Story</Link>
+              <Link href="/projects" className="footer-link">Projects Overview</Link>
+              <Link href="/investment" className="footer-link">Investment Guide</Link>
+              <Link href="/blog" className="footer-link">Journal</Link>
+              <Link href="/contact" className="footer-link">Contact Us</Link>
             </div>
           </div>
+
           <div>
-            <h4 className="footer-col-title">Our Communities</h4>
-            <div className="footer-links">
-              <Link href="/brindavana">Brindavana (Pavagada · 30 Acres)</Link>
-              <Link href="/madhuvana">Madhuvana (Maddur · 18 Acres)</Link>
-              <Link href="/anantavana">Anantavana (Kabini · 35 Acres)</Link>
-              <Link href="/eeshavana">Eeshavana (Cauvery Riverfront)</Link>
+            <h4 style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#FFF', marginBottom: '24px', fontWeight: 600 }}>Our Communities</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <Link href="/brindavana" className="footer-link">Brindavana (Pavagada)</Link>
+              <Link href="/madhuvana" className="footer-link">Madhuvana (Maddur)</Link>
+              <Link href="/anantavana" className="footer-link">Anantavana (Kabini)</Link>
+              <Link href="/eeshavana" className="footer-link">Eeshavana (Cauvery)</Link>
             </div>
           </div>
+
           <div>
-            <h4 className="footer-col-title">SEO Keywords Index</h4>
-            <div className="footer-links" style={{ fontSize: '0.75rem', lineHeight: 1.6, opacity: 0.75 }}>
-              <p>Managed Farmland Bangalore · Sustainable Farmland Karnataka · Farm Plots Near Bangalore · Agricultural Land Investment · Eco Friendly Farm Communities · Nakshatra Vana Forest</p>
-            </div>
-            <div className="footer-socials" style={{ marginTop: '15px', display: 'flex', gap: '15px' }}>
+            <h4 style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#FFF', marginBottom: '24px', fontWeight: 600 }}>Connect</h4>
+            <div style={{ display: 'flex', gap: '20px', marginBottom: '30px' }}>
               {[
                 { icon: 'fa-instagram', label: 'Instagram' },
                 { icon: 'fa-facebook-f', label: 'Facebook' },
                 { icon: 'fa-youtube', label: 'YouTube' },
                 { icon: 'fa-linkedin-in', label: 'LinkedIn' },
               ].map((s) => (
-                <Magnetic key={s.icon} strength={0.5}>
-                  <a href="#" aria-label={s.label} className="social-icon" style={{ color: '#fff', fontSize: '1.2rem', transition: 'color 0.3s' }}><i className={`fa-brands ${s.icon}`}></i></a>
+                <Magnetic key={s.icon} strength={0.3}>
+                  <a href="#" aria-label={s.label} style={{ color: 'var(--accent-gold)', fontSize: '1.4rem', transition: 'transform 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    <i className={`fa-brands ${s.icon}`}></i>
+                  </a>
                 </Magnetic>
               ))}
             </div>
+            <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6 }}>
+              Managed Farmland Bangalore<br/>
+              Sustainable Farmland Karnataka<br/>
+              Eco Friendly Farm Communities
+            </p>
           </div>
         </motion.div>
-        <div className="footer-bottom">
-          <span>Rooted in nature. Built for generations. CIN: U01100KA2022PTC159587</span>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '5px' }}>
-            <span>&copy; {new Date().getFullYear()} Vanatvam Private Limited. All rights reserved.</span>
-            <span style={{ fontSize: '0.75rem', opacity: 0.8 }}>Powered by <a href="#" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: 600 }}>Tenspick</a></span>
+
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', paddingTop: '40px', borderTop: '1px solid rgba(255,255,255,0.1)', fontSize: '0.85rem', color: 'rgba(255,255,255,0.5)' }}>
+          <div>
+            Rooted in nature. Built for generations. CIN: U01100KA2022PTC159587
+          </div>
+          <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+            <Link href="/privacy-policy" className="footer-link-small">Privacy Policy</Link>
+            <Link href="/terms" className="footer-link-small">Terms & Conditions</Link>
+            <span>&copy; {new Date().getFullYear()} Vanatvam Private Limited.</span>
+            <span style={{ marginLeft: '10px' }}>Designed by <a href="#" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>Tenspick</a></span>
           </div>
         </div>
       </div>

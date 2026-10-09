@@ -11,7 +11,7 @@ export default function Blog() {
       title: 'How Vanatvam is Redefining Farmland Ownership with a Natural & Sustainable Approach',
       date: 'January 12, 2026',
       author: 'Vanatvam Ecological Team',
-      img: '/assets/images/dew_drops_leaf.webp',
+      img: '/assets/project-images/Brindavana/Rainy Countryside Pond Reflections.png',
       excerpt: 'Discover how we are moving away from traditional real estate to create living, breathing ecosystems that you can call home.',
       category: 'Ecology'
     },
@@ -20,7 +20,7 @@ export default function Blog() {
       title: 'The Wellness Benefits of Living Close to Nature: A Guide for Modern Families',
       date: 'December 05, 2025',
       author: 'Dr. Vivek Sharma',
-      img: '/assets/images/anantavana.webp',
+      img: '/assets/project-images/Ananthavana/hero_image.jpg',
       excerpt: 'Modern science is finally catching up to ancient wisdom: living near forests and rich biodiversity profoundly impacts mental and physical health.',
       category: 'Wellness'
     },
@@ -29,7 +29,7 @@ export default function Blog() {
       title: 'Why Sustainable Farmland is the Future of Real Estate in India',
       date: 'November 22, 2025',
       author: 'Vanatvam Research',
-      img: '/assets/images/about_hero_bg.webp',
+      img: '/assets/project-images/Brindavana/Sunny Tropical Banana Orchard.png',
       excerpt: 'As urban spaces become increasingly crowded, managed agricultural land offers an incredible inflation-hedging asset that also secures our ecological future.',
       category: 'Investment'
     },
@@ -38,7 +38,7 @@ export default function Blog() {
       title: 'Sacred Groves, Eternal Harmony: How Madhuvana Revives India’s Soul',
       date: 'October 15, 2025',
       author: 'Vanatvam Heritage Team',
-      img: '/assets/images/forest_address_bg.webp',
+      img: '/assets/project-images/Brindavana/Tropical Garden Pathway Tunnel.png',
       excerpt: 'A deep dive into the philosophy behind Project Madhuvana and how we are using ancient Nakshatra Vana principles to create sacred ecological spaces.',
       category: 'Heritage'
     }
@@ -62,10 +62,10 @@ export default function Blog() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '40px' }}>
             {blogs.map((blog, i) => (
-              <motion.article 
-                key={blog.id} 
-                initial={{ opacity: 0, y: 30 }} 
-                animate={{ opacity: 1, y: 0 }} 
+              <motion.article
+                key={blog.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 whileHover={{ y: -10 }}
                 style={{ background: '#FFF', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 15px 35px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}

@@ -14,10 +14,10 @@ import { useLenis } from '@/components/premium/SmoothScroll';
 
 
 const heroSlides = [
-  { id: 'brindavana', name: 'BRINDAVANA', location: 'Pavagada · 30 Acres', tagline: 'Our benchmark project — barren land reborn as a thriving forest ecosystem.', img: '/assets/images/about_hero_bg.webp' },
-  { id: 'madhuvana', name: 'MADHUVANA', location: 'Maddur · 18 Acres', tagline: 'A dense water-forest ecosystem built around 250+ native trees.', img: '/assets/images/madhu_vana.webp' },
-  { id: 'anantavana', name: 'ANANTAVANA', location: 'Near Kabini · 35 Acres', tagline: 'Living within the Bandipur–Nagarhole wildlife corridor.', img: '/assets/images/anantavana.webp' },
-  { id: 'eeshavana', name: 'EESHAVANA', location: 'Kollegala · Cauvery Riverfront', tagline: 'A premium riverfront community on the sacred Cauvery.', img: '/assets/images/eeshavana.webp' },
+  { id: 'brindavana', name: 'BRINDAVANA', location: 'Pavagada · 30 Acres', tagline: 'Our benchmark project — barren land reborn as a thriving forest ecosystem.', img: '/assets/project-images/Brindavana/Sunny%20Tropical%20Banana%20Orchard.png' },
+  { id: 'madhuvana', name: 'MADHUVANA', location: 'Maddur · 18 Acres', tagline: 'A dense water-forest ecosystem built around 250+ native trees.', img: '/assets/project-images/Maduvana/hero.png' },
+  { id: 'anantavana', name: 'ANANTAVANA', location: 'Near Kabini · 35 Acres', tagline: 'Living within the Bandipur–Nagarhole wildlife corridor.', img: '/assets/project-images/Ananthavana/hero_image.jpg' },
+  { id: 'eeshavana', name: 'EESHAVANA', location: 'Kollegala · Cauvery Riverfront', tagline: 'A premium riverfront community on the sacred Cauvery.', img: '/assets/project-images/Esahavana/EV%20River%20View%201.jpg' },
 ];
 
 export default function Home() {
@@ -181,7 +181,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.94 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.9 }}
                 style={{ borderRadius: '28px', overflow: 'hidden', height: '560px', boxShadow: '0 30px 70px rgba(0,0,0,0.12)' }}
               >
-                <img src="/assets/images/impact_seedling.webp" alt="Seedling growing in native soil" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/assets/project-images/Brindavana/Farmer%20Tending%20Lush%20Seedlings.png" alt="Seedling growing in native soil" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.3 }}
@@ -249,7 +249,7 @@ export default function Home() {
             transition={{ duration: 1 }}
             style={{ flex: '1 1 50%', minWidth: '300px', position: 'relative', minHeight: '500px' }}
           >
-            <img src="/assets/images/about_story_forest.webp" alt="Forest Conservation" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} />
+            <img src="/assets/project-images/Maduvana/Tropical%20Garden%20Pond%20Oasis.png" alt="Forest Conservation" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} />
             <div style={{ position: 'absolute', bottom: '40px', left: '40px', background: 'rgba(18,34,23,0.6)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '18px', padding: '20px 26px', display: 'flex', alignItems: 'center', gap: '16px' }}>
               <i className="fa-solid fa-leaf" style={{ color: 'var(--accent-gold)', fontSize: '1.4rem' }}></i>
               <div>
@@ -297,7 +297,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.94 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.9 }}
               style={{ flex: '1 1 420px', borderRadius: '28px', overflow: 'hidden', height: '540px', boxShadow: '0 30px 65px rgba(0,0,0,0.1)' }}
             >
-              <img src="/assets/images/dew_drops_leaf.webp" alt="New growth on native leaf" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="/assets/project-images/Maduvana/Serene%20Tropical%20Garden%20Pond%20Retreat.png" alt="New growth on native leaf" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </motion.div>
 
             {/* Content column */}
@@ -450,10 +450,10 @@ export default function Home() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '30px', gridAutoFlow: 'dense' }}>
             {[
-              { id: 'brindavana', name: 'BRINDAVANA', loc: 'Pavagada · 30 Acres', img: '/assets/images/about_hero_bg.webp', colSpan: 'span 7', height: '480px', desc: 'A benchmark in ecological restoration, turning barren land into a thriving ecosystem.' },
-              { id: 'madhuvana', name: 'MADHUVANA', loc: 'Maddur · 18 Acres', img: '/assets/images/madhu_vana.webp', colSpan: 'span 5', height: '480px', desc: 'A dense water-forest ecosystem built around 250+ native trees and sustainable farm plots.' },
-              { id: 'anantavana', name: 'ANANTAVANA', loc: 'Near Kabini · 35 Acres', img: '/assets/images/anantavana.webp', colSpan: 'span 5', height: '400px', desc: 'Nestled in the Bandipur wildlife corridor, designed to support high biodiversity.' },
-              { id: 'eeshavana', name: 'EESHAVANA', loc: 'Kollegala · Cauvery Riverfront', img: '/assets/images/eeshavana.webp', colSpan: 'span 7', height: '400px', desc: 'Our premier riverfront community along the banks of the sacred Cauvery river.' }
+              { id: 'brindavana', name: 'BRINDAVANA', loc: 'Pavagada · 30 Acres', img: '/assets/project-images/Brindavana/Sunny%20Tropical%20Banana%20Orchard.png', colSpan: 'span 7', height: '480px', desc: 'A benchmark in ecological restoration, turning barren land into a thriving ecosystem.' },
+              { id: 'madhuvana', name: 'MADHUVANA', loc: 'Maddur · 18 Acres', img: '/assets/project-images/Maduvana/hero.png', colSpan: 'span 5', height: '480px', desc: 'A dense water-forest ecosystem built around 250+ native trees and sustainable farm plots.' },
+              { id: 'anantavana', name: 'ANANTAVANA', loc: 'Near Kabini · 35 Acres', img: '/assets/project-images/Ananthavana/hero_image.jpg', colSpan: 'span 5', height: '400px', desc: 'Nestled in the Bandipur wildlife corridor, designed to support high biodiversity.' },
+              { id: 'eeshavana', name: 'EESHAVANA', loc: 'Kollegala · Cauvery Riverfront', img: '/assets/project-images/Esahavana/EV%20River%20View%201.jpg', colSpan: 'span 7', height: '400px', desc: 'Our premier riverfront community along the banks of the sacred Cauvery river.' }
             ].map((proj, i) => (
               <motion.div 
                 key={i}
@@ -518,12 +518,12 @@ export default function Home() {
             {[...Array(2)].map((_, loopIndex) => (
               <div key={loopIndex} style={{ display: 'flex' }}>
                 {[
-                  { img: '/assets/images/about_hero_bg.webp', alt: 'Family walking dog on trail' },
-                  { img: '/assets/images/madhu_vana.webp', alt: 'Family petting dog' },
-                  { img: '/assets/images/anantavana.webp', alt: 'Cow grazing in farm' },
-                  { img: '/assets/images/eeshavana.webp', alt: 'Woman picking herbs' },
-                  { img: '/assets/images/about_story_forest.webp', alt: 'Forest path walking' },
-                  { img: '/assets/images/hero_kaveri_river.webp', alt: 'Riverfront views' }
+                  { img: '/assets/project-images/Brindavana/Sunny%20Tropical%20Banana%20Orchard.png', alt: 'Family walking dog on trail' },
+                  { img: '/assets/project-images/Maduvana/hero.png', alt: 'Family petting dog' },
+                  { img: '/assets/project-images/Ananthavana/hero_image.jpg', alt: 'Cow grazing in farm' },
+                  { img: '/assets/project-images/Esahavana/EV%20River%20View%201.jpg', alt: 'Woman picking herbs' },
+                  { img: '/assets/project-images/Maduvana/Tropical%20Garden%20Pond%20Oasis.png', alt: 'Forest path walking' },
+                  { img: '/assets/project-images/Esahavana/Riverside%20view.png', alt: 'Riverfront views' }
                 ].map((item, i) => (
                   <div key={i} style={{ width: '400px', height: '280px', margin: '0 12px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.05)', flexShrink: 0 }}>
                     <img src={item.img} alt={item.alt} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -542,65 +542,6 @@ export default function Home() {
             animation-play-state: paused !important;
           }
         `}} />
-      </section>
-
-      {/* Ownership Beyond Your Plot + Green Cover Guarantee */}
-      <section style={{ padding: 'clamp(80px, 10vh, 120px) 0', background: 'var(--bg-cream)' }}>
-        <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '60px', alignItems: 'stretch' }}>
-            <motion.div
-              initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
-              style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
-            >
-              <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
-                Individual Ownership · Collective Experience
-              </span>
-              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.2rem, 4vw, 3rem)', color: 'var(--bg-dark-forest)', lineHeight: 1.15, marginBottom: '24px' }}>
-                Ownership That Extends Beyond Your Plot.
-              </h2>
-              <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '34px' }}>
-                Each member owns a registered parcel within the community. But the experience extends far beyond that boundary — shared forests, water bodies, trails, biodiversity corridors, and gathering spaces become part of everyone&apos;s everyday life.
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '22px' }}>
-                <div style={{ borderLeft: '3px solid var(--accent-gold)', paddingLeft: '20px' }}>
-                  <strong style={{ display: 'block', color: 'var(--bg-dark-forest)', fontSize: '1.05rem', marginBottom: '4px' }}>You Own Your Land.</strong>
-                  <span style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Secured individual plot title &amp; legal ownership.</span>
-                </div>
-                <div style={{ borderLeft: '3px solid var(--accent-gold)', paddingLeft: '20px' }}>
-                  <strong style={{ display: 'block', color: 'var(--bg-dark-forest)', fontSize: '1.05rem', marginBottom: '4px' }}>You Experience The Ecosystem.</strong>
-                  <span style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Access to 100+ acres of collective forest &amp; water bodies.</span>
-                </div>
-                <div style={{ borderLeft: '3px solid var(--accent-gold)', paddingLeft: '20px' }}>
-                  <strong style={{ display: 'block', color: 'var(--bg-dark-forest)', fontSize: '1.05rem', marginBottom: '4px' }}>You Belong To Something Larger.</strong>
-                  <span style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>A community of custodians, not just neighbours.</span>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.92 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
-              style={{ background: 'var(--bg-dark-forest)', color: '#FFF', borderRadius: '32px', padding: '60px 40px', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
-            >
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.75rem, 5.0vw, 5.0rem)', color: 'var(--accent-gold)', lineHeight: 1 }}>
-                <Counter value={80} suffix="%+" />
-              </div>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', margin: '18px 0 14px' }}>Green Cover Guarantee</h3>
-              <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, marginBottom: '28px' }}>
-                Across our communities, more than 80% of developed land is transformed into native green cover. Instead of maximizing built-up space, Vanatvam prioritizes:
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', maxWidth: '240px', margin: '0 auto', textAlign: 'left' }}>
-                {['Forests', 'Water', 'Biodiversity', 'Community', 'Built Spaces'].map((s, i) => (
-                  <div key={s} style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                    <span style={{ width: '26px', height: '26px', borderRadius: '50%', background: 'rgba(198,162,101,0.15)', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 700, flexShrink: 0 }}>
-                      {i + 1}
-                    </span>
-                    <span style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.85)' }}>{s}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
       </section>
 
       {/* Nature. Community. Future. */}
@@ -655,36 +596,72 @@ export default function Home() {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', marginBottom: '60px' }}>
             <motion.div 
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-              style={{ background: '#FFF', borderRadius: '24px', padding: '40px', boxShadow: '0 15px 35px rgba(0,0,0,0.05)' }}
+              style={{ background: '#FFF', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 15px 35px rgba(0,0,0,0.05)' }}
             >
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginBottom: '16px' }}>Deepotsava</h3>
-              <p style={{ color: 'var(--text-muted)', lineHeight: 1.7 }}>
-                A magical evening where hundreds of earthen lamps are lovingly lit across the farm, illuminating pathways, courtyards, and green spaces—creating a warm, communal glow and a sense of shared wonder.
-              </p>
+              <div style={{ width: '100%', height: '240px' }}>
+                <img src="/Event%20images/DSC08963.JPG" alt="Deepotsava celebration" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ padding: '40px' }}>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginBottom: '16px' }}>Deepotsava</h3>
+                <p style={{ color: 'var(--text-muted)', lineHeight: 1.7 }}>
+                  A magical evening where hundreds of earthen lamps are lovingly lit across the farm, illuminating pathways, courtyards, and green spaces—creating a warm, communal glow and a sense of shared wonder.
+                </p>
+              </div>
             </motion.div>
             
             <motion.div 
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
-              style={{ background: '#FFF', borderRadius: '24px', padding: '40px', boxShadow: '0 15px 35px rgba(0,0,0,0.05)' }}
+              style={{ background: '#FFF', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 15px 35px rgba(0,0,0,0.05)' }}
             >
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginBottom: '16px' }}>Vasantotsava</h3>
-              <p style={{ color: 'var(--text-muted)', lineHeight: 1.7 }}>
-                A joyful celebration of spring, complete with nature-inspired arts, guided walks, interactive workshops, and farm-to-table gatherings—designed to awaken the senses and connect us all with the rhythms of growth and renewal.
-              </p>
+              <div style={{ width: '100%', height: '240px' }}>
+                <img src="/Event%20images/DSC08964%20(1).JPG" alt="Vasantotsava celebration" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ padding: '40px' }}>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginBottom: '16px' }}>Vasantotsava</h3>
+                <p style={{ color: 'var(--text-muted)', lineHeight: 1.7 }}>
+                  A joyful celebration of spring, complete with nature-inspired arts, guided walks, interactive workshops, and farm-to-table gatherings—designed to awaken the senses and connect us all with the rhythms of growth and renewal.
+                </p>
+              </div>
             </motion.div>
             
             <motion.div 
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
-              style={{ background: '#FFF', borderRadius: '24px', padding: '40px', boxShadow: '0 15px 35px rgba(0,0,0,0.05)' }}
+              style={{ background: '#FFF', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 15px 35px rgba(0,0,0,0.05)' }}
             >
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginBottom: '16px' }}>Seasonal Gatherings</h3>
-              <p style={{ color: 'var(--text-muted)', lineHeight: 1.7 }}>
-                From planting festivals, to stargazing nights, nature workshops, communal cooking, and storytelling by the bonfire—we host events that celebrate biodiversity, culture, and sustainable living.
-              </p>
+              <div style={{ width: '100%', height: '240px' }}>
+                <img src="/Event%20images/DSC09025.JPG" alt="Seasonal gatherings" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ padding: '40px' }}>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginBottom: '16px' }}>Seasonal Gatherings</h3>
+                <p style={{ color: 'var(--text-muted)', lineHeight: 1.7 }}>
+                  From planting festivals, to stargazing nights, nature workshops, communal cooking, and storytelling by the bonfire—we host events that celebrate biodiversity, culture, and sustainable living.
+                </p>
+              </div>
             </motion.div>
+          </div>
+
+          <div className="weekend-marquee" style={{ position: 'relative', width: '100%', overflow: 'hidden', padding: '10px 0' }}>
+            <div className="weekend-marquee-track" style={{ display: 'flex', width: 'calc(350px * 12)', animation: 'vanaMarqueeScroll 40s linear infinite' }}>
+              {[...Array(2)].map((_, loopIndex) => (
+                <div key={loopIndex} style={{ display: 'flex' }}>
+                  {[
+                    '/Event%20images/IMG-20240108-WA0006%20(1).jpg',
+                    '/Event%20images/IMG-20240108-WA0013.jpg',
+                    '/Event%20images/IMG-20240108-WA0023.jpg',
+                    '/Event%20images/WhatsApp%20Image%202024-04-02%20at%202.37.57%20PM%20(2)%20(1).jpeg',
+                    '/Event%20images/WhatsApp%20Image%202024-04-02%20at%202.38.05%20PM.jpeg',
+                    '/Event%20images/WhatsApp%20Image%202024-04-02%20at%202.39.30%20PM%20(2).jpeg'
+                  ].map((imgSrc, i) => (
+                    <div key={i} style={{ width: '350px', height: '240px', margin: '0 12px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.05)', flexShrink: 0 }}>
+                      <img src={imgSrc} alt={`Vanatvam event highlight ${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -763,7 +740,7 @@ export default function Home() {
       {/* Final CTA: The future is not built. It is grown. */}
       <section className="cta-section">
         <div className="cta-bg">
-          <img src="/assets/images/cta_sunset_bg.webp" alt="Sunset hills backdrop - Vanatvam sustainable farmland Karnataka" />
+          <img src="/assets/project-images/Esahavana/EV%20Arial%20View%204.png" alt="Sunset hills backdrop - Vanatvam sustainable farmland Karnataka" />
         </div>
         <div className="cta-overlay"></div>
         <div className="container">

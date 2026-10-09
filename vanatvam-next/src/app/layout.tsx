@@ -3,6 +3,8 @@ import "./globals.css";
 import SmoothScroll from "@/components/premium/SmoothScroll";
 import ScrollProgress from "@/components/premium/ScrollProgress";
 import GrainOverlay from "@/components/premium/GrainOverlay";
+import FloatingController from "@/components/premium/FloatingController";
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.vanatvam.com"),
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Vanatvam",
     images: [
       {
-        url: "/assets/images/about_hero_bg.webp",
+        url: "/assets/project-images/Brindavana/Sunny Tropical Banana Orchard.png",
         width: 1200,
         height: 630,
         alt: "Vanatvam Nature Communities",
@@ -94,6 +96,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <FloatingController />
         <ScrollProgress />
         <GrainOverlay />
         <SmoothScroll>{children}</SmoothScroll>

@@ -7,7 +7,7 @@ import Magnetic from '@/components/premium/Magnetic';
 
 export default function Navigation() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -78,12 +78,12 @@ export default function Navigation() {
       {/* Drawer Menu */}
       <AnimatePresence>
         {isDrawerOpen && (
-          <motion.div 
-            initial={{ x: '100%' }} 
-            animate={{ x: 0 }} 
-            exit={{ x: '100%' }} 
+          <motion.div
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
             transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
-            className="fixed inset-0 z-40 bg-white" 
+            className="fixed inset-0 z-40 bg-white"
             style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', padding: '120px 20px 40px', backgroundColor: 'rgba(255, 255, 255, 0.98)', zIndex: 999, display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '30px', alignItems: 'center', width: '100%' }}>
@@ -95,18 +95,18 @@ export default function Navigation() {
                 { path: '/blog', label: 'Journal' },
                 { path: '/contact', label: 'Contact' }
               ].map((item, i) => (
-                <motion.div 
+                <motion.div
                   key={item.path}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + i * 0.05 }}
                 >
-                  <Link 
-                    href={item.path} 
+                  <Link
+                    href={item.path}
                     onClick={closeDrawer}
-                    style={{ 
-                      fontSize: '1.8rem', 
-                      color: pathname === item.path ? 'var(--accent-gold)' : '#1E352F', 
+                    style={{
+                      fontSize: '1.8rem',
+                      color: pathname === item.path ? 'var(--accent-gold)' : '#1E352F',
                       textDecoration: 'none',
                       fontFamily: 'var(--font-serif)',
                       display: 'block',
@@ -118,7 +118,7 @@ export default function Navigation() {
                 </motion.div>
               ))}
             </nav>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.35 }}
@@ -126,14 +126,14 @@ export default function Navigation() {
             >
               <Link href="/book-a-visit" className="btn-pill btn-pill-dark" onClick={closeDrawer} style={{ width: '100%', justifyContent: 'center', padding: '16px' }}>Book a Visit</Link>
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
               style={{ marginTop: 'auto', paddingTop: '30px', display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center' }}
             >
-              <a href="tel:+919999999999" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '1rem' }}><i className="fa-solid fa-phone" style={{marginRight:'8px'}}></i> +91 99999 99999</a>
-              <a href="mailto:hello@vanatvam.com" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '1rem' }}><i className="fa-solid fa-envelope" style={{marginRight:'8px'}}></i> hello@vanatvam.com</a>
+              <a href="tel:+919999999999" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '1rem' }}><i className="fa-solid fa-phone" style={{ marginRight: '8px' }}></i> +91 99999 99999</a>
+              <a href="mailto:hello@vanatvam.com" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '1rem' }}><i className="fa-solid fa-envelope" style={{ marginRight: '8px' }}></i> hello@vanatvam.com</a>
             </motion.div>
           </motion.div>
         )}
@@ -142,7 +142,7 @@ export default function Navigation() {
       {/* Overlay for Drawer */}
       <AnimatePresence>
         {isDrawerOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -152,7 +152,7 @@ export default function Navigation() {
         )}
       </AnimatePresence>
 
-      
+
     </>
   );
 }

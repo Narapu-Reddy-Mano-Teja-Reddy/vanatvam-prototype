@@ -14,7 +14,7 @@ export default function BlogPost() {
       title: 'How Vanatvam is Redefining Farmland Ownership with a Natural & Sustainable Approach',
       date: 'January 12, 2026',
       author: 'Vanatvam Ecological Team',
-      img: '/assets/images/dew_drops_leaf.webp',
+      img: '/assets/project-images/Brindavana/Rainy Countryside Pond Reflections.png',
       category: 'Ecology',
       content: (
         <>
@@ -23,7 +23,7 @@ export default function BlogPost() {
           <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>From Ownership to Custodianship</h3>
           <p>When you purchase a plot in a Vanatvam community, you aren't just buying land; you are becoming a custodian of a living ecosystem. We shift the paradigm from resource extraction to ecological restoration. This means implementing deep water trenching, soil regeneration protocols, and strict guidelines against chemical fertilizers.</p>
           
-          <img src="/assets/images/impact_seedling.webp" alt="Seedling" style={{ width: '100%', borderRadius: '16px', margin: '40px 0', boxShadow: '0 10px 30px rgba(0,0,0,0.08)' }} />
+          <img src="/assets/project-images/Brindavana/Farmer Tending Lush Seedlings.png" alt="Seedling" style={{ width: '100%', borderRadius: '16px', margin: '40px 0', boxShadow: '0 10px 30px rgba(0,0,0,0.08)' }} />
           
           <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', color: 'var(--bg-dark-forest)', marginTop: '40px', marginBottom: '20px' }}>The Power of Managed Sustainability</h3>
           <p>The primary hurdle for urban individuals wanting to own farmland is maintenance. How do you manage a farm when you live in a city? Our managed farmland model completely removes this friction. Our team of ecologists, agriculturists, and local farmers handle the day-to-day operations—from planting native canopy trees to harvesting organic produce.</p>
@@ -34,7 +34,7 @@ export default function BlogPost() {
       title: 'The Wellness Benefits of Living Close to Nature: A Guide for Modern Families',
       date: 'December 05, 2025',
       author: 'Dr. Vivek Sharma',
-      img: '/assets/images/anantavana.webp',
+      img: '/assets/project-images/Ananthavana/hero_image.jpg',
       category: 'Wellness',
       content: (
         <>
@@ -56,7 +56,7 @@ export default function BlogPost() {
       title: 'Why Sustainable Farmland is the Future of Real Estate in India',
       date: 'November 22, 2025',
       author: 'Vanatvam Research',
-      img: '/assets/images/about_hero_bg.webp',
+      img: '/assets/project-images/Brindavana/Sunny Tropical Banana Orchard.png',
       category: 'Investment',
       content: (
         <>
@@ -74,7 +74,7 @@ export default function BlogPost() {
       title: 'Sacred Groves, Eternal Harmony: How Madhuvana Revives India’s Soul',
       date: 'October 15, 2025',
       author: 'Vanatvam Heritage Team',
-      img: '/assets/images/forest_address_bg.webp',
+      img: '/assets/project-images/Brindavana/Tropical Garden Pathway Tunnel.png',
       category: 'Heritage',
       content: (
         <>

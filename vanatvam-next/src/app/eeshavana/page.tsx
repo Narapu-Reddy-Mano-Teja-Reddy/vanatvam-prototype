@@ -16,22 +16,22 @@ export default function Eeshavana() {
     { label: 'Green Cover', value: '80%+ Riparian Forest' },
   ];
 
-  
+
   const galleryItems = [
-    { img: '/assets/images/eeshavana.webp', title: 'Cauvery Riverfront', desc: 'Direct, pristine access to the sacred waters of the flowing Cauvery river.' },
-    { img: '/assets/images/dew_drops_leaf.webp', title: 'Riparian Forest', desc: 'A protected buffer zone supporting unique aquatic and riverbank ecosystems.' },
-    { img: '/assets/images/about_hero_bg.webp', title: 'Tranquil Retreat', desc: 'Exclusive community spots designed for meditation and riverside wellness.' },
-    { img: '/assets/images/master_plan_map.webp', title: 'Exclusive Enclaves', desc: 'Premium plots starting from 8,000 sq.ft offering unmatched river views.' },
+    { img: '/assets/project-images/Esahavana/EV Image.png', title: 'Cauvery Riverfront', desc: 'Direct, pristine access to the sacred waters of the flowing Cauvery river.' },
+    { img: '/assets/project-images/Brindavana/Rainy Countryside Pond Reflections.png', title: 'Riparian Forest', desc: 'A protected buffer zone supporting unique aquatic and riverbank ecosystems.' },
+    { img: '/assets/project-images/Brindavana/Sunny Tropical Banana Orchard.png', title: 'Tranquil Retreat', desc: 'Exclusive community spots designed for meditation and riverside wellness.' },
+    { img: '/assets/project-images/Esahavana/EV Arial View 1.png', title: 'Exclusive Enclaves', desc: 'Premium plots starting from 8,000 sq.ft offering unmatched river views.' },
   ];
 
 
   return (
     <>
       <Navigation />
-      
+
       <section style={{ height: '80vh', position: 'relative', display: 'flex', alignItems: 'center' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <img src="/assets/images/eeshavana.webp" alt="EESHAVANA" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <img src="/assets/project-images/Esahavana/EV Image.png" alt="EESHAVANA" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(18, 34, 23, 0.4) 0%, rgba(18, 34, 23, 0.9) 100%)' }}></div>
         </div>
 
@@ -40,9 +40,9 @@ export default function Eeshavana() {
             <span style={{ display: 'inline-block', padding: '6px 16px', background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)', color: '#FFF', borderRadius: '30px', fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '30px' }}>
               KOLLEGALA · 6.5 ACRES
             </span>
-            
+
             <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.75rem, 5.0vw, 5.0rem)', color: '#FFF', lineHeight: 1, marginBottom: '20px' }}>EESHAVANA</h1>
-            
+
             <p style={{ fontSize: '1.4rem', color: 'rgba(255,255,255,0.9)', maxWidth: '600px', fontWeight: 300, fontFamily: 'var(--font-serif)', fontStyle: 'italic', margin: '0 auto' }}>
               Premium Riverfront Community
             </p>
@@ -55,14 +55,14 @@ export default function Eeshavana() {
           <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '80px', alignItems: 'flex-start' }}>
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px' }}>PROJECT OVERVIEW</span>
-              
+
               <div style={{ marginBottom: '40px' }}>
-                <img src="/assets/projects/eeshavanaalogo.webp" alt="EESHAVANA Logo" style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
+                <img src="/assets/images/Project-Logos/eeshavanaalogo.webp" alt="EESHAVANA Logo" style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
 
               <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 2.8vw, 2.8rem)', color: 'var(--bg-dark-forest)', marginBottom: '30px', lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: 'Live by the river,<br/>not just near it.' }}>
               </h2>
-              
+
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-dark)', fontSize: '1.1rem', lineHeight: 1.8 }}>
                 <p>Eeshavana is a 6.5-acre gated premium riverfront community where village calm meets riverside living — plots from 8000 sq.ft.</p>
                 <p>Eeshavana is a thoughtfully planned premium riverfront community envisioned along the serene banks of the Kaveri. Every plot, pathway, and pause point has been laid out to keep you close to the river and far from the noise — connected to the essentials of life, without losing the wild calm of the land it sits on.</p>
@@ -97,7 +97,7 @@ export default function Eeshavana() {
                     { title: 'Growth Corridor', desc: 'Located in high-appreciation zones while maintaining ecological sanctity.' }
                   ].map((adv, i) => (
                     <div key={i} style={{ display: 'flex', gap: '20px', background: '#FFF', padding: '24px', borderRadius: '16px', boxShadow: '0 10px 20px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.02)' }}>
-                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--bg-cream)', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontWeight: 'bold' }}>0{i+1}</div>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--bg-cream)', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontWeight: 'bold' }}>0{i + 1}</div>
                       <div>
                         <h4 style={{ fontSize: '1.1rem', color: 'var(--bg-dark-forest)', marginBottom: '8px' }}>{adv.title}</h4>
                         <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--text-muted)' }}>{adv.desc}</p>
@@ -109,17 +109,17 @@ export default function Eeshavana() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ position: 'sticky', top: '120px' }}>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '40px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '40px' }}>
                 <div style={{ gridColumn: '1 / -1', marginBottom: '10px' }}>
                   <span style={{ color: 'var(--accent-gold)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>Project Specifications</span>
                 </div>
                 {specs.map((s, i) => (
-                  <div key={s.label} style={{ 
+                  <div key={s.label} style={{
                     gridColumn: i === specs.length - 1 && specs.length % 2 !== 0 ? '1 / -1' : 'auto',
-                    background: i === 0 ? 'var(--bg-dark-forest)' : '#FFFFFF', 
-                    padding: '24px', 
-                    borderRadius: '20px', 
-                    border: i === 0 ? 'none' : '1px solid var(--border-light)', 
+                    background: i === 0 ? 'var(--bg-dark-forest)' : '#FFFFFF',
+                    padding: '24px',
+                    borderRadius: '20px',
+                    border: i === 0 ? 'none' : '1px solid var(--border-light)',
                     boxShadow: i === 0 ? '0 20px 40px rgba(18,34,23,0.15)' : '0 10px 30px rgba(0,0,0,0.04)',
                     display: 'flex',
                     flexDirection: 'column',
@@ -131,9 +131,9 @@ export default function Eeshavana() {
                 ))}
               </div>
 
-              <div style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.1)', position: 'relative', marginBottom: '60px' }}>
-                <img src="/assets/images/master_plan_map.webp" alt="Master Plan" style={{ width: '100%', height: 'auto', display: 'block' }} />
-                <div style={{ position: 'absolute', bottom: '-30px', left: '-30px', background: 'var(--bg-dark-forest)', color: '#FFF', padding: '40px', borderRadius: '24px', maxWidth: '300px', boxShadow: '0 20px 40px rgba(24, 44, 30, 0.2)' }}>
+              <div style={{ position: 'relative', marginBottom: '60px' }}>
+                <img src="/assets/project-images/Esahavana/EV Arial View 1.png" alt="Master Plan" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '24px', boxShadow: '0 30px 60px rgba(0,0,0,0.1)' }} />
+                <div style={{ position: 'absolute', bottom: '-24px', left: '-24px', background: 'var(--bg-dark-forest)', color: '#FFF', padding: '40px', borderRadius: '24px', maxWidth: '300px', boxShadow: '0 20px 40px rgba(24, 44, 30, 0.4)', zIndex: 2 }}>
                   <i className="fa-solid fa-leaf" style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '20px' }}></i>
                   <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: '10px' }}>Sustainable Design</h4>
                   <p style={{ fontSize: '0.9rem', opacity: 0.8, lineHeight: 1.6, margin: 0 }}>Every aspect of the master plan is dictated by the natural topography and water flow.</p>
@@ -144,7 +144,7 @@ export default function Eeshavana() {
         </div>
       </section>
 
-            {galleryItems.length > 0 && (
+      {galleryItems.length > 0 && (
         <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: '#FFF' }}>
           <div className="container">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
@@ -153,7 +153,7 @@ export default function Eeshavana() {
                 Life at EESHAVANA
               </h2>
             </motion.div>
-            
+
             <AccordionGallery items={galleryItems} height="500px" />
           </div>
         </section>

@@ -100,14 +100,14 @@ function statusColors(status: string) {
 }
 
 const amenities = [
-  { letter: 'A', icon: 'fa-archway', name: 'Entrance & Site', desc: 'Grand eco-entrance arch with security and school site access.' },
-  { letter: 'B', icon: 'fa-tree', name: 'Theme Park', desc: 'Lush botanical theme park and green biodiversity trails.' },
-  { letter: 'C', icon: 'fa-house', name: 'Mud House', desc: 'Traditional eco-friendly mud house built with sustainable earth blocks.' },
-  { letter: 'D', icon: 'fa-house-chimney', name: 'Cottage Retreat', desc: 'Serene heritage cottages overlooking private water bodies.' },
-  { letter: 'E', icon: 'fa-water', name: 'Pond', desc: 'Rainwater harvesting pond supporting native flora and aquatic life.' },
-  { letter: 'F', icon: 'fa-tree-city', name: 'Tree House', desc: 'Elevated wooden tree house perched amidst ancient canopy trees.' },
-  { letter: 'G', icon: 'fa-route', name: 'Tree-lined Roads', desc: 'Organic paved avenues with tree-lined walking tracks.' },
-  { letter: 'H', icon: 'fa-droplet', name: 'Natural Pond', desc: 'Secluded natural lotus pond for relaxation and bird watching.' },
+  { letter: 'A', icon: 'fa-archway', name: 'Entrance & Site', desc: 'Grand eco-entrance arch with security and school site access.', img: '/assets/project-images/Maduvana/Rustic Tropical Garden Gateway.png' },
+  { letter: 'B', icon: 'fa-tree', name: 'Theme Park', desc: 'Lush botanical theme park and green biodiversity trails.', img: '/assets/project-images/Maduvana/Aerial Spiral Garden in Bloom.png' },
+  { letter: 'C', icon: 'fa-house', name: 'Mud House', desc: 'Traditional eco-friendly mud house built with sustainable earth blocks.', img: '/assets/project-images/Maduvana/a114d324-c066-402d-8ebe-32f8f8a65bc4.png' },
+  { letter: 'D', icon: 'fa-house-chimney', name: 'Cottage Retreat', desc: 'Serene heritage cottages overlooking private water bodies.', img: '/assets/project-images/Maduvana/Sunlit Terracotta Cottage and Lush Garden.png' },
+  { letter: 'E', icon: 'fa-water', name: 'Pond', desc: 'Rainwater harvesting pond supporting native flora and aquatic life.', img: '/assets/project-images/Maduvana/Tropical Garden Pond Oasis.png' },
+  { letter: 'F', icon: 'fa-tree-city', name: 'Tree House', desc: 'Elevated wooden tree house perched amidst ancient canopy trees.', img: '/assets/project-images/Maduvana/72b47d11-1784-4ca8-bcad-b18bdfe4c679.png' },
+  { letter: 'G', icon: 'fa-route', name: 'Tree-lined Roads', desc: 'Organic paved avenues with tree-lined walking tracks.', img: '/assets/project-images/Maduvana/0cb87566-31bb-4ed5-8e5d-f2e8e6ae3d6e.png' },
+  { letter: 'H', icon: 'fa-droplet', name: 'Natural Pond', desc: 'Secluded natural lotus pond for relaxation and bird watching.', img: '/assets/project-images/Maduvana/Serene Tropical Garden Pond Retreat.png' },
 ];
 
 const birds = [
@@ -120,12 +120,12 @@ const birds = [
 ];
 
 export default function Madhuvana() {
-  
+
   const galleryItems = [
-    { img: '/assets/images/madhu_vana.webp', title: 'Water-Led Ecology', desc: 'A landscape sculpted around flowing canals and an extensive central lake.' },
-    { img: '/assets/images/madhuvana_gallery_1.webp', title: 'The Secret Vanas', desc: 'Five sacred groves aligned with ancient Vedic wisdom and celestial energies.' },
-    { img: '/assets/images/about_hero_bg.webp', title: 'Canopy Density', desc: 'Over 5,000 native trees forming a thriving habitat for birds and pollinators.' },
-    { img: '/assets/images/master_plan_map.webp', title: 'Farm Parcels', desc: 'Spacious quarter-acre plots designed for integrated organic farming and living.' },
+    { img: '/assets/project-images/Maduvana/Tropical Garden Pond Oasis.png', title: 'Water-Led Ecology', desc: 'A landscape sculpted around flowing water channels and scenic ponds.' },
+    { img: '/assets/project-images/Maduvana/Serene Tropical Garden Pond Retreat.png', title: 'The Sacred Vanas', desc: 'Sacred grove experiences inspired by ancient traditions like Nakshatra Vana.' },
+    { img: '/assets/project-images/Maduvana/Sunlit Terracotta Cottage and Lush Garden.png', title: 'Cozy Cottages', desc: 'Beautiful cottages designed for peaceful living immersed in nature.' },
+    { img: '/assets/project-images/Maduvana/Aerial Spiral Garden in Bloom.png', title: 'Farm Parcels', desc: 'Spacious parcels designed for rare species plantations and biodiversity spaces.' },
   ];
 
   const [selected, setSelected] = useState<{ kind: 'plot' | 'amenity'; id: string } | null>(null);
@@ -162,7 +162,7 @@ export default function Madhuvana() {
 
       <section className="hero" style={{ height: '85vh', position: 'relative', display: 'flex', alignItems: 'center' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <img src="/assets/images/madhu_vana.webp" alt="MadhuVana Cottages & Landscape" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <img src="/assets/project-images/Maduvana/hero.png" alt="MadhuVana Cottages & Landscape" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(14, 26, 18, 0.4) 0%, rgba(14, 26, 18, 0.88) 100%)' }} />
         </div>
 
@@ -172,10 +172,10 @@ export default function Madhuvana() {
               Maddur, Karnataka
             </span>
             <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(3rem, 5.5vw, 5rem)', color: '#FFF', lineHeight: 1.05, marginBottom: '20px' }}>
-              MadhuVana<br/><span style={{ fontStyle: 'italic', fontWeight: 300 }}>The Sweet Symphony of Nature</span>
+              MadhuVana<br /><span style={{ fontStyle: 'italic', fontWeight: 300 }}>The Sweet Symphony of Nature</span>
             </h1>
             <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.7, fontWeight: 300, marginBottom: '35px' }}>
-              Nestled near Maddur, MadhuVana is a serene 18-acre ecosystem shaped by water, fertile soil, and over 250 native trees. Designed for farm parcels from 8,000 sq.ft onwards.
+              MadhuVana is an immersive natural ecosystem where over 20% of the land is reserved for common spaces. Discover scenic ponds, herbal gardens, rare species plantations, and cozy cottages.
             </p>
             <div style={{ display: 'flex', gap: '30px', alignItems: 'center', flexWrap: 'wrap' }}>
               <Magnetic strength={0.3}>
@@ -197,7 +197,7 @@ export default function Madhuvana() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '30px', textAlign: 'center' }}>
             {[
               { value: 18, suffix: ' Acres', label: 'Total Ecosystem' },
-              { value: 250, suffix: '+', label: 'Native Trees' },
+              { value: 200, suffix: '+', label: 'Rare Trees' },
               { value: 8000, suffix: '+ sq.ft', label: 'Farm Parcels' },
               { value: 20, suffix: '%+', label: 'Open & Green Spaces' },
             ].map((s) => (
@@ -220,15 +220,16 @@ export default function Madhuvana() {
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px' }}>PROJECT OVERVIEW</span>
 
               <div style={{ marginBottom: '40px' }}>
-                <img src="/assets/projects/Logo-MadhuVana.svg" alt="MADHUVANA Logo" style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
+                <img src="/assets/images/Project-Logos/Logo-MadhuVana.svg" alt="MADHUVANA Logo" style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
 
               <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 2.8vw, 2.8rem)', color: 'var(--bg-dark-forest)', marginBottom: '30px', lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: 'Ancient forest wisdom<br/>meets modern living.' }}>
               </h2>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-dark)', fontSize: '1.1rem', lineHeight: 1.8 }}>
-                <p>MadhuVana is a joint offering from VanaTvam and Indus Herbs. Spread across 18 acres, MadhuVana will feature over 5000 trees and plants, ponds, gazebos, walkways, and a vibrant community space with eco-cottages.</p>
-                <p>Located off the Bangalore-Mysore highway near Maddur, MadhuVana is surrounded by the River Cauvery and interlaced with canals. It is envisioned as a "Natural, Sustainable Farm Community" — where neighbors share a common goal of holistic, nature-centric living.</p>
+                <p>Immersed in Nature, Designed with Care.</p>
+                <p>MadhuVana is a unique ecosystem designed to balance mindful living and environmental restoration. With over 20% of the land reserved for common spaces, you will discover scenic ponds, lakes, flowing water channels, and lush walking trails. Retreat into our tree houses or cozy cottages amidst the verdant greenery.</p>
+                <p>The community is a sanctuary for rare species plantations, herbal gardens, fruit-bearing trees, and sacred Vana experiences inspired by ancient traditions.</p>
                 <div>
                   <DownloadBrochureButton />
                 </div>
@@ -243,7 +244,7 @@ export default function Madhuvana() {
                     { title: 'Growth Corridor', desc: 'Located in high-appreciation zones while maintaining ecological sanctity.' }
                   ].map((adv, i) => (
                     <div key={i} style={{ display: 'flex', gap: '20px', background: '#FFF', padding: '24px', borderRadius: '16px', boxShadow: '0 10px 20px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.02)' }}>
-                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--bg-cream)', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontWeight: 'bold' }}>0{i+1}</div>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--bg-cream)', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontWeight: 'bold' }}>0{i + 1}</div>
                       <div>
                         <h4 style={{ fontSize: '1.1rem', color: 'var(--bg-dark-forest)', marginBottom: '8px' }}>{adv.title}</h4>
                         <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--text-muted)' }}>{adv.desc}</p>
@@ -255,9 +256,9 @@ export default function Madhuvana() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ position: 'sticky', top: '120px' }}>
-              <div style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.1)', position: 'relative', marginBottom: '60px' }}>
-                <img src="/assets/images/master_plan_map.webp" alt="Master Plan" style={{ width: '100%', height: 'auto', display: 'block' }} />
-                <div style={{ position: 'absolute', bottom: '-30px', left: '-30px', background: 'var(--bg-dark-forest)', color: '#FFF', padding: '40px', borderRadius: '24px', maxWidth: '300px', boxShadow: '0 20px 40px rgba(24, 44, 30, 0.2)' }}>
+              <div style={{ position: 'relative', marginBottom: '60px' }}>
+                <img src="/assets/project-images/Esahavana/EV Arial View 1.png" alt="Master Plan" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '24px', boxShadow: '0 30px 60px rgba(0,0,0,0.1)' }} />
+                <div style={{ position: 'absolute', bottom: '-24px', left: '-24px', background: 'var(--bg-dark-forest)', color: '#FFF', padding: '40px', borderRadius: '24px', maxWidth: '300px', boxShadow: '0 20px 40px rgba(24, 44, 30, 0.4)', zIndex: 2 }}>
                   <i className="fa-solid fa-leaf" style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '20px' }}></i>
                   <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: '10px' }}>Sustainable Design</h4>
                   <p style={{ fontSize: '0.9rem', opacity: 0.8, lineHeight: 1.6, margin: 0 }}>Every aspect of the master plan is dictated by the natural topography and water flow.</p>
@@ -268,50 +269,7 @@ export default function Madhuvana() {
         </div>
       </section>
 
-      {/* Interactive 3D Master Plan */}
-      <section id="master-plan" style={{ padding: 'clamp(50px, 6vh, 70px) 0 clamp(60px, 8vh, 90px)', background: '#F4F1EA' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="subtitle-tag">Interactive Master Plan</span>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.2rem, 3.5vw, 3rem)', color: 'var(--bg-dark-forest)' }}>
-              Click Any Plot or Amenity to Explore
-            </h2>
-            <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', maxWidth: '560px', margin: '12px auto 0' }}>
-              Every parcel below is clickable — explore indicative area, dimensions, orientation, and tree cover for each plot.
-            </p>
-          </div>
 
-          <div className="booklet-masterplan-wrapper">
-            <div className="booklet-masterplan-container">
-              <img src="/assets/images/master_plan_map.webp" alt="Official Master Plan Layout" className="booklet-masterplan-img" />
-
-              {plotHotspots.map((p) => (
-                <div
-                  key={p.id}
-                  className={`plot-hotspot-v2 ${p.premium ? 'premium' : ''}`}
-                  style={{ top: p.top, left: p.left }}
-                  title={`Plot ${p.id}`}
-                  onClick={() => setSelected({ kind: 'plot', id: p.id })}
-                >
-                  {p.id}{p.premium ? ' ★' : ''}
-                </div>
-              ))}
-
-              {amenityHotspots.map((a) => (
-                <div
-                  key={a.id}
-                  className="amenity-pin-v2"
-                  style={{ top: a.top, left: a.left }}
-                  title={`${a.id}: ${a.title}`}
-                  onClick={() => setSelected({ kind: 'amenity', id: a.id })}
-                >
-                  {a.id}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 12 Amenities Grid */}
       <section id="amenities" style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: '#FFFFFF' }}>
@@ -326,43 +284,32 @@ export default function Madhuvana() {
             </p>
           </div>
 
-          <div className="amenities-grid-12">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px' }}>
             {amenities.map((a, i) => (
-              <motion.div key={a.letter} className="amenity-card" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.05 }}>
-                <div className="amenity-letter">{a.letter}</div>
-                <div className="amenity-icon"><i className={`fa-solid ${a.icon}`}></i></div>
-                <h4 className="amenity-name">{a.name}</h4>
-                <p className="amenity-desc">{a.desc}</p>
+              <motion.div key={a.letter} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.05 }}
+                style={{ background: '#FFF', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.03)' }}>
+                <div style={{ height: '200px', width: '100%', position: 'relative' }}>
+                  <img src={a.img} alt={a.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <div style={{ position: 'absolute', top: '15px', left: '15px', background: 'var(--bg-dark-forest)', color: '#FFF', width: '32px', height: '32px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 600 }}>
+                    {a.letter}
+                  </div>
+                </div>
+                <div style={{ padding: '24px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                    <i className={`fa-solid ${a.icon}`} style={{ color: 'var(--accent-gold)', fontSize: '1.2rem' }}></i>
+                    <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', color: 'var(--bg-dark-forest)', margin: 0 }}>{a.name}</h4>
+                  </div>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.6, margin: 0 }}>{a.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Winged Visitors */}
-      <section id="birds" style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: '#122217', color: '#FFFFFF' }}>
-        <div className="container">
-          <div style={{ marginBottom: '50px' }}>
-            <span className="subtitle-tag subtitle-tag-light">Fauna &amp; Biodiversity</span>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.2rem, 3.5vw, 3rem)' }}>Winged Visitors of MadhuVana</h2>
-            <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '520px', fontWeight: 300, marginTop: '10px' }}>
-              Over 30+ species of migratory and resident birds thrive across MadhuVana&apos;s canopy and water bodies.
-            </p>
-          </div>
 
-          <div className="birds-grid-6">
-            {birds.map((b, i) => (
-              <motion.div key={b.name} className="bird-card" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.06 }}>
-                <div className="bird-card-img"><img src={b.img} alt={b.name} /></div>
-                <h4 className="bird-name">{b.name}</h4>
-                <p className="bird-sub">{b.sub}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-            {galleryItems.length > 0 && (
+      {galleryItems.length > 0 && (
         <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: '#FFF' }}>
           <div className="container">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
@@ -371,7 +318,7 @@ export default function Madhuvana() {
                 Life at MADHUVANA
               </h2>
             </motion.div>
-            
+
             <AccordionGallery items={galleryItems} height="500px" />
           </div>
         </section>
@@ -380,23 +327,45 @@ export default function Madhuvana() {
       {/* CTA */}
       <section className="cta-section">
         <div className="cta-bg">
-          <img src="/assets/images/cta_sunset_bg.webp" alt="Sunset landscape" />
+          <img src="/assets/project-images/Esahavana/EV River View 1.jpg" alt="Sunset landscape" />
         </div>
         <div className="cta-overlay"></div>
         <div className="container relative-z">
           <motion.div className="cta-content" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ textAlign: 'center', margin: '0 auto', maxWidth: '650px' }}>
             <h2 className="cta-title">Own Your Piece of MadhuVana.</h2>
             <p className="cta-sub">18 Acres · Maddur · Farm Parcels from 8,000 sq.ft</p>
+            <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', marginBottom: '30px', fontWeight: 300 }}>
+              Become part of a sustainable, nature-connected community where the sweet symphony of nature plays every day.
+            </p>
             <Magnetic strength={0.3}>
-              <Link href="/contact" className="btn-pill btn-pill-white" style={{ margin: '0 auto' }}>
+              <Link href="/contact" className="btn-pill btn-pill-white" style={{ margin: '0 auto 40px' }}>
                 Schedule Site Visit &amp; Plot Inspection <i className="fa-solid fa-arrow-right"></i>
               </Link>
             </Magnetic>
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.2)', paddingTop: '25px', display: 'flex', justifyContent: 'center', gap: '40px', color: '#FFF' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem' }}>
+                <i className="fa-solid fa-phone" style={{ color: 'var(--accent-gold)' }}></i>
+                <span>080 47095111</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem' }}>
+                <i className="fa-solid fa-globe" style={{ color: 'var(--accent-gold)' }}></i>
+                <span>www.vanatvam.com</span>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      <ConnectivitySection />
+      <ConnectivitySection
+        title="Located off the Bangalore-Mysore Highway."
+        subtitle="Prime Connectivity"
+        locations={[
+          { time: '10', unit: 'Minutes', desc: 'To Bangalore-Mysore Highway', icon: 'fa-road' },
+          { time: '80', unit: 'Kilometers', desc: 'To Bangalore City', icon: 'fa-city' },
+          { time: '60', unit: 'Kilometers', desc: 'To Historic Mysore', icon: 'fa-landmark' },
+          { time: '5', unit: 'Minutes', desc: 'To Cauvery River Access', icon: 'fa-water' },
+        ]}
+      />
 
       <OtherProjectsSection currentProjectId="madhuvana" />
 

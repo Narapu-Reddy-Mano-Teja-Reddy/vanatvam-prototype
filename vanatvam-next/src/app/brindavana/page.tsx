@@ -7,12 +7,12 @@ import AccordionGallery from '@/components/premium/AccordionGallery';
 import { ConnectivitySection, OtherProjectsSection, DownloadBrochureButton } from '@/app/components/ProjectSections';
 
 export default function Brindavana() {
-  
+
   const galleryItems = [
-    { img: '/assets/images/about_hero_bg.webp', title: 'Flourishing Ecosystem', desc: 'Over 85% native forest cover creating a robust, self-sustaining microclimate.' },
-    { img: '/assets/images/about_story_forest.webp', title: 'Therapeutic Trails', desc: 'Walkways designed to naturally reduce stress and foster a deep connection with nature.' },
-    { img: '/assets/images/dew_drops_leaf.webp', title: 'Organic Regeneration', desc: 'Soil enriched naturally without chemicals, reviving the land to its purest form.' },
-    { img: '/assets/images/master_plan_map.webp', title: 'Sustainable Masterplan', desc: 'Every pathway and plot follows the natural topography for zero ecological disruption.' },
+    { img: '/assets/project-images/Brindavana/Sunny Tropical Banana Orchard.png', title: 'Flourishing Ecosystem', desc: 'Over 85% native forest cover creating a robust, self-sustaining microclimate.' },
+    { img: '/assets/project-images/Ananthavana/hero_image_2.jpg', title: 'Therapeutic Trails', desc: 'Walkways designed to naturally reduce stress and foster a deep connection with nature.' },
+    { img: '/assets/project-images/Brindavana/Rainy Countryside Pond Reflections.png', title: 'Organic Regeneration', desc: 'Soil enriched naturally without chemicals, reviving the land to its purest form.' },
+    { img: '/assets/project-images/Esahavana/EV Arial View 1.png', title: 'Sustainable Masterplan', desc: 'Every pathway and plot follows the natural topography for zero ecological disruption.' },
   ];
 
 
@@ -27,23 +27,23 @@ export default function Brindavana() {
   return (
     <>
       <Navigation />
-      
+
       <section style={{ height: '80vh', position: 'relative', display: 'flex', alignItems: 'center' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <img src="/assets/images/about_hero_bg.webp" alt="BRINDAVANA" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <img src="/assets/project-images/Brindavana/Sunny Tropical Banana Orchard.png" alt="BRINDAVANA" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(18, 34, 23, 0.4) 0%, rgba(18, 34, 23, 0.9) 100%)' }}></div>
         </div>
 
         <div className="container relative" style={{ zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '60px' }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <span style={{ display: 'inline-block', padding: '6px 16px', background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)', color: '#FFF', borderRadius: '30px', fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '30px' }}>
+            <span style={{ display: 'inline-block', padding: '8px 24px', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(15px)', color: '#FFF', borderRadius: '30px', fontSize: '0.85rem', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '32px', border: '1px solid rgba(255,255,255,0.2)' }}>
               PAVAGADA · 30 ACRES
             </span>
-            
-            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.75rem, 5.0vw, 5.0rem)', color: '#FFF', lineHeight: 1, marginBottom: '20px' }}>BRINDAVANA</h1>
-            
-            <p style={{ fontSize: '1.4rem', color: 'rgba(255,255,255,0.9)', maxWidth: '600px', fontWeight: 300, fontFamily: 'var(--font-serif)', fontStyle: 'italic', margin: '0 auto' }}>
-              Where roots run deep and nature thrives
+
+            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(3.5rem, 8vw, 7.5rem)', color: '#FFF', lineHeight: 0.95, marginBottom: '24px', letterSpacing: '-0.03em', textShadow: '0 10px 40px rgba(0,0,0,0.3)' }}>BRINDAVANA</h1>
+
+            <p style={{ fontSize: '1.6rem', color: 'rgba(255,255,255,0.95)', maxWidth: '600px', fontWeight: 300, fontFamily: 'var(--font-serif)', fontStyle: 'italic', margin: '0 auto', letterSpacing: '0.02em' }}>
+              Where roots run deep and nature thrives.
             </p>
           </motion.div>
         </div>
@@ -54,14 +54,14 @@ export default function Brindavana() {
           <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '80px', alignItems: 'flex-start' }}>
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px' }}>PROJECT OVERVIEW</span>
-              
+
               <div style={{ marginBottom: '40px' }}>
-                <img src="/assets/projects/BrindaVana.webp" alt="BRINDAVANA Logo" style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
+                <img src="/assets/images/Project-Logos/BrindaVana.webp" alt="BRINDAVANA Logo" style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
 
-              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 2.8vw, 2.8rem)', color: 'var(--bg-dark-forest)', marginBottom: '30px', lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: 'A story of land<br/>transformation.' }}>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.5rem, 4vw, 3.8rem)', color: 'var(--bg-dark-forest)', marginBottom: '36px', lineHeight: 1.1, letterSpacing: '-0.02em' }} dangerouslySetInnerHTML={{ __html: 'A story of land<br/>transformation.' }}>
               </h2>
-              
+
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-dark)', fontSize: '1.1rem', lineHeight: 1.8 }}>
                 <p>Welcome to Brindavana, a 30-acre haven of sustainable, natural farmland nestled amidst the serenity of Krishnapura in the Pavagada Taluk. Here, at Brindavana by Vanatvam, we have woven together the ancient wisdom of our culture with innovative agroforestry and organic farming practices to create a flourishing ecosystem that nourishes both the land and the soul.</p>
                 <p>Brindavana is a community of like-minded individuals who share a passion for sustainability, a desire for a simpler way of life, and an emotional connection to our culture. Reconnect with your roots and discover the therapeutic power of immersing yourself in nature.</p>
@@ -96,7 +96,7 @@ export default function Brindavana() {
                     { title: 'Growth Corridor', desc: 'Located in high-appreciation zones while maintaining ecological sanctity.' }
                   ].map((adv, i) => (
                     <div key={i} style={{ display: 'flex', gap: '20px', background: '#FFF', padding: '24px', borderRadius: '16px', boxShadow: '0 10px 20px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.02)' }}>
-                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--bg-cream)', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontWeight: 'bold' }}>0{i+1}</div>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--bg-cream)', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontWeight: 'bold' }}>0{i + 1}</div>
                       <div>
                         <h4 style={{ fontSize: '1.1rem', color: 'var(--bg-dark-forest)', marginBottom: '8px' }}>{adv.title}</h4>
                         <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--text-muted)' }}>{adv.desc}</p>
@@ -108,17 +108,17 @@ export default function Brindavana() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ position: 'sticky', top: '120px' }}>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '40px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '40px' }}>
                 <div style={{ gridColumn: '1 / -1', marginBottom: '10px' }}>
                   <span style={{ color: 'var(--accent-gold)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>Project Specifications</span>
                 </div>
                 {specs.map((s, i) => (
-                  <div key={s.label} style={{ 
+                  <div key={s.label} style={{
                     gridColumn: i === specs.length - 1 && specs.length % 2 !== 0 ? '1 / -1' : 'auto',
-                    background: i === 0 ? 'var(--bg-dark-forest)' : '#FFFFFF', 
-                    padding: '24px', 
-                    borderRadius: '20px', 
-                    border: i === 0 ? 'none' : '1px solid var(--border-light)', 
+                    background: i === 0 ? 'var(--bg-dark-forest)' : '#FFFFFF',
+                    padding: '24px',
+                    borderRadius: '20px',
+                    border: i === 0 ? 'none' : '1px solid var(--border-light)',
                     boxShadow: i === 0 ? '0 20px 40px rgba(18,34,23,0.15)' : '0 10px 30px rgba(0,0,0,0.04)',
                     display: 'flex',
                     flexDirection: 'column',
@@ -130,9 +130,9 @@ export default function Brindavana() {
                 ))}
               </div>
 
-              <div style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.1)', position: 'relative', marginBottom: '60px' }}>
-                <img src="/assets/images/master_plan_map.webp" alt="Master Plan" style={{ width: '100%', height: 'auto', display: 'block' }} />
-                <div style={{ position: 'absolute', bottom: '-30px', left: '-30px', background: 'var(--bg-dark-forest)', color: '#FFF', padding: '40px', borderRadius: '24px', maxWidth: '300px', boxShadow: '0 20px 40px rgba(24, 44, 30, 0.2)' }}>
+              <div style={{ position: 'relative', marginBottom: '60px' }}>
+                <img src="/assets/project-images/Esahavana/EV Arial View 1.png" alt="Master Plan" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '24px', boxShadow: '0 30px 60px rgba(0,0,0,0.1)' }} />
+                <div style={{ position: 'absolute', bottom: '-24px', left: '-24px', background: 'var(--bg-dark-forest)', color: '#FFF', padding: '40px', borderRadius: '24px', maxWidth: '300px', boxShadow: '0 20px 40px rgba(24, 44, 30, 0.4)', zIndex: 2 }}>
                   <i className="fa-solid fa-leaf" style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '20px' }}></i>
                   <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: '10px' }}>Sustainable Design</h4>
                   <p style={{ fontSize: '0.9rem', opacity: 0.8, lineHeight: 1.6, margin: 0 }}>Every aspect of the master plan is dictated by the natural topography and water flow.</p>
@@ -143,7 +143,7 @@ export default function Brindavana() {
         </div>
       </section>
 
-            {galleryItems.length > 0 && (
+      {galleryItems.length > 0 && (
         <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: '#FFF' }}>
           <div className="container">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
@@ -152,14 +152,14 @@ export default function Brindavana() {
                 Life at BRINDAVANA
               </h2>
             </motion.div>
-            
+
             <AccordionGallery items={galleryItems} height="500px" />
           </div>
         </section>
       )}
 
       <ConnectivitySection />
-      
+
       <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-dark-forest)', textAlign: 'center' }}>
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

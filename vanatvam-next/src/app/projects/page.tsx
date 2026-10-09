@@ -16,10 +16,10 @@ export default function Projects() {
       id: 'brindavana',
       category: 'completed',
       name: 'BRINDAVANA',
-      logo: '/assets/projects/BrindaVana.webp',
+      logo: '/assets/images/Project-Logos/BrindaVana.webp',
       location: 'PAVAGADA · 30 ACRES',
       desc: 'Our benchmark project demonstrating ecological restoration. What began as largely barren land is evolving into a thriving green ecosystem with deep water harvesting and native tree canopy.',
-      img: '/assets/images/about_hero_bg.webp',
+      img: '/assets/project-images/Brindavana/Sunny Tropical Banana Orchard.png',
       badge: 'Completed',
       badgeBg: 'var(--bg-dark-forest)',
       pills: ['Native Canopy', 'Rain Catchments']
@@ -28,34 +28,34 @@ export default function Projects() {
       id: 'madhuvana',
       category: 'water',
       name: 'MADHUVANA',
-      logo: '/assets/projects/Logo-MadhuVana.svg',
-      location: 'MADDUR · 18 ACRES',
-      desc: 'A pristine water-forest ecosystem built around 250+ native tree species. Features interactive master planning, deep water recharge zones, and sustainable organic farm plots.',
-      img: '/assets/images/madhu_vana.webp',
+      logo: '/assets/images/Project-Logos/Logo-MadhuVana.svg',
+      location: 'MADDUR',
+      desc: 'The Sweet Symphony of Nature. A pristine water-forest ecosystem built around 200+ rare & endangered tree species. Features sacred groves like Nakshatra Vana and cozy cottages designed for peaceful living.',
+      img: '/assets/project-images/Maduvana/hero.png',
       badge: 'Water Forest',
       badgeBg: 'var(--accent-gold)',
-      pills: ['250+ Native Trees', '3D Master Plan']
+      pills: ['200+ Native Trees', 'Sacred Groves']
     },
     {
       id: 'anantavana',
       category: 'wildlife',
       name: 'ANANTAVANA',
-      logo: '/assets/projects/Anantavana.webp',
-      location: 'NEAR KABINI · 35 ACRES',
-      desc: 'Nestled in the Bandipur–Nagarhole wildlife corridor. A nature-led community carefully designed to act as an ecological buffer zone supporting high biodiversity and endemic species.',
-      img: '/assets/images/anantavana.webp',
+      logo: '/assets/images/Project-Logos/Anantavana.webp',
+      location: 'NEAR KABINI · 34 ACRES',
+      desc: 'Where the Forest Leads. Set in Kabini’s rich ecological belt. With dense forests and thriving biodiversity, Anantavana invites you to step into nature. Farm parcels from 10,000 sq. ft.',
+      img: '/assets/project-images/Ananthavana/hero_image.jpg',
       badge: 'Wildlife Corridor',
       badgeBg: '#2D6A4F',
-      pills: ['Bandipur Corridor', 'Wildlife Buffer']
+      pills: ['Bandipur Corridor', 'Heritage Cottages']
     },
     {
       id: 'eeshavana',
       category: 'riverfront',
       name: 'EESHAVANA',
-      logo: '/assets/projects/eeshavanaalogo.webp',
+      logo: '/assets/images/Project-Logos/eeshavanaalogo.webp',
       location: 'KOLLEGALA · CAUVERY RIVERFRONT',
       desc: 'Our premier riverfront community set along the banks of the sacred Cauvery river. Designed around the deep relationship between people, riparian ecology, and water.',
-      img: '/assets/images/eeshavana.webp',
+      img: '/assets/project-images/Esahavana/EV Image.png',
       badge: 'Cauvery Riverfront',
       badgeBg: '#1B4965',
       pills: ['Cauvery Frontage', 'River Ecosystem']
@@ -80,14 +80,14 @@ export default function Projects() {
 
       <section className="hero" style={{ height: '70vh', minHeight: '500px', position: 'relative' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <img src="/assets/images/forest_address_bg.webp" alt="Projects Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <img src="/assets/project-images/Brindavana/Tropical Garden Pathway Tunnel.png" alt="Projects Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(18, 34, 23, 0.4) 0%, rgba(18, 34, 23, 0.9) 100%)' }}></div>
         </div>
 
         <div className="container relative" style={{ zIndex: 10, display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }}>
             <span style={{ display: 'inline-block', padding: '6px 16px', border: '1px solid var(--accent-gold)', borderRadius: '30px', color: 'var(--accent-gold)', fontSize: '0.85rem', letterSpacing: '0.1em', marginBottom: '20px' }}>OUR LIVING SANCTUARIES</span>
-            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.475rem, 4.5vw, 4.5rem)', color: '#FFF', lineHeight: 1.1, marginBottom: '20px' }}>
+            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(3.5rem, 7vw, 6.5rem)', color: '#FFF', lineHeight: 0.95, marginBottom: '24px', letterSpacing: '-0.02em' }}>
               <RevealText>Four Expressions of</RevealText><br/>
               <RevealText delay={0.1} style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>Nature.</RevealText>
             </h1>
@@ -109,18 +109,22 @@ export default function Projects() {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.4 }}
-                  whileHover={{ y: -10 }}
-                  style={{ background: '#FFF', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.06)', display: 'flex', flexDirection: 'column' }}
+                  transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
+                  whileHover={{ y: -15, boxShadow: '0 30px 60px rgba(0,0,0,0.12)' }}
+                  style={{ background: '#FFF', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.06)', display: 'flex', flexDirection: 'column', border: '1px solid rgba(0,0,0,0.03)' }}
                 >
-                  <TiltCard max={4} style={{ position: 'relative', height: '300px', overflow: 'hidden' }}>
-                    <img src={proj.img} alt={proj.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <TiltCard max={4} style={{ position: 'relative', height: '400px', overflow: 'hidden' }}>
+                    <motion.img 
+                      whileHover={{ scale: 1.05 }} 
+                      transition={{ duration: 0.6, ease: 'easeOut' }}
+                      src={proj.img} alt={proj.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                    />
                     <div style={{ position: 'absolute', top: 20, left: 20, background: proj.badgeBg, color: '#FFF', padding: '6px 14px', borderRadius: '30px', fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.05em' }}>
                       {proj.badge}
                     </div>
                   </TiltCard>
-                  <div style={{ padding: '40px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                    <span style={{ color: 'var(--accent-gold)', fontSize: '0.8rem', letterSpacing: '0.1em', fontWeight: 600, marginBottom: '15px', display: 'block' }}>{proj.location}</span>
+                  <div style={{ padding: '48px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                    <span style={{ color: 'var(--accent-gold)', fontSize: '0.85rem', letterSpacing: '0.15em', fontWeight: 600, marginBottom: '15px', display: 'block', textTransform: 'uppercase' }}>{proj.location}</span>
                     
                     {proj.logo ? (
                       <div style={{ marginBottom: '15px', height: '60px', display: 'flex', alignItems: 'center' }}>
@@ -179,7 +183,7 @@ export default function Projects() {
               initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
               style={{ borderRadius: '30px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.04)' }}
             >
-              <img src="/assets/images/dew_drops_leaf.webp" alt="Nature's Rhythm" style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
+              <img src="/assets/project-images/Brindavana/Rainy Countryside Pond Reflections.png" alt="Nature's Rhythm" style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
             </motion.div>
           </div>
         </div>
