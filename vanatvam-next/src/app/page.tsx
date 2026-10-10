@@ -14,7 +14,7 @@ import { useLenis } from '@/components/premium/SmoothScroll';
 
 
 const heroSlides = [
-  { id: 'brindavana', name: 'BRINDAVANA', location: 'Pavagada · 30 Acres', tagline: 'Our benchmark project — barren land reborn as a thriving forest ecosystem.', img: '/assets/project-images/Brindavana/Sunny%20Tropical%20Banana%20Orchard.png' },
+  { id: 'brindavana', name: 'BRINDAVANA', location: 'Pavagada · 30 Acres', tagline: 'Our benchmark project — barren land reborn as a thriving forest ecosystem.', img: '/assets/project-images/Ananthavana/hero_image_2.jpg' },
   { id: 'madhuvana', name: 'MADHUVANA', location: 'Maddur · 18 Acres', tagline: 'A dense water-forest ecosystem built around 250+ native trees.', img: '/assets/project-images/Maduvana/hero.png' },
   { id: 'anantavana', name: 'ANANTAVANA', location: 'Near Kabini · 35 Acres', tagline: 'Living within the Bandipur–Nagarhole wildlife corridor.', img: '/assets/project-images/Ananthavana/hero_image.jpg' },
   { id: 'eeshavana', name: 'EESHAVANA', location: 'Kollegala · Cauvery Riverfront', tagline: 'A premium riverfront community on the sacred Cauvery.', img: '/assets/project-images/Esahavana/EV%20River%20View%201.jpg' },
@@ -450,7 +450,7 @@ export default function Home() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '30px', gridAutoFlow: 'dense' }}>
             {[
-              { id: 'brindavana', name: 'BRINDAVANA', loc: 'Pavagada · 30 Acres', img: '/assets/project-images/Brindavana/Sunny%20Tropical%20Banana%20Orchard.png', colSpan: 'span 7', height: '480px', desc: 'A benchmark in ecological restoration, turning barren land into a thriving ecosystem.' },
+              { id: 'brindavana', name: 'BRINDAVANA', loc: 'Pavagada · 30 Acres', img: '/assets/project-images/Ananthavana/hero_image_2.jpg', colSpan: 'span 7', height: '480px', desc: 'A benchmark in ecological restoration, turning barren land into a thriving ecosystem.' },
               { id: 'madhuvana', name: 'MADHUVANA', loc: 'Maddur · 18 Acres', img: '/assets/project-images/Maduvana/hero.png', colSpan: 'span 5', height: '480px', desc: 'A dense water-forest ecosystem built around 250+ native trees and sustainable farm plots.' },
               { id: 'anantavana', name: 'ANANTAVANA', loc: 'Near Kabini · 35 Acres', img: '/assets/project-images/Ananthavana/hero_image.jpg', colSpan: 'span 5', height: '400px', desc: 'Nestled in the Bandipur wildlife corridor, designed to support high biodiversity.' },
               { id: 'eeshavana', name: 'EESHAVANA', loc: 'Kollegala · Cauvery Riverfront', img: '/assets/project-images/Esahavana/EV%20River%20View%201.jpg', colSpan: 'span 7', height: '400px', desc: 'Our premier riverfront community along the banks of the sacred Cauvery river.' }
@@ -518,7 +518,7 @@ export default function Home() {
             {[...Array(2)].map((_, loopIndex) => (
               <div key={loopIndex} style={{ display: 'flex' }}>
                 {[
-                  { img: '/assets/project-images/Brindavana/Sunny%20Tropical%20Banana%20Orchard.png', alt: 'Family walking dog on trail' },
+                  { img: '/assets/project-images/Ananthavana/hero_image_2.jpg', alt: 'Family walking dog on trail' },
                   { img: '/assets/project-images/Maduvana/hero.png', alt: 'Family petting dog' },
                   { img: '/assets/project-images/Ananthavana/hero_image.jpg', alt: 'Cow grazing in farm' },
                   { img: '/assets/project-images/Esahavana/EV%20River%20View%201.jpg', alt: 'Woman picking herbs' },

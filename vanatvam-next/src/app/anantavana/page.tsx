@@ -1,12 +1,15 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
 import AccordionGallery from '@/components/premium/AccordionGallery';
-import { ConnectivitySection, OtherProjectsSection, DownloadBrochureButton } from '@/app/components/ProjectSections';
+
 
 export default function Anantavana() {
+  const { scrollY } = useScroll();
+  const heroY = useTransform(scrollY, [0, 1000], ['0%', '15%'], { clamp: true });
+  const heroScale = useTransform(scrollY, [0, 1000], [1, 1.15], { clamp: true });
   const specs = [
     { label: 'Location', value: 'Near Kabini, Karnataka' },
     { label: 'Total Area', value: '34 Acres' },
@@ -27,11 +30,11 @@ export default function Anantavana() {
     <>
       <Navigation />
 
-      <section style={{ height: '80vh', position: 'relative', display: 'flex', alignItems: 'center' }}>
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+      <section style={{ height: '100vh', position: 'relative', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+        <motion.div style={{ position: 'absolute', inset: 0, zIndex: 0, top: '-15%', height: '130%', y: heroY, scale: heroScale, transformOrigin: 'center center' }}>
           <img src="/assets/project-images/Ananthavana/hero_image.jpg" alt="ANANTAVANA" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(18, 34, 23, 0.4) 0%, rgba(18, 34, 23, 0.9) 100%)' }}></div>
-        </div>
+        </motion.div>
 
         <div className="container relative" style={{ zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '60px' }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -50,8 +53,8 @@ export default function Anantavana() {
 
       <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-cream)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '80px', alignItems: 'flex-start' }}>
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '80px', alignItems: 'flex-start' }}>
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ flex: '1.2 1 400px' }}>
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px' }}>PROJECT OVERVIEW</span>
 
               <div style={{ marginBottom: '40px' }}>
@@ -66,7 +69,7 @@ export default function Anantavana() {
                 <p>AnantaVana is a sustainable natural re-forestation project in Kabini for nature lovers. Spread across 34 acres, Anantavana unfolds in phases, with farm parcels from 10,000 sq. ft. Set in Kabini’s rich ecological belt, this is not land created—it is land that already lives.</p>
                 <p>With dense forests, thriving biodiversity, and a quiet natural rhythm, Anantavana invites you to step into nature, not impose upon it. Over 20% of the land is reserved for common spaces featuring tree-lined roads, natural ponds, pergolas, heritage cottages, mud houses, herbal gardens, and tree houses amidst nature.</p>
                 <div>
-                  <DownloadBrochureButton />
+                  <a href="#" className="btn-pill btn-pill-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginTop: '30px' }}><i className="fa-solid fa-download"></i> Download Brochure</a>
                 </div>
               </div>
 
@@ -112,8 +115,8 @@ export default function Anantavana() {
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ position: 'sticky', top: '120px' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '40px' }}>
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ flex: '1 1 300px', position: 'sticky', top: '120px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '40px' }}>
                 <div style={{ gridColumn: '1 / -1', marginBottom: '10px' }}>
                   <span style={{ color: 'var(--accent-gold)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>Project Specifications</span>
                 </div>
@@ -140,6 +143,29 @@ export default function Anantavana() {
         </div>
       </section>
 
+      {/* Video Tour Section */}
+      <section style={{ padding: 'clamp(50px, 6vh, 70px) 0', background: '#122217' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>Project Video</span>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.2rem, 3.5vw, 3rem)', color: '#FFF' }}>
+              Experience AnantaVana
+            </h2>
+          </div>
+
+          <div style={{ background: '#000', padding: '0', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.3)', overflow: 'hidden', position: 'relative', paddingTop: '56.25%' }}>
+            <iframe 
+              src="https://www.youtube.com/embed/ZMd2mZhfvsI?si=UftSlEEPsjw9E41T&autoplay=1&mute=1" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            ></iframe>
+          </div>
+        </div>
+      </section>
       {/* Large Master Plan Section */}
       <section style={{ padding: 'clamp(50px, 6vh, 70px) 0', background: '#F4F1EA' }}>
         <div className="container">
@@ -174,16 +200,30 @@ export default function Anantavana() {
         </section>
       )}
 
-      <ConnectivitySection
-        title="Surrounded by Wilderness. Connected to Comfort."
-        subtitle="Nearby Destinations"
-        locations={[
-          { time: '85', unit: 'Kilometers', desc: 'To Bandipur National Park', icon: 'fa-leaf' },
-          { time: '27', unit: 'Kilometers', desc: 'To Kakankote Forest', icon: 'fa-tree' },
-          { time: '7', unit: 'Kilometers', desc: 'To Boating in Gandatoor', icon: 'fa-ship' },
-          { time: '130', unit: 'Kilometers', desc: 'To Scenic Coorg', icon: 'fa-mountain' },
-        ]}
-      />
+      <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-cream)' }}>
+        <div className="container">
+           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+             <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>Nearby Destinations</span>
+             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2rem, 3.5vw, 3rem)', color: 'var(--bg-dark-forest)' }}>Surrounded by Wilderness. Connected to Comfort.</h2>
+           </div>
+           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '30px' }}>
+              {[
+                { time: '85', unit: 'Kilometers', desc: 'To Bandipur National Park', icon: 'fa-leaf' },
+                { time: '27', unit: 'Kilometers', desc: 'To Kakankote Forest', icon: 'fa-tree' },
+                { time: '7', unit: 'Kilometers', desc: 'To Boating in Gandatoor', icon: 'fa-ship' },
+                { time: '130', unit: 'Kilometers', desc: 'To Scenic Coorg', icon: 'fa-mountain' },
+              ].map((item, i) => (
+                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                  style={{ background: '#FFF', padding: '30px', borderRadius: '20px', textAlign: 'center', border: '1px solid rgba(0,0,0,0.03)', boxShadow: '0 10px 20px rgba(0,0,0,0.03)' }}>
+                  <div style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '16px' }}><i className={`fa-solid ${item.icon}`}></i></div>
+                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: '2.5rem', color: 'var(--bg-dark-forest)', lineHeight: 1, marginBottom: '8px' }}>{item.time}</div>
+                  <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-dark)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '12px' }}>{item.unit}</div>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', margin: 0 }}>{item.desc}</p>
+                </motion.div>
+              ))}
+           </div>
+        </div>
+      </section>
 
       <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-dark-forest)', textAlign: 'center', position: 'relative' }}>
         <div className="container relative" style={{ zIndex: 1 }}>
@@ -209,7 +249,30 @@ export default function Anantavana() {
         </div>
       </section>
 
-      <OtherProjectsSection currentProjectId="anantavana" />
+      <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: '#FFFFFF', borderTop: '1px solid var(--border-light)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 2.5vw, 2.5rem)', color: 'var(--bg-dark-forest)' }}>Discover Other Projects</h3>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', maxWidth: '1000px', margin: '0 auto' }}>
+            {[
+              { id: 'brindavana', name: 'BRINDAVANA', loc: 'Pavagada', img: '/assets/images/Project-Logos/BrindaVana.webp' },
+              { id: 'madhuvana', name: 'MADHUVANA', loc: 'Maddur', img: '/assets/images/Project-Logos/Logo-MadhuVana.svg' },
+              { id: 'eeshavana', name: 'EESHAVANA', loc: 'Kollegala', img: '/assets/images/Project-Logos/eeshavanaalogo.webp' }
+            ].map((p, i) => (
+              <Link key={p.id} href={`/${p.id}`} style={{ textDecoration: 'none', display: 'block' }}>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                  style={{ background: 'var(--bg-cream)', borderRadius: '24px', padding: '30px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '200px', border: '1px solid rgba(0,0,0,0.02)', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', transition: 'transform 0.3s' }}
+                  onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+                  onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '20px', fontWeight: 600 }}>{p.loc}</span>
+                  <img src={p.img} alt={p.name} style={{ maxHeight: '60px', maxWidth: '180px', objectFit: 'contain' }} />
+                </motion.div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </>

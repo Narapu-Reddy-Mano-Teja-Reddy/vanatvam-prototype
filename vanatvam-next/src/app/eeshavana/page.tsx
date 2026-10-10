@@ -1,13 +1,16 @@
 
 'use client';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
 import AccordionGallery from '@/components/premium/AccordionGallery';
-import { ConnectivitySection, OtherProjectsSection, DownloadBrochureButton } from '@/app/components/ProjectSections';
+
 
 export default function Eeshavana() {
+  const { scrollY } = useScroll();
+  const heroY = useTransform(scrollY, [0, 1000], ['0%', '15%'], { clamp: true });
+  const heroScale = useTransform(scrollY, [0, 1000], [1, 1.15], { clamp: true });
   const specs = [
     { label: 'Location', value: 'Kollegala, Karnataka' },
     { label: 'Feature', value: 'Direct Cauvery Riverfront' },
@@ -29,11 +32,11 @@ export default function Eeshavana() {
     <>
       <Navigation />
 
-      <section style={{ height: '80vh', position: 'relative', display: 'flex', alignItems: 'center' }}>
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+      <section style={{ height: '100vh', position: 'relative', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+        <motion.div style={{ position: 'absolute', inset: 0, zIndex: 0, top: '-15%', height: '130%', y: heroY, scale: heroScale, transformOrigin: 'center center' }}>
           <img src="/assets/project-images/Esahavana/EV Image.png" alt="EESHAVANA" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(18, 34, 23, 0.4) 0%, rgba(18, 34, 23, 0.9) 100%)' }}></div>
-        </div>
+        </motion.div>
 
         <div className="container relative" style={{ zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '60px' }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -52,8 +55,8 @@ export default function Eeshavana() {
 
       <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-cream)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '80px', alignItems: 'flex-start' }}>
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '80px', alignItems: 'flex-start' }}>
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ flex: '1.2 1 400px' }}>
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px' }}>PROJECT OVERVIEW</span>
 
               <div style={{ marginBottom: '40px' }}>
@@ -67,7 +70,7 @@ export default function Eeshavana() {
                 <p>Eeshavana is a 6.5-acre gated premium riverfront community where village calm meets riverside living — plots from 8000 sq.ft.</p>
                 <p>Eeshavana is a thoughtfully planned premium riverfront community envisioned along the serene banks of the Kaveri. Every plot, pathway, and pause point has been laid out to keep you close to the river and far from the noise — connected to the essentials of life, without losing the wild calm of the land it sits on.</p>
                 <div>
-                  <DownloadBrochureButton />
+                  <a href="#" className="btn-pill btn-pill-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginTop: '30px' }}><i className="fa-solid fa-download"></i> Download Brochure</a>
                 </div>
               </div>
 
@@ -108,8 +111,8 @@ export default function Eeshavana() {
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ position: 'sticky', top: '120px' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '40px' }}>
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ flex: '1 1 300px', position: 'sticky', top: '120px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '40px' }}>
                 <div style={{ gridColumn: '1 / -1', marginBottom: '10px' }}>
                   <span style={{ color: 'var(--accent-gold)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>Project Specifications</span>
                 </div>
@@ -159,7 +162,30 @@ export default function Eeshavana() {
         </section>
       )}
 
-      <ConnectivitySection />
+      <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-cream)' }}>
+        <div className="container">
+           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+             <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>Location Highlights</span>
+             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2rem, 3.5vw, 3rem)', color: 'var(--bg-dark-forest)' }}>Perfect Blend of Convenience & Connectivity</h2>
+           </div>
+           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '30px' }}>
+              {[
+                { time: '2', unit: 'Hours', desc: 'From Bengaluru via Expressway', icon: 'fa-car' },
+                { time: '15', unit: 'Mins', desc: 'From Kollegala Town', icon: 'fa-city' },
+                { time: '10', unit: 'Mins', desc: 'To Nearest Hospital', icon: 'fa-hospital' },
+                { time: '0', unit: 'Mins', desc: 'Direct River Access', icon: 'fa-water' },
+              ].map((item, i) => (
+                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                  style={{ background: '#FFF', padding: '30px', borderRadius: '20px', textAlign: 'center', border: '1px solid rgba(0,0,0,0.03)', boxShadow: '0 10px 20px rgba(0,0,0,0.03)' }}>
+                  <div style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '16px' }}><i className={`fa-solid ${item.icon}`}></i></div>
+                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: '2.5rem', color: 'var(--bg-dark-forest)', lineHeight: 1, marginBottom: '8px' }}>{item.time}</div>
+                  <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-dark)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '12px' }}>{item.unit}</div>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', margin: 0 }}>{item.desc}</p>
+                </motion.div>
+              ))}
+           </div>
+        </div>
+      </section>
 
       <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-dark-forest)', textAlign: 'center' }}>
         <div className="container">
@@ -175,7 +201,30 @@ export default function Eeshavana() {
         </div>
       </section>
 
-      <OtherProjectsSection currentProjectId="eeshavana" />
+      <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: '#FFFFFF', borderTop: '1px solid var(--border-light)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 2.5vw, 2.5rem)', color: 'var(--bg-dark-forest)' }}>Discover Other Projects</h3>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', maxWidth: '1000px', margin: '0 auto' }}>
+            {[
+              { id: 'brindavana', name: 'BRINDAVANA', loc: 'Pavagada', img: '/assets/images/Project-Logos/BrindaVana.webp' },
+              { id: 'madhuvana', name: 'MADHUVANA', loc: 'Maddur', img: '/assets/images/Project-Logos/Logo-MadhuVana.svg' },
+              { id: 'anantavana', name: 'ANANTAVANA', loc: 'Kabini', img: '/assets/images/Project-Logos/Anantavana.webp' }
+            ].map((p, i) => (
+              <Link key={p.id} href={`/${p.id}`} style={{ textDecoration: 'none', display: 'block' }}>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                  style={{ background: 'var(--bg-cream)', borderRadius: '24px', padding: '30px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '200px', border: '1px solid rgba(0,0,0,0.02)', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', transition: 'transform 0.3s' }}
+                  onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+                  onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '20px', fontWeight: 600 }}>{p.loc}</span>
+                  <img src={p.img} alt={p.name} style={{ maxHeight: '60px', maxWidth: '180px', objectFit: 'contain' }} />
+                </motion.div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </>

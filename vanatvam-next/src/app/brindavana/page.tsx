@@ -1,15 +1,18 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
 import AccordionGallery from '@/components/premium/AccordionGallery';
-import { ConnectivitySection, OtherProjectsSection, DownloadBrochureButton } from '@/app/components/ProjectSections';
+
 
 export default function Brindavana() {
+  const { scrollY } = useScroll();
+  const heroY = useTransform(scrollY, [0, 1000], ['0%', '15%'], { clamp: true });
+  const heroScale = useTransform(scrollY, [0, 1000], [1, 1.15], { clamp: true });
 
   const galleryItems = [
-    { img: '/assets/project-images/Brindavana/Sunny Tropical Banana Orchard.png', title: 'Flourishing Ecosystem', desc: 'Over 85% native forest cover creating a robust, self-sustaining microclimate.' },
+    { img: '/assets/project-images/Ananthavana/hero_image_2.jpg', title: 'Flourishing Ecosystem', desc: 'Over 85% native forest cover creating a robust, self-sustaining microclimate.' },
     { img: '/assets/project-images/Ananthavana/hero_image_2.jpg', title: 'Therapeutic Trails', desc: 'Walkways designed to naturally reduce stress and foster a deep connection with nature.' },
     { img: '/assets/project-images/Brindavana/Rainy Countryside Pond Reflections.png', title: 'Organic Regeneration', desc: 'Soil enriched naturally without chemicals, reviving the land to its purest form.' },
     { img: '/assets/project-images/Esahavana/EV Arial View 1.png', title: 'Sustainable Masterplan', desc: 'Every pathway and plot follows the natural topography for zero ecological disruption.' },
@@ -28,11 +31,11 @@ export default function Brindavana() {
     <>
       <Navigation />
 
-      <section style={{ height: '80vh', position: 'relative', display: 'flex', alignItems: 'center' }}>
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <img src="/assets/project-images/Brindavana/Sunny Tropical Banana Orchard.png" alt="BRINDAVANA" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      <section style={{ height: '100vh', position: 'relative', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+        <motion.div style={{ position: 'absolute', inset: 0, zIndex: 0, top: '-15%', height: '130%', y: heroY, scale: heroScale, transformOrigin: 'center center' }}>
+          <img src="/assets/project-images/Ananthavana/hero_image_2.jpg" alt="BRINDAVANA" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(18, 34, 23, 0.4) 0%, rgba(18, 34, 23, 0.9) 100%)' }}></div>
-        </div>
+        </motion.div>
 
         <div className="container relative" style={{ zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '60px' }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -51,8 +54,8 @@ export default function Brindavana() {
 
       <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-cream)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '80px', alignItems: 'flex-start' }}>
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '80px', alignItems: 'flex-start' }}>
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ flex: '1.2 1 400px' }}>
               <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', display: 'block', marginBottom: '20px' }}>PROJECT OVERVIEW</span>
 
               <div style={{ marginBottom: '40px' }}>
@@ -66,24 +69,36 @@ export default function Brindavana() {
                 <p>Welcome to Brindavana, a 30-acre haven of sustainable, natural farmland nestled amidst the serenity of Krishnapura in the Pavagada Taluk. Here, at Brindavana by Vanatvam, we have woven together the ancient wisdom of our culture with innovative agroforestry and organic farming practices to create a flourishing ecosystem that nourishes both the land and the soul.</p>
                 <p>Brindavana is a community of like-minded individuals who share a passion for sustainability, a desire for a simpler way of life, and an emotional connection to our culture. Reconnect with your roots and discover the therapeutic power of immersing yourself in nature.</p>
                 <div>
-                  <DownloadBrochureButton />
+                  <a href="#" className="btn-pill btn-pill-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginTop: '30px' }}><i className="fa-solid fa-download"></i> Download Brochure</a>
                 </div>
               </div>
 
               <div style={{ marginTop: '60px' }}>
                 <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', color: 'var(--bg-dark-forest)', marginBottom: '30px' }}>Amenities</h3>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px' }}>
                   {[
-                    { title: 'Trekking Path', icon: 'fa-person-hiking' },
-                    { title: 'Clubhouse', icon: 'fa-house-chimney-window' },
-                    { title: 'Pickleball Court', icon: 'fa-table-tennis-paddle-ball' },
-                    { title: 'Eco Cottages', icon: 'fa-house-leaf' }
+                    { title: 'Eco Cottages', desc: 'Sustainable living spaces blending seamlessly with the forest.', img: '/assets/illustrations/eco-cottage.jpg' },
+                    { title: 'Trekking Path', desc: 'Serene trails connecting you directly to nature.', img: '/assets/illustrations/nature-walk.jpg' },
                   ].map((amenity, i) => (
-                    <div key={i} style={{ background: '#FFF', padding: '30px 20px', borderRadius: '16px', textAlign: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.03)' }}>
-                      <div style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '15px' }}><i className={`fa-solid ${amenity.icon}`}></i></div>
-                      <h4 style={{ fontSize: '1rem', color: 'var(--bg-dark-forest)', fontWeight: 600 }}>{amenity.title}</h4>
+                    <div key={i} style={{ background: '#FFF', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.06)', border: '1px solid rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
+                      <img src={amenity.img} alt={amenity.title} style={{ width: '100%', height: '160px', objectFit: 'cover' }} />
+                      <div style={{ padding: '24px', flexGrow: 1 }}>
+                        <h4 style={{ fontSize: '1.3rem', color: 'var(--bg-dark-forest)', fontWeight: 600, marginBottom: '8px', fontFamily: 'var(--font-serif)' }}>{amenity.title}</h4>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.5 }}>{amenity.desc}</p>
+                      </div>
                     </div>
                   ))}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                    {[
+                      { title: 'Clubhouse', icon: 'fa-house-chimney-window' },
+                      { title: 'Pickleball Court', icon: 'fa-table-tennis-paddle-ball' }
+                    ].map((amenity, i) => (
+                      <div key={i} style={{ background: '#FFF', padding: '24px', borderRadius: '16px', display: 'flex', alignItems: 'center', gap: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.03)', flexGrow: 1 }}>
+                        <div style={{ fontSize: '1.8rem', color: 'var(--accent-gold)' }}><i className={`fa-solid ${amenity.icon}`}></i></div>
+                        <h4 style={{ fontSize: '1.1rem', color: 'var(--bg-dark-forest)', fontWeight: 600, margin: 0 }}>{amenity.title}</h4>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -107,8 +122,8 @@ export default function Brindavana() {
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ position: 'sticky', top: '120px' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '40px' }}>
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ flex: '1 1 300px', position: 'sticky', top: '120px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '40px' }}>
                 <div style={{ gridColumn: '1 / -1', marginBottom: '10px' }}>
                   <span style={{ color: 'var(--accent-gold)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>Project Specifications</span>
                 </div>
@@ -158,7 +173,30 @@ export default function Brindavana() {
         </section>
       )}
 
-      <ConnectivitySection />
+      <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-cream)' }}>
+        <div className="container">
+           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+             <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>Location Highlights</span>
+             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2rem, 3.5vw, 3rem)', color: 'var(--bg-dark-forest)' }}>Perfect Blend of Convenience & Connectivity</h2>
+           </div>
+           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '30px' }}>
+              {[
+                { time: '2', unit: 'Hours', desc: 'From Bengaluru Airport', icon: 'fa-plane' },
+                { time: '10', unit: 'Mins', desc: 'From Pavagada Town', icon: 'fa-city' },
+                { time: '5', unit: 'Mins', desc: 'To Medical Facilities', icon: 'fa-hospital' },
+                { time: '15', unit: 'Mins', desc: 'To Educational Hubs', icon: 'fa-school' },
+              ].map((item, i) => (
+                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                  style={{ background: '#FFF', padding: '30px', borderRadius: '20px', textAlign: 'center', border: '1px solid rgba(0,0,0,0.03)', boxShadow: '0 10px 20px rgba(0,0,0,0.03)' }}>
+                  <div style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '16px' }}><i className={`fa-solid ${item.icon}`}></i></div>
+                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: '2.5rem', color: 'var(--bg-dark-forest)', lineHeight: 1, marginBottom: '8px' }}>{item.time}</div>
+                  <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-dark)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '12px' }}>{item.unit}</div>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', margin: 0 }}>{item.desc}</p>
+                </motion.div>
+              ))}
+           </div>
+        </div>
+      </section>
 
       <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: 'var(--bg-dark-forest)', textAlign: 'center' }}>
         <div className="container">
@@ -174,7 +212,30 @@ export default function Brindavana() {
         </div>
       </section>
 
-      <OtherProjectsSection currentProjectId="brindavana" />
+      <section style={{ padding: 'clamp(60px, 8vh, 90px) 0', background: '#FFFFFF', borderTop: '1px solid var(--border-light)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 2.5vw, 2.5rem)', color: 'var(--bg-dark-forest)' }}>Discover Other Projects</h3>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', maxWidth: '1000px', margin: '0 auto' }}>
+            {[
+              { id: 'madhuvana', name: 'MADHUVANA', loc: 'Maddur', img: '/assets/images/Project-Logos/Logo-MadhuVana.svg' },
+              { id: 'anantavana', name: 'ANANTAVANA', loc: 'Kabini', img: '/assets/images/Project-Logos/Anantavana.webp' },
+              { id: 'eeshavana', name: 'EESHAVANA', loc: 'Kollegala', img: '/assets/images/Project-Logos/eeshavanaalogo.webp' }
+            ].map((p, i) => (
+              <Link key={p.id} href={`/${p.id}`} style={{ textDecoration: 'none', display: 'block' }}>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                  style={{ background: 'var(--bg-cream)', borderRadius: '24px', padding: '30px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '200px', border: '1px solid rgba(0,0,0,0.02)', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', transition: 'transform 0.3s' }}
+                  onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+                  onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '20px', fontWeight: 600 }}>{p.loc}</span>
+                  <img src={p.img} alt={p.name} style={{ maxHeight: '60px', maxWidth: '180px', objectFit: 'contain' }} />
+                </motion.div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </>
